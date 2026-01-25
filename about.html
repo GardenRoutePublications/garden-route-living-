@@ -2,442 +2,170 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="3ac2MDqd1PRK0g65gk6Q21J4i4F_L_yZWabLLRe7Qwk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Garden Route Living</title>
     <meta name="description" content="Garden Route Living is an independent digital magazine celebrating the people, places and lifestyle of South Africa's most beautiful coastline.">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="About Garden Route Living">
-    <meta property="og:description" content="An independent digital magazine celebrating South Africa's most beautiful coastline.">
-    <meta property="og:image" content="https://gardenrouteliving.onrender.com/garden-route-beach.jpg">
-    <meta property="og:url" content="https://gardenrouteliving.onrender.com/about.html">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- SEO -->
-    <link rel="canonical" href="https://gardenrouteliving.onrender.com/about.html">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:wght@400;500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --ink: #1a1a1a;
-            --ink-light: #4a4a4a;
-            --ink-muted: #6b6b6b;
-            --paper: #fefdfb;
-            --cream: #f8f6f1;
-            --sand: #e9e5dc;
-            --ocean: #1e3a4c;
-            --gold: #b8860b;
-            --gold-light: #d4a84b;
-            
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-body: 'Source Sans 3', -apple-system, sans-serif;
-            
-            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        :root{--ink:#111;--ink-light:#333;--ink-muted:#666;--paper:#fff;--cream:#f7f6f3;--sand:#eae7e0;--gold:#8a7355;--font-display:'Playfair Display',Georgia,serif;--font-serif:'Cormorant Garamond',Georgia,serif;--font-body:'Source Sans 3',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{font-size:17px;-webkit-font-smoothing:antialiased}
+        body{font-family:var(--font-body);background:var(--paper);color:var(--ink);line-height:1.7}
+        img{max-width:100%;display:block}
+        a{color:inherit;text-decoration:none}
+
+        .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.04)}
+        .header__inner{max-width:1400px;margin:0 auto;padding:1.25rem 3rem;display:flex;justify-content:space-between;align-items:center}
+        .logo{line-height:1}
+        .logo__main{font-family:var(--font-display);font-size:0.9rem;font-weight:500;letter-spacing:0.3em;text-transform:uppercase}
+        .logo__sub{font-family:var(--font-serif);font-size:2.2rem;font-weight:300;font-style:italic;color:var(--gold);margin-left:0.2rem}
+        .nav{display:flex;gap:2.5rem}
+        .nav a{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted)}
+        .nav a:hover{color:var(--ink)}
+
+        .hero{padding:140px 0 80px;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;padding-left:3rem;padding-right:3rem}
+        .hero__content{}
+        .hero__label{font-size:0.6rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+        .hero__title{font-family:var(--font-display);font-size:3.5rem;font-weight:400;line-height:1.05;margin-bottom:1.5rem;letter-spacing:-0.02em}
+        .hero__intro{font-family:var(--font-serif);font-size:1.5rem;color:var(--ink-light);line-height:1.5}
+        .hero__image{aspect-ratio:3/4;overflow:hidden}
+        .hero__image img{width:100%;height:100%;object-fit:cover}
+
+        .content{max-width:1400px;margin:0 auto;padding:0 3rem}
+        .content__grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;padding:80px 0;border-top:1px solid var(--sand)}
+        .content__label{font-size:0.6rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);padding-top:0.5rem}
+        .content__body{}
+        .content__body p{font-size:1.05rem;color:var(--ink-light);margin-bottom:1.5rem;max-width:600px}
+        .content__body p:first-child{font-family:var(--font-serif);font-size:1.35rem;line-height:1.55;margin-bottom:2rem}
+
+        .values{background:var(--cream);padding:100px 0}
+        .values__inner{max-width:1400px;margin:0 auto;padding:0 3rem}
+        .values__header{display:grid;grid-template-columns:1fr 2fr;gap:80px;margin-bottom:60px}
+        .values__label{font-size:0.6rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold)}
+        .values__title{font-family:var(--font-display);font-size:2rem;font-weight:400;max-width:500px}
+        .values__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:60px}
+        .value__number{font-family:var(--font-serif);font-size:3rem;font-weight:300;color:var(--sand);margin-bottom:1rem}
+        .value__title{font-family:var(--font-display);font-size:1.1rem;font-weight:500;margin-bottom:0.75rem}
+        .value__text{font-size:0.95rem;color:var(--ink-muted);line-height:1.6}
+
+        .team{max-width:1400px;margin:0 auto;padding:100px 3rem}
+        .team__header{display:grid;grid-template-columns:1fr 2fr;gap:80px;margin-bottom:60px}
+        .team__label{font-size:0.6rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold)}
+        .team__intro{font-family:var(--font-serif);font-size:1.35rem;color:var(--ink-light);line-height:1.55;max-width:500px}
+
+        .cta{background:var(--ink);color:#fff;padding:80px 0}
+        .cta__inner{max-width:1400px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:2fr 1fr;gap:80px;align-items:center}
+        .cta__title{font-family:var(--font-display);font-size:2rem;font-weight:400}
+        .cta__link{font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-align:right}
+        .cta__link:hover{color:#fff}
+
+        .footer{padding:60px 3rem;border-top:1px solid var(--sand)}
+        .footer__inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+        .footer__logo{font-family:var(--font-display);font-size:0.85rem;letter-spacing:0.2em;text-transform:uppercase}
+        .footer__logo span{font-family:var(--font-serif);font-size:1.4rem;font-style:italic;color:var(--gold);text-transform:none;letter-spacing:0;margin-left:0.25rem}
+        .footer__copy{font-size:0.8rem;color:var(--ink-muted)}
+
+        @media(max-width:1024px){
+            .hero{grid-template-columns:1fr;gap:40px;padding-top:120px}
+            .hero__title{font-size:2.5rem}
+            .hero__image{aspect-ratio:16/9;order:-1}
+            .content__grid,.values__header,.team__header{grid-template-columns:1fr;gap:20px}
+            .content__label,.values__label,.team__label{margin-bottom:0.5rem}
+            .cta__inner{grid-template-columns:1fr;gap:30px;text-align:center}
+            .cta__link{text-align:center}
         }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: var(--font-body);
-            background: var(--paper);
-            color: var(--ink);
-            line-height: 1.7;
-        }
-        
-        img { max-width: 100%; height: auto; display: block; }
-        a { color: inherit; text-decoration: none; }
-        
-        /* Header */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(254, 253, 251, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-        }
-        
-        .header__inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .logo__main {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--ink);
-        }
-        
-        .logo__sub { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.8rem; margin-left: 1.5rem; margin-top: 0;
-            font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: 1.8rem;
-            font-weight: 400;
-            font-style: italic;
-            color: var(--gold);
-            margin-top: -0.3rem;
-            margin-left: 2rem;
-            letter-spacing: 0.02em;
-        }
-        .logo__sub-OLD {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-style: italic;
-            color: var(--gold);
-        }
-        
-        .nav {
-            display: flex;
-            gap: 2.5rem;
-            align-items: center;
-        }
-        
-        .nav__link {
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--ink-light);
-            transition: var(--transition);
-        }
-        
-        .nav__link:hover { color: var(--gold); }
-        
-        /* Hero */
-        .hero {
-            padding-top: 80px;
-            position: relative;
-            height: 60vh;
-            min-height: 400px;
-            display: flex;
-            align-items: flex-end;
-            overflow: hidden;
-        }
-        
-        .hero__image {
-            position: absolute;
-            inset: 0;
-        }
-        
-        .hero__image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .hero__overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
-        }
-        
-        .hero__content {
-            position: relative;
-            z-index: 2;
-            max-width: 1400px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 2rem 3rem;
-            color: white;
-        }
-        
-        .hero__title {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 500;
-        }
-        
-        /* Content */
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        
-        .content__intro {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 400;
-            font-style: italic;
-            line-height: 1.6;
-            color: var(--ink-light);
-            margin-bottom: 3rem;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid var(--sand);
-        }
-        
-        .content h2 {
-            font-family: var(--font-display);
-            font-size: 1.75rem;
-            font-weight: 500;
-            color: var(--ink);
-            margin: 2.5rem 0 1rem;
-        }
-        
-        .content p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: var(--ink-light);
-            margin-bottom: 1.5rem;
-        }
-        
-        .content a {
-            color: var(--ocean);
-            border-bottom: 1px solid var(--gold);
-            transition: var(--transition);
-        }
-        
-        .content a:hover {
-            color: var(--gold);
-        }
-        
-        /* Values */
-        .values {
-            background: var(--cream);
-            padding: 4rem 2rem;
-            margin: 3rem 0;
-        }
-        
-        .values__inner {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .values__title {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 500;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .values__grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-        
-        .value {
-            text-align: center;
-            padding: 1.5rem;
-        }
-        
-        .value__icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .value__title {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .value__text {
-            font-size: 2rem;
-            color: var(--ink-muted);
-            line-height: 1.6;
-        }
-        
-        /* CTA */
-        .cta {
-            background: var(--ocean);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        .cta__title {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-        
-        .cta__text {
-            font-size: 1.05rem;
-            opacity: 0.9;
-            max-width: 500px;
-            margin: 0 auto 2rem;
-        }
-        
-        .cta__button {
-            display: inline-block;
-            background: white;
-            color: var(--ocean);
-            padding: 1rem 2.5rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            transition: var(--transition);
-        }
-        
-        .cta__button:hover {
-            background: var(--gold);
-            color: white;
-        }
-        
-        /* Footer */
-        .footer {
-            background: var(--ink);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        
-        .footer__logo {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-        
-        .footer__links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer__links a {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.7);
-            transition: var(--transition);
-        }
-        
-        .footer__links a:hover { color: white; }
-        
-        .footer__copy {
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.5);
-        }
-        
-        @media (max-width: 768px) {
-            .nav { display: none; }
-            .values__grid { grid-template-columns: 1fr; }
-            .hero { height: 50vh; }
+        @media(max-width:768px){
+            .header__inner{padding:1rem 1.5rem}
+            .nav{display:none}
+            .hero,.content,.values__inner,.team,.footer__inner{padding-left:1.5rem;padding-right:1.5rem}
+            .hero__title{font-size:2rem}
+            .values__grid{grid-template-columns:1fr;gap:40px}
+            .footer__inner{flex-direction:column;gap:1rem;text-align:center}
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header__inner">
-            <a href="index.html" class="logo">
-                <span class="logo__main">Garden Route</span>
-                <span class="logo__sub">Living</span>
-            </a>
+            <a href="index.html" class="logo"><span class="logo__main">Garden Route</span><span class="logo__sub">Living</span></a>
             <nav class="nav">
-                <a href="index.html" class="nav__link">Stories</a>
-                <a href="about.html" class="nav__link">About</a>
-                <a href="contact.html" class="nav__link">Contact</a>
+                <a href="index.html">Stories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
-    
+
     <section class="hero">
-        <div class="hero__image">
-            <img src="knysna-heads-sailboat.jpg" alt="Yacht sailing through the iconic Knysna Heads channel with dramatic sandstone cliffs winding through coastal fynbos down to a secluded beach with dramatic rock formations along the Garden Route">
-        </div>
-        <div class="hero__overlay"></div>
         <div class="hero__content">
-            <h1 class="hero__title">About Us</h1>
+            <p class="hero__label">About the Magazine</p>
+            <h1 class="hero__title">Stories from South Africa's Most Beautiful Coastline</h1>
+            <p class="hero__intro">Garden Route Living is an independent digital magazine dedicated to the people, places and culture of the Garden Route.</p>
+        </div>
+        <div class="hero__image">
+            <img src="about-aerial.jpeg" alt="Aerial view of the Garden Route coastline">
         </div>
     </section>
-    
-    <article class="content">
-        <p class="content__intro">Garden Route Living is an independent digital magazine dedicated to celebrating the people, places and lifestyle of South Africa's most beautiful coastline.</p>
-        
-        <p>We believe the Garden Route deserves more than generic travel guides and algorithm-driven content. This 300-kilometre stretch of coastline—from Mossel Bay to Nature's Valley—is home to some of the most remarkable communities, ecosystems and stories in the world.</p>
-        
-        <p>Our mission is simple: to tell those stories with the depth, authenticity and visual quality they deserve.</p>
-        
-        <h2>What We Cover</h2>
-        
-        <p>From the restaurateurs serving fresh linefish caught that morning, to the winemakers cultivating vines in the Harkerville hills. From the interior designers who understand our unique coastal climate, to the athletes who grew up running barefoot on our beaches and went on to win World Cups.</p>
-        
-        <p>We cover dining, wine, outdoors, wellness, design, property, sport and community—always through the lens of the people who live and work here.</p>
-        
-        <h2>Our Approach</h2>
-        
-        <p>Every story in Garden Route Living is researched, written and photographed to magazine standards. We don't do clickbait. We don't chase algorithms. We create content that locals are proud to share and visitors find genuinely useful.</p>
-        
-        <p>We work closely with businesses and organisations across the Garden Route, but our editorial remains independent. If we feature something, it's because we believe in it.</p>
-        
-        <h2>For Businesses</h2>
-        
-        <p>Garden Route Living offers advertising partnerships and sponsored content opportunities for businesses that align with our values. Our readers are affluent, engaged, and actively seeking quality experiences along the Garden Route.</p>
-        
-        <p>If you'd like to discuss how we can work together, please <a href="contact.html">get in touch</a>.</p>
-    </article>
-    
+
+    <div class="content">
+        <div class="content__grid">
+            <p class="content__label">Our Story</p>
+            <div class="content__body">
+                <p>We started Garden Route Living because we believed the region deserved better than generic travel content written by people who had never been here.</p>
+                <p>The Garden Route isn't a single destination. It's a 300-kilometre stretch of coastline that encompasses indigenous forests, dramatic cliffs, hidden lagoons, and dozens of distinct communities, each with its own character.</p>
+                <p>Our mission is simple: tell the stories of the people who make this place extraordinary. The restaurateurs who source from local fishermen. The winemakers experimenting in unexpected terroir. The athletes who trained on these trails before representing their country. The designers who've learned to work with our demanding coastal climate.</p>
+                <p>No stock photography. No sponsored content presented as editorial. No AI-generated filler. Just carefully researched stories about real people doing remarkable things.</p>
+            </div>
+        </div>
+    </div>
+
     <section class="values">
         <div class="values__inner">
-            <h2 class="values__title">What We Stand For</h2>
+            <div class="values__header">
+                <p class="values__label">What Guides Us</p>
+                <h2 class="values__title">Three principles shape everything we publish</h2>
+            </div>
             <div class="values__grid">
                 <div class="value">
-                    <div class="value__icon">🌊</div>
+                    <p class="value__number">01</p>
                     <h3 class="value__title">Authenticity</h3>
-                    <p class="value__text">Real stories from real people. No stock photos, no generic content, no AI-generated fluff.</p>
+                    <p class="value__text">Every story features real people we've interviewed, real places we've visited, real photography we've commissioned. We don't aggregate. We originate.</p>
                 </div>
                 <div class="value">
-                    <div class="value__icon">🌿</div>
+                    <p class="value__number">02</p>
                     <h3 class="value__title">Sustainability</h3>
-                    <p class="value__text">We champion businesses and initiatives that protect the Garden Route's extraordinary natural environment.</p>
+                    <p class="value__text">We prioritise businesses and initiatives protecting the Garden Route's extraordinary natural environment. The region's future depends on responsible stewardship.</p>
                 </div>
                 <div class="value">
-                    <div class="value__icon">🤝</div>
+                    <p class="value__number">03</p>
                     <h3 class="value__title">Community</h3>
-                    <p class="value__text">The Garden Route's strength lies in its people. We celebrate and support local communities.</p>
+                    <p class="value__text">The Garden Route's strength lies in its people. We celebrate local talent, support local businesses, and reinvest in the communities that inspire our work.</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section class="cta">
-        <h2 class="cta__title">Have a Story to Share?</h2>
-        <p class="cta__text">We're always looking for remarkable people, places and businesses to feature in Garden Route Living.</p>
-        <a href="contact.html" class="cta__button">Get in Touch</a>
-    </section>
-    
-    <footer class="footer">
-        <p class="footer__logo">Garden Route Living</p>
-        <div class="footer__links">
-            <a href="index.html">Stories</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+
+    <section class="team">
+        <div class="team__header">
+            <p class="team__label">The Team</p>
+            <p class="team__intro">Garden Route Living is produced by a small team of writers, photographers and designers based along the Garden Route, from Mossel Bay to Plettenberg Bay.</p>
         </div>
-        <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
+    </section>
+
+    <section class="cta">
+        <div class="cta__inner">
+            <h2 class="cta__title">Have a story worth telling? We'd love to hear from you.</h2>
+            <a href="contact.html" class="cta__link">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__logo">Garden Route<span>Living</span></p>
+            <p class="footer__copy">© 2026 Garden Route Living</p>
+        </div>
     </footer>
 </body>
 </html>
