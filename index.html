@@ -9,7 +9,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Garden Route Living | Coastal Life, Local Stories">
     <meta property="og:description" content="Garden Route Living celebrates the people, places and lifestyle of South Africa's most beautiful coastline. From Mossel Bay to Plettenberg Bay.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80">
+    <meta property="og:image" content="https://gardenrouteliving.onrender.com/images/hero-knysna-heads.jpeg">
     <meta property="og:url" content="https://gardenrouteliving.onrender.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Garden Route Living">
@@ -17,14 +17,14 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Garden Route Living | Coastal Life, Local Stories">
-    <meta name="twitter:description" content="Garden Route Living celebrates the people, places and lifestyle of South Africa's most beautiful coastline.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80">
+    <meta name="twitter:description" content="Celebrating the people, places and lifestyle of South Africa's most beautiful coastline.">
+    <meta name="twitter:image" content="https://gardenrouteliving.onrender.com/images/hero-knysna-heads.jpeg">
     
     <!-- SEO -->
     <link rel="canonical" href="https://gardenrouteliving.onrender.com/">
     <meta name="robots" content="index, follow">
     
-    <!-- Fonts - Premium editorial pairing -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -37,1006 +37,444 @@
             --color-sand: #e8e4dc;
             --color-ocean: #2d4a5e;
             --color-gold: #c4913d;
-            --color-gold-light: #d4a855;
-            --color-mist: rgba(255,255,255,0.92);
             
             --font-display: 'Cormorant Garamond', Georgia, serif;
             --font-body: 'Lora', Georgia, serif;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html {
-            font-size: 18px;
-            scroll-behavior: smooth;
-        }
+        html { font-size: 18px; scroll-behavior: smooth; }
         
         body {
             font-family: var(--font-body);
             background: var(--color-paper);
             color: var(--color-ink);
             line-height: 1.7;
-            overflow-x: hidden;
         }
         
-        /* ============================================
-           MASTHEAD - Elegant Magazine Header
-        ============================================ */
-        .masthead {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1.25rem 2.5rem;
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            transition: all 0.4s ease;
-        }
-        
-        .masthead--scrolled {
-            background: var(--color-mist);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 0.75rem 2.5rem;
-        }
-        
-        .masthead__nav-left,
-        .masthead__nav-right {
+        /* Navigation */
+        .nav {
+            padding: 1.5rem 2rem;
             display: flex;
-            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid var(--color-sand);
         }
         
-        .masthead__nav-right {
-            justify-content: flex-end;
-        }
-        
-        .masthead__nav-link {
-            font-family: var(--font-body);
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--color-ink);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-        
-        .masthead__nav-link:hover {
-            opacity: 1;
-        }
-        
-        .masthead__brand {
+        .nav__brand {
             text-align: center;
+            text-decoration: none;
         }
         
-        .masthead__title {
+        .nav__title {
             font-family: var(--font-display);
             font-size: 1.8rem;
             font-weight: 400;
             letter-spacing: 0.25em;
             text-transform: uppercase;
             color: var(--color-ink);
-            margin-bottom: -0.1rem;
+            display: block;
         }
         
-        .masthead__subtitle {
+        .nav__subtitle {
             font-family: var(--font-display);
             font-size: 1rem;
             font-weight: 300;
             font-style: italic;
-            letter-spacing: 0.05em;
             color: var(--color-ink);
             opacity: 0.7;
         }
         
-        /* ============================================
-           HERO - Full Bleed Editorial
-        ============================================ */
+        /* Hero Section - Framed Image with Text Below */
         .hero {
-            height: 100vh;
-            min-height: 700px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero__image-frame {
+            width: 100%;
+            aspect-ratio: 16/9;
             overflow: hidden;
+            border: 1px solid var(--color-sand);
         }
         
-        .hero__image {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-        }
-        
-        .hero__image img {
+        .hero__image-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
-        }
-        
-        .hero__overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to bottom,
-                rgba(0,0,0,0.1) 0%,
-                rgba(0,0,0,0.05) 40%,
-                rgba(0,0,0,0.2) 100%
-            );
-            z-index: 1;
         }
         
         .hero__content {
-            position: relative;
-            z-index: 2;
             text-align: center;
-            color: white;
-            padding: 2rem;
-            max-width: 700px;
-            margin-top: 5rem;
+            padding: 3rem 1rem;
         }
         
-        .hero__headline {
+        .hero__tagline {
             font-family: var(--font-display);
-            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 300;
-            line-height: 1.2;
-            text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+            line-height: 1.3;
+            color: var(--color-ink);
             margin-bottom: 1.5rem;
         }
         
-        .hero__headline em {
-            font-style: italic;
-            font-weight: 300;
-        }
-        
-        .hero__subline {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 300;
-            font-style: italic;
-            opacity: 0.9;
-            text-shadow: 0 1px 20px rgba(0,0,0,0.4);
-        }
-        
-        .hero__scroll {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            color: white;
+        .hero__description {
             font-family: var(--font-body);
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            opacity: 0.7;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .hero__scroll-line {
-            width: 1px;
-            height: 40px;
-            background: linear-gradient(to bottom, white, transparent);
-        }
-        
-        /* ============================================
-           SECTION INTRO
-        ============================================ */
-        .section-intro {
-            text-align: center;
-            padding: 5rem 2rem 3rem;
+            font-size: 1rem;
+            color: #555;
             max-width: 600px;
             margin: 0 auto;
         }
         
-        .section-intro__tag {
-            font-family: var(--font-body);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-            margin-bottom: 1rem;
-            display: block;
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid var(--color-sand);
         }
         
-        .section-intro__title {
+        .section-header__title {
             font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: var(--color-ink);
-            margin-bottom: 1rem;
-        }
-        
-        .section-intro__line {
-            width: 50px;
-            height: 1px;
-            background: var(--color-gold);
-            margin: 0 auto;
-        }
-        
-        /* ============================================
-           FEATURED GRID
-        ============================================ */
-        .featured {
-            padding: 0 2rem 5rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .featured__grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 1.5rem;
-        }
-        
-        .featured-card {
-            position: relative;
-            overflow: hidden;
-            background: var(--color-ink);
-        }
-        
-        .featured-card--hero {
-            grid-column: span 8;
-            aspect-ratio: 16/10;
-        }
-        
-        .featured-card--tall {
-            grid-column: span 4;
-            aspect-ratio: 3/4;
-        }
-        
-        .featured-card--wide {
-            grid-column: span 6;
-            aspect-ratio: 16/10;
-        }
-        
-        .featured-card--square {
-            grid-column: span 4;
-            aspect-ratio: 1;
-        }
-        
-        .featured-card__image {
-            position: absolute;
-            inset: 0;
-        }
-        
-        .featured-card__image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease, filter 0.6s ease;
-        }
-        
-        .featured-card:hover .featured-card__image img {
-            transform: scale(1.03);
-        }
-        
-        .featured-card__overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to top,
-                rgba(0,0,0,0.7) 0%,
-                rgba(0,0,0,0.2) 50%,
-                transparent 100%
-            );
-            z-index: 1;
-        }
-        
-        .featured-card__content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem;
-            z-index: 2;
-            color: white;
-        }
-        
-        .featured-card__tag {
-            font-family: var(--font-body);
-            font-size: 0.65rem;
+            font-size: 0.85rem;
             font-weight: 600;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: var(--color-gold-light);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .featured-card__title {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 400;
-            line-height: 1.2;
-        }
-        
-        .featured-card--hero .featured-card__title {
-            font-size: 2rem;
-        }
-        
-        .featured-card__link {
-            position: absolute;
-            inset: 0;
-            z-index: 3;
-        }
-        
-        /* ============================================
-           EDITORIAL FEATURE
-        ============================================ */
-        .editorial {
-            background: var(--color-cream);
-            padding: 6rem 2rem;
-        }
-        
-        .editorial__grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .editorial__image {
-            position: relative;
-            aspect-ratio: 4/5;
-            overflow: hidden;
-        }
-        
-        .editorial__image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .editorial__content {
-            padding: 2rem 0;
-        }
-        
-        .editorial__tag {
-            font-family: var(--font-body);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
             color: var(--color-gold);
-            margin-bottom: 1.5rem;
-            display: block;
         }
         
-        .editorial__title {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 300;
-            line-height: 1.15;
-            color: var(--color-ink);
-            margin-bottom: 1.5rem;
-        }
-        
-        .editorial__text {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-        
-        .editorial__link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--color-ink);
-            text-decoration: none;
-            margin-top: 1.5rem;
-            padding-bottom: 0.25rem;
-            border-bottom: 1px solid var(--color-gold);
-            transition: border-color 0.3s;
-        }
-        
-        .editorial__link:hover {
-            border-color: var(--color-ink);
-        }
-        
-        /* ============================================
-           STORIES GRID
-        ============================================ */
-        .stories {
-            padding: 5rem 2rem;
+        /* Article Grid */
+        .article-grid {
             max-width: 1200px;
             margin: 0 auto;
-        }
-        
-        .stories__grid {
+            padding: 0 2rem 4rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
+            gap: 2rem;
         }
         
-        .story-card {
+        .article-card {
             position: relative;
+            background: white;
+            border: 1px solid var(--color-sand);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .story-card__image {
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        
+        .article-card--featured {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        
+        .article-card__image {
             aspect-ratio: 4/3;
             overflow: hidden;
-            margin-bottom: 1.25rem;
         }
         
-        .story-card__image img {
+        .article-card--featured .article-card__image {
+            aspect-ratio: 16/10;
+        }
+        
+        .article-card__image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
         
-        .story-card:hover .story-card__image img {
+        .article-card:hover .article-card__image img {
             transform: scale(1.03);
         }
         
-        .story-card__tag {
+        .article-card__content {
+            padding: 1.5rem;
+        }
+        
+        .article-card--featured .article-card__content {
+            padding: 2rem;
+        }
+        
+        .article-card__tag {
             font-family: var(--font-body);
             font-size: 0.65rem;
             font-weight: 600;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
             color: var(--color-gold);
             margin-bottom: 0.5rem;
             display: block;
         }
         
-        .story-card__title {
+        .article-card__title {
             font-family: var(--font-display);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 400;
-            line-height: 1.25;
+            line-height: 1.3;
             color: var(--color-ink);
             margin-bottom: 0.75rem;
         }
         
-        .story-card__excerpt {
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.7;
+        .article-card--featured .article-card__title {
+            font-size: 1.8rem;
         }
         
-        .story-card__link {
+        .article-card__excerpt {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .article-card__link {
             position: absolute;
             inset: 0;
+            z-index: 1;
         }
         
-        /* ============================================
-           NEWSLETTER
-        ============================================ */
-        .newsletter {
-            background: var(--color-ocean);
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-        
-        .newsletter__title {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 300;
-            color: white;
-            margin-bottom: 0.75rem;
-        }
-        
-        .newsletter__text {
-            font-size: 0.95rem;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 2rem;
-            max-width: 450px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .newsletter__form {
-            display: flex;
-            gap: 0.75rem;
-            max-width: 450px;
-            margin: 0 auto;
-        }
-        
-        .newsletter__input {
-            flex: 1;
-            padding: 1rem 1.25rem;
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            border: 1px solid rgba(255,255,255,0.3);
-            background: rgba(255,255,255,0.1);
-            color: white;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-        
-        .newsletter__input::placeholder {
-            color: rgba(255,255,255,0.5);
-        }
-        
-        .newsletter__input:focus {
-            border-color: rgba(255,255,255,0.6);
-        }
-        
-        .newsletter__btn {
-            padding: 1rem 2rem;
-            font-family: var(--font-body);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            background: var(--color-gold);
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .newsletter__btn:hover {
-            background: var(--color-gold-light);
-        }
-        
-        /* ============================================
-           FOOTER
-        ============================================ */
+        /* Footer */
         .footer {
             background: var(--color-ink);
             color: white;
-            padding: 4rem 2rem 2rem;
-        }
-        
-        .footer__grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 3rem 2rem;
+            text-align: center;
         }
         
         .footer__brand {
             font-family: var(--font-display);
-            font-size: 1.3rem;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5rem;
         }
         
         .footer__tagline {
-            font-size: 0.9rem;
-            opacity: 0.6;
-            line-height: 1.7;
-            max-width: 280px;
-        }
-        
-        .footer__title {
             font-family: var(--font-display);
+            font-style: italic;
             font-size: 0.9rem;
-            letter-spacing: 0.1em;
-            margin-bottom: 1.25rem;
-            opacity: 0.8;
+            opacity: 0.7;
+            margin-bottom: 1.5rem;
         }
         
         .footer__links {
-            list-style: none;
+            margin-bottom: 1.5rem;
         }
         
-        .footer__link {
-            display: block;
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.5);
-            text-decoration: none;
-            padding: 0.3rem 0;
-            transition: color 0.3s;
-        }
-        
-        .footer__link:hover {
+        .footer__links a {
             color: var(--color-gold);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.85rem;
         }
         
-        .footer__bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .footer__links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer__email {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer__email a {
+            color: var(--color-gold);
+            text-decoration: none;
         }
         
         .footer__copy {
             font-size: 0.8rem;
-            opacity: 0.4;
+            opacity: 0.5;
         }
         
-        .footer__email a {
-            font-size: 0.85rem;
-            color: var(--color-gold);
-            text-decoration: none;
-        }
-        
-        /* ============================================
-           RESPONSIVE
-        ============================================ */
-        @media (max-width: 1024px) {
-            .featured__grid {
-                grid-template-columns: repeat(6, 1fr);
+        /* Responsive */
+        @media (max-width: 900px) {
+            .article-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            
-            .featured-card--hero {
-                grid-column: span 6;
-            }
-            
-            .featured-card--tall {
-                grid-column: span 3;
-            }
-            
-            .featured-card--wide {
-                grid-column: span 6;
-            }
-            
-            .featured-card--square {
-                grid-column: span 3;
-            }
-            
-            .editorial__grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .editorial__image {
-                aspect-ratio: 16/9;
+            .article-card--featured {
+                grid-column: span 2;
+                grid-row: span 1;
             }
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             html { font-size: 16px; }
-            
-            .masthead {
+            .article-grid {
                 grid-template-columns: 1fr;
-                justify-items: center;
-                gap: 0.5rem;
-                padding: 1rem;
+                padding: 0 1.5rem 3rem;
             }
-            
-            .masthead__nav-left,
-            .masthead__nav-right {
-                display: none;
-            }
-            
-            .masthead__title {
-                font-size: 1.4rem;
-            }
-            
-            .hero__content {
-                margin-top: 3rem;
-            }
-            
-            .featured__grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .featured-card--hero,
-            .featured-card--tall,
-            .featured-card--wide,
-            .featured-card--square {
+            .article-card--featured {
                 grid-column: span 1;
-                aspect-ratio: 4/3;
             }
-            
-            .stories__grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .footer__grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 2rem;
-            }
-            
-            .footer__bottom {
-                flex-direction: column;
-                gap: 0.5rem;
-                text-align: center;
-            }
-            
-            .newsletter__form {
-                flex-direction: column;
-            }
+            .hero { padding: 2rem 1.5rem; }
+            .nav { padding: 1rem 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Masthead -->
-    <header class="masthead" id="masthead">
-        <nav class="masthead__nav-left">
-            <a href="#stories" class="masthead__nav-link">Stories</a>
-            <a href="#features" class="masthead__nav-link">Features</a>
-        </nav>
-        
-        <div class="masthead__brand">
-            <h1 class="masthead__title">Garden Route</h1>
-            <span class="masthead__subtitle">Living</span>
-        </div>
-        
-        <nav class="masthead__nav-right">
-            <a href="#newsletter" class="masthead__nav-link">Newsletter</a>
-            <a href="#contact" class="masthead__nav-link">Contact</a>
-        </nav>
-    </header>
+    <nav class="nav">
+        <a href="index.html" class="nav__brand">
+            <span class="nav__title">Garden Route</span>
+            <span class="nav__subtitle">Living</span>
+        </a>
+    </nav>
 
-    <!-- Hero -->
     <section class="hero">
-        <div class="hero__image">
-            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1800&q=85" alt="Luxury coastal living on the Garden Route">
+        <div class="hero__image-frame">
+            <img src="images/hero-knysna-heads.jpeg" alt="Knysna Heads, Garden Route, South Africa">
         </div>
-        <div class="hero__overlay"></div>
-        
         <div class="hero__content">
-            <h2 class="hero__headline">
-                Find your corner<br>
-                to retreat to.<br>
-                <em>Old worlds.<br>
-                Seas and luxury.</em>
-            </h2>
-            <p class="hero__subline">Coastal stories from South Africa's most beautiful stretch</p>
-        </div>
-        
-        <div class="hero__scroll">
-            <span>Scroll</span>
-            <div class="hero__scroll-line"></div>
+            <h1 class="hero__tagline">Coastal life. Local stories.</h1>
+            <p class="hero__description">Celebrating the people, places and lifestyle of South Africa's most beautiful coastline. From Mossel Bay to Plettenberg Bay.</p>
         </div>
     </section>
 
-    <!-- Featured Section -->
-    <div class="section-intro" id="features">
-        <span class="section-intro__tag">Featured</span>
-        <h2 class="section-intro__title">This Week's Stories</h2>
-        <div class="section-intro__line"></div>
+    <div class="section-header">
+        <h2 class="section-header__title">Featured Stories</h2>
     </div>
-    
-    <section class="featured">
-        <div class="featured__grid">
-            <article class="featured-card featured-card--hero">
-                <div class="featured-card__image">
-                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" alt="Italian dining at Enrico's">
-                </div>
-                <div class="featured-card__overlay"></div>
-                <div class="featured-card__content">
-                    <span class="featured-card__tag">Dining</span>
-                    <h3 class="featured-card__title">Enrico's: Where the Ocean Meets the Table</h3>
-                </div>
-                <a href="article/enricos-restaurant.html" class="featured-card__link" aria-label="Read about Enrico's Restaurant"></a>
-            </article>
-            
-            <article class="featured-card featured-card--tall">
-                <div class="featured-card__image">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Sunrise on the Garden Route">
-                </div>
-                <div class="featured-card__overlay"></div>
-                <div class="featured-card__content">
-                    <span class="featured-card__tag">Outdoors</span>
-                    <h3 class="featured-card__title">Sunrise Sessions: Where to Greet the Dawn</h3>
-                </div>
-                <a href="article/sunrise-sessions.html" class="featured-card__link" aria-label="Read Sunrise Sessions"></a>
-            </article>
-            
-            <article class="featured-card featured-card--wide">
-                <div class="featured-card__image">
-                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80" alt="Hiking in the Outeniqua Mountains">
-                </div>
-                <div class="featured-card__overlay"></div>
-                <div class="featured-card__content">
-                    <span class="featured-card__tag">Adventure</span>
-                    <h3 class="featured-card__title">The Best Hiking Trails on the Garden Route</h3>
-                </div>
-                <a href="article/hiking-trails.html" class="featured-card__link" aria-label="Read about hiking trails"></a>
-            </article>
-            
-            <article class="featured-card featured-card--wide">
-                <div class="featured-card__image">
-                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80" alt="Safari game drive">
-                </div>
-                <div class="featured-card__overlay"></div>
-                <div class="featured-card__content">
-                    <span class="featured-card__tag">Travel</span>
-                    <h3 class="featured-card__title">A Weekend on Safari at Garden Route Game Lodge</h3>
-                </div>
-                <a href="article/garden-route-game-lodge.html" class="featured-card__link" aria-label="Read about Garden Route Game Lodge"></a>
-            </article>
-            
-            <article class="featured-card featured-card--square">
-                <div class="featured-card__image">
-                    <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80" alt="Luka Vineyards">
-                </div>
-                <div class="featured-card__overlay"></div>
-                <div class="featured-card__content">
-                    <span class="featured-card__tag">Wine</span>
-                    <h3 class="featured-card__title">Luka Vineyards</h3>
-                </div>
-                <a href="article/luka-vineyards.html" class="featured-card__link" aria-label="Read about Luka Vineyards"></a>
-            </article>
-            
-            <article class="featured-card featured-card--square">
-                <div class="featured-card__image">
-                    <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&q=80" alt="Wild Oats Market">
-                </div>
-                <div class="featured-card__overlay"></div>
-                <div class="featured-card__content">
-                    <span class="featured-card__tag">Community</span>
-                    <h3 class="featured-card__title">Saturday at Wild Oats</h3>
-                </div>
-                <a href="article/wild-oats-market.html" class="featured-card__link" aria-label="Read about Wild Oats Market"></a>
-            </article>
-            
-            <article class="featured-card featured-card--square">
-                <div class="featured-card__image">
-                    <img src="https://theworkshopinteriors.co.za/wp-content/uploads/2024/09/i2.jpg" alt="The Workshop Interiors">
-                </div>
-                <div class="featured-card__overlay"></div>
-                <div class="featured-card__content">
-                    <span class="featured-card__tag">Interiors</span>
-                    <h3 class="featured-card__title">The Workshop Interiors</h3>
-                </div>
-                <a href="article/workshop-interiors.html" class="featured-card__link" aria-label="Read about The Workshop Interiors"></a>
-            </article>
-        </div>
+
+    <section class="article-grid">
+        <!-- Featured: Enrico's -->
+        <article class="article-card article-card--featured">
+            <div class="article-card__image">
+                <img src="images/enricos.jpeg" alt="Enrico's Restaurant terrace overlooking the ocean">
+            </div>
+            <div class="article-card__content">
+                <span class="article-card__tag">Dining</span>
+                <h3 class="article-card__title">Enrico's: Where the Ocean Meets the Table</h3>
+                <p class="article-card__excerpt">At Ristorante Enrico in Keurboomstrand, the fish comes from the restaurant's own boat, the sunsets are legendary, and the 'Bomba' is not to be missed.</p>
+            </div>
+            <a href="article/enricos-restaurant.html" class="article-card__link" aria-label="Read about Enrico's Restaurant"></a>
+        </article>
+
+        <!-- Sunrise Sessions -->
+        <article class="article-card">
+            <div class="article-card__image">
+                <img src="images/sunrise-sessions.jpeg" alt="Sunrise Sessions silent disco at dawn">
+            </div>
+            <div class="article-card__content">
+                <span class="article-card__tag">Outdoors</span>
+                <h3 class="article-card__title">Sunrise Sessions</h3>
+                <p class="article-card__excerpt">Greet the dawn with music and movement on the Garden Route's most beautiful beaches.</p>
+            </div>
+            <a href="article/sunrise-sessions.html" class="article-card__link" aria-label="Read about Sunrise Sessions"></a>
+        </article>
+
+        <!-- Hiking Trails -->
+        <article class="article-card">
+            <div class="article-card__image">
+                <img src="images/hiking-waterfall.jpeg" alt="Waterfall in Knysna forest">
+            </div>
+            <div class="article-card__content">
+                <span class="article-card__tag">Outdoors</span>
+                <h3 class="article-card__title">The Best Hiking Trails</h3>
+                <p class="article-card__excerpt">From coastal cliffs to ancient forests, the Garden Route's most rewarding walks.</p>
+            </div>
+            <a href="article/hiking-trails.html" class="article-card__link" aria-label="Read about hiking trails"></a>
+        </article>
+
+        <!-- Game Lodge -->
+        <article class="article-card">
+            <div class="article-card__image">
+                <img src="images/game-lodge.jpeg" alt="Lions at Garden Route Game Lodge">
+            </div>
+            <div class="article-card__content">
+                <span class="article-card__tag">Travel</span>
+                <h3 class="article-card__title">Garden Route Game Lodge</h3>
+                <p class="article-card__excerpt">Big 5 encounters just three hours from Cape Town.</p>
+            </div>
+            <a href="article/garden-route-game-lodge.html" class="article-card__link" aria-label="Read about Garden Route Game Lodge"></a>
+        </article>
+
+        <!-- Luka Vineyards -->
+        <article class="article-card">
+            <div class="article-card__image">
+                <img src="images/luka-vineyards.jpeg" alt="Luka Vineyards outdoor seating">
+            </div>
+            <div class="article-card__content">
+                <span class="article-card__tag">Wine</span>
+                <h3 class="article-card__title">Luka Vineyards</h3>
+                <p class="article-card__excerpt">A sailing family's Garden Route chapter in Harkerville.</p>
+            </div>
+            <a href="article/luka-vineyards.html" class="article-card__link" aria-label="Read about Luka Vineyards"></a>
+        </article>
+
+        <!-- Wild Oats -->
+        <article class="article-card">
+            <div class="article-card__image">
+                <img src="images/wild-oats.jpeg" alt="Wild Oats Community Farmers Market entrance">
+            </div>
+            <div class="article-card__content">
+                <span class="article-card__tag">Community</span>
+                <h3 class="article-card__title">Saturday Morning at Wild Oats</h3>
+                <p class="article-card__excerpt">25 years of bringing the Garden Route together, every Saturday.</p>
+            </div>
+            <a href="article/wild-oats-market.html" class="article-card__link" aria-label="Read about Wild Oats Market"></a>
+        </article>
+
+        <!-- Workshop Interiors -->
+        <article class="article-card">
+            <div class="article-card__image">
+                <img src="images/workshop-interiors.jpeg" alt="The Workshop Interiors team">
+            </div>
+            <div class="article-card__content">
+                <span class="article-card__tag">Interiors</span>
+                <h3 class="article-card__title">The Workshop Interiors</h3>
+                <p class="article-card__excerpt">A mother-daughter legacy transforming Garden Route homes.</p>
+            </div>
+            <a href="article/workshop-interiors.html" class="article-card__link" aria-label="Read about The Workshop Interiors"></a>
+        </article>
+
+        <!-- Warrick Gelant -->
+        <article class="article-card">
+            <div class="article-card__image">
+                <img src="images/warrick-gelant.jpeg" alt="Warrick Gelant in Springbok jersey">
+            </div>
+            <div class="article-card__content">
+                <span class="article-card__tag">Sport</span>
+                <h3 class="article-card__title">Knysna's World Cup Winner</h3>
+                <p class="article-card__excerpt">The Warrick Gelant story: from Hornlee to rugby glory.</p>
+            </div>
+            <a href="article/warrick-gelant.html" class="article-card__link" aria-label="Read about Warrick Gelant"></a>
+        </article>
+
+        <!-- Custom Blinds / Designing -->
+        <article class="article-card">
+            <div class="article-card__image">
+                <img src="images/coastal-blinds.jpeg" alt="Outdoor blinds with lagoon view">
+            </div>
+            <div class="article-card__content">
+                <span class="article-card__tag">Design</span>
+                <h3 class="article-card__title">Designing for the Garden Route</h3>
+                <p class="article-card__excerpt">Where climate meets craft: the science of coastal interiors.</p>
+            </div>
+            <a href="article/designing-garden-route.html" class="article-card__link" aria-label="Read about designing for the Garden Route"></a>
+        </article>
+
+        <!-- Art of Coastal Living / Property -->
+        <article class="article-card">
+            <div class="article-card__image">
+                <img src="images/coastal-property.jpeg" alt="Thesen Islands waterfront property at sunset">
+            </div>
+            <div class="article-card__content">
+                <span class="article-card__tag">Property</span>
+                <h3 class="article-card__title">The Art of Coastal Living</h3>
+                <p class="article-card__excerpt">Inside the homes that define Garden Route style, from clifftop escapes to forest retreats.</p>
+            </div>
+            <a href="article/designing-garden-route.html" class="article-card__link" aria-label="Read about coastal living"></a>
+        </article>
     </section>
 
-    <!-- Editorial Feature -->
-    <section class="editorial">
-        <div class="editorial__grid">
-            <div class="editorial__image">
-                <img src="https://images.unsplash.com/photo-1544298621-a28e00ec96ea?w=800&q=80" alt="Rugby in South Africa">
-            </div>
-            <div class="editorial__content">
-                <span class="editorial__tag">Local Hero</span>
-                <h2 class="editorial__title">From Knysna Streets to the World Stage</h2>
-                <p class="editorial__text">When Warrick Gelant lifted the Rugby World Cup trophy in 2019, an entire town celebrated. The Knysna-born fullback's journey from the Garden Route to international stardom is a story of talent, determination, and never forgetting where you come from.</p>
-                <p class="editorial__text">We trace the path of the Garden Route's favourite son, from the streets of Hornlee to the Springbok jersey.</p>
-                <a href="article/warrick-gelant.html" class="editorial__link">
-                    Read the full story
-                    <span>→</span>
-                </a>
-            </div>
+    <footer class="footer">
+        <p class="footer__brand">GARDEN ROUTE LIVING</p>
+        <p class="footer__tagline">Coastal life. Local stories.</p>
+        <div class="footer__links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
-    </section>
-
-    <!-- Local Stories -->
-    <section class="stories" id="stories">
-        <div class="section-intro">
-            <span class="section-intro__tag">Discover</span>
-            <h2 class="section-intro__title">Local Stories</h2>
-            <div class="section-intro__line"></div>
-        </div>
-        
-        <div class="stories__grid">
-            <article class="story-card">
-                <div class="story-card__image">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Coastal property">
-                </div>
-                <span class="story-card__tag">Property</span>
-                <h3 class="story-card__title">The Art of Coastal Living</h3>
-                <p class="story-card__excerpt">Inside the homes that define Garden Route style, from clifftop escapes to forest retreats.</p>
-                <a href="#" class="story-card__link" aria-label="Read about coastal living"></a>
-            </article>
-            
-            <article class="story-card">
-                <div class="story-card__image">
-                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Window treatments">
-                </div>
-                <span class="story-card__tag">Design</span>
-                <h3 class="story-card__title">Designing for the Garden Route</h3>
-                <p class="story-card__excerpt">Where climate meets craft: the science and art of window treatments for coastal homes.</p>
-                <a href="article/designing-garden-route.html" class="story-card__link" aria-label="Read about designing for the Garden Route"></a>
-            </article>
-            
-            <article class="story-card">
-                <div class="story-card__image">
-                    <img src="https://images.unsplash.com/photo-1476673160081-cf065f30e067?w=600&q=80" alt="Garden Route coastline">
-                </div>
-                <span class="story-card__tag">Culture</span>
-                <h3 class="story-card__title">The Soul of the South Cape</h3>
-                <p class="story-card__excerpt">Understanding the unique character that makes this coastline unlike anywhere else in South Africa.</p>
-                <a href="#" class="story-card__link" aria-label="Read about the South Cape"></a>
-            </article>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter" id="newsletter">
-        <h2 class="newsletter__title">Stay in the Loop</h2>
-        <p class="newsletter__text">The best of Garden Route living, delivered to your inbox. No spam, just stories worth reading.</p>
-        <form class="newsletter__form">
-            <input type="email" class="newsletter__input" placeholder="Your email address" required>
-            <button type="submit" class="newsletter__btn">Subscribe</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="footer__grid">
-            <div>
-                <p class="footer__brand">Garden Route Living</p>
-                <p class="footer__tagline">Celebrating the people, places and lifestyle of South Africa's most beautiful coastline since 2026.</p>
-            </div>
-            <div>
-                <p class="footer__title">Explore</p>
-                <ul class="footer__links">
-                    <li><a href="#" class="footer__link">Lifestyle</a></li>
-                    <li><a href="#" class="footer__link">Home & Design</a></li>
-                    <li><a href="#" class="footer__link">Food & Wine</a></li>
-                    <li><a href="#" class="footer__link">Adventure</a></li>
-                </ul>
-            </div>
-            <div>
-                <p class="footer__title">Community</p>
-                <ul class="footer__links">
-                    <li><a href="#" class="footer__link">Local Business</a></li>
-                    <li><a href="#" class="footer__link">Events</a></li>
-                    <li><a href="#" class="footer__link">Property</a></li>
-                    <li><a href="#" class="footer__link">Directory</a></li>
-                </ul>
-            </div>
-            <div>
-                <p class="footer__title">Connect</p>
-                <ul class="footer__links">
-                    <li><a href="about.html" class="footer__link">About Us</a></li>
-                    <li><a href="contact.html" class="footer__link">Contact</a></li>
-                    <li><a href="contact.html" class="footer__link">Advertise</a></li>
-                    <li><a href="#newsletter" class="footer__link">Newsletter</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
-            <p class="footer__email"><a href="mailto:gardenroutepublishing@gmail.com">gardenroutepublishing@gmail.com</a></p>
-        </div>
+        <p class="footer__email"><a href="mailto:gardenroutepublishing@gmail.com">gardenroutepublishing@gmail.com</a></p>
+        <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Masthead scroll effect
-        const masthead = document.getElementById('masthead');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 100) {
-                masthead.classList.add('masthead--scrolled');
-            } else {
-                masthead.classList.remove('masthead--scrolled');
-            }
-        });
-        
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        document.querySelectorAll('.story-card, .editorial__content, .editorial__image, .featured-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>
