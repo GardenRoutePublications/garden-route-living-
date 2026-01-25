@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta name="google-site-verification" content="3ac2MDqd1PRK0g65gk6Q21J4i4F_L_yZWabLLRe7Qwk" />
 <head>
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="3ac2MDqd1PRK0g65gk6Q21J4i4F_L_yZWabLLRe7Qwk" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garden Route Living | Coastal Life, Local Stories</title>
     <meta name="description" content="Garden Route Living celebrates the people, places and lifestyle of South Africa's most beautiful coastline. From Mossel Bay to Plettenberg Bay.">
@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Garden Route Living | Coastal Life, Local Stories">
     <meta property="og:description" content="Garden Route Living celebrates the people, places and lifestyle of South Africa's most beautiful coastline. From Mossel Bay to Plettenberg Bay.">
-    <meta property="og:image" content="https://gardenrouteliving.onrender.com/images/hero-knysna-heads.jpeg">
+    <meta property="og:image" content="https://gardenrouteliving.onrender.com/hero-knysna-heads.jpeg">
     <meta property="og:url" content="https://gardenrouteliving.onrender.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Garden Route Living">
@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Garden Route Living | Coastal Life, Local Stories">
     <meta name="twitter:description" content="Celebrating the people, places and lifestyle of South Africa's most beautiful coastline.">
-    <meta name="twitter:image" content="https://gardenrouteliving.onrender.com/images/hero-knysna-heads.jpeg">
+    <meta name="twitter:image" content="https://gardenrouteliving.onrender.com/hero-knysna-heads.jpeg">
     
     <!-- SEO -->
     <link rel="canonical" href="https://gardenrouteliving.onrender.com/">
@@ -55,35 +55,67 @@
         
         /* Navigation */
         .nav {
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 2.5rem 2rem 2rem;
+            text-align: center;
             border-bottom: 1px solid var(--color-sand);
         }
         
         .nav__brand {
-            text-align: center;
             text-decoration: none;
+            display: block;
         }
         
         .nav__title {
             font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 400;
-            letter-spacing: 0.25em;
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: 0.35em;
             text-transform: uppercase;
             color: var(--color-ink);
             display: block;
+            margin-bottom: 0.25rem;
         }
         
         .nav__subtitle {
             font-family: var(--font-display);
-            font-size: 1rem;
+            font-size: 1.4rem;
             font-weight: 300;
             font-style: italic;
+            color: var(--color-gold);
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        .nav__tagline {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #888;
+        }
+        
+        .nav__links {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-sand);
+        }
+        
+        .nav__links a {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
             color: var(--color-ink);
+            text-decoration: none;
+            margin: 0 1.5rem;
             opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .nav__links a:hover {
+            opacity: 1;
+            color: var(--color-gold);
         }
         
         /* Hero Section - Framed Image with Text Below */
@@ -318,12 +350,18 @@
         <a href="index.html" class="nav__brand">
             <span class="nav__title">Garden Route</span>
             <span class="nav__subtitle">Living</span>
+            <span class="nav__tagline">Stories from South Africa's Most Beautiful Coastline</span>
         </a>
+        <div class="nav__links">
+            <a href="index.html">Stories</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
 
     <section class="hero">
         <div class="hero__image-frame">
-            <img src="images/hero-knysna-heads.jpeg" alt="Knysna Heads, Garden Route, South Africa">
+            <img src="hero-knysna-heads.jpeg" alt="Knysna Heads, Garden Route, South Africa">
         </div>
         <div class="hero__content">
             <h1 class="hero__tagline">Coastal life. Local stories.</h1>
@@ -339,131 +377,131 @@
         <!-- Featured: Enrico's -->
         <article class="article-card article-card--featured">
             <div class="article-card__image">
-                <img src="images/enricos.jpeg" alt="Enrico's Restaurant terrace overlooking the ocean">
+                <img src="enricos.jpeg" alt="Enrico's Restaurant terrace overlooking the ocean">
             </div>
             <div class="article-card__content">
                 <span class="article-card__tag">Dining</span>
                 <h3 class="article-card__title">Enrico's: Where the Ocean Meets the Table</h3>
                 <p class="article-card__excerpt">At Ristorante Enrico in Keurboomstrand, the fish comes from the restaurant's own boat, the sunsets are legendary, and the 'Bomba' is not to be missed.</p>
             </div>
-            <a href="article/enricos-restaurant.html" class="article-card__link" aria-label="Read about Enrico's Restaurant"></a>
+            <a href="enricos-restaurant.html" class="article-card__link" aria-label="Read about Enrico's Restaurant"></a>
         </article>
 
         <!-- Sunrise Sessions -->
         <article class="article-card">
             <div class="article-card__image">
-                <img src="images/sunrise-sessions.jpeg" alt="Sunrise Sessions silent disco at dawn">
+                <img src="sunrise-sessions.jpeg" alt="Sunrise Sessions silent disco at dawn">
             </div>
             <div class="article-card__content">
                 <span class="article-card__tag">Outdoors</span>
                 <h3 class="article-card__title">Sunrise Sessions</h3>
                 <p class="article-card__excerpt">Greet the dawn with music and movement on the Garden Route's most beautiful beaches.</p>
             </div>
-            <a href="article/sunrise-sessions.html" class="article-card__link" aria-label="Read about Sunrise Sessions"></a>
+            <a href="sunrise-sessions.html" class="article-card__link" aria-label="Read about Sunrise Sessions"></a>
         </article>
 
         <!-- Hiking Trails -->
         <article class="article-card">
             <div class="article-card__image">
-                <img src="images/hiking-waterfall.jpeg" alt="Waterfall in Knysna forest">
+                <img src="hiking-waterfall.jpeg" alt="Waterfall in Knysna forest">
             </div>
             <div class="article-card__content">
                 <span class="article-card__tag">Outdoors</span>
                 <h3 class="article-card__title">The Best Hiking Trails</h3>
                 <p class="article-card__excerpt">From coastal cliffs to ancient forests, the Garden Route's most rewarding walks.</p>
             </div>
-            <a href="article/hiking-trails.html" class="article-card__link" aria-label="Read about hiking trails"></a>
+            <a href="hiking-trails.html" class="article-card__link" aria-label="Read about hiking trails"></a>
         </article>
 
         <!-- Game Lodge -->
         <article class="article-card">
             <div class="article-card__image">
-                <img src="images/game-lodge.jpeg" alt="Lions at Garden Route Game Lodge">
+                <img src="game-lodge.jpeg" alt="Lions at Garden Route Game Lodge">
             </div>
             <div class="article-card__content">
                 <span class="article-card__tag">Travel</span>
                 <h3 class="article-card__title">Garden Route Game Lodge</h3>
                 <p class="article-card__excerpt">Big 5 encounters just three hours from Cape Town.</p>
             </div>
-            <a href="article/garden-route-game-lodge.html" class="article-card__link" aria-label="Read about Garden Route Game Lodge"></a>
+            <a href="garden-route-game-lodge.html" class="article-card__link" aria-label="Read about Garden Route Game Lodge"></a>
         </article>
 
         <!-- Luka Vineyards -->
         <article class="article-card">
             <div class="article-card__image">
-                <img src="images/luka-vineyards.jpeg" alt="Luka Vineyards outdoor seating">
+                <img src="luka-vineyards.jpeg" alt="Luka Vineyards outdoor seating">
             </div>
             <div class="article-card__content">
                 <span class="article-card__tag">Wine</span>
                 <h3 class="article-card__title">Luka Vineyards</h3>
                 <p class="article-card__excerpt">A sailing family's Garden Route chapter in Harkerville.</p>
             </div>
-            <a href="article/luka-vineyards.html" class="article-card__link" aria-label="Read about Luka Vineyards"></a>
+            <a href="luka-vineyards.html" class="article-card__link" aria-label="Read about Luka Vineyards"></a>
         </article>
 
         <!-- Wild Oats -->
         <article class="article-card">
             <div class="article-card__image">
-                <img src="images/wild-oats.jpeg" alt="Wild Oats Community Farmers Market entrance">
+                <img src="wild-oats.jpeg" alt="Wild Oats Community Farmers Market entrance">
             </div>
             <div class="article-card__content">
                 <span class="article-card__tag">Community</span>
                 <h3 class="article-card__title">Saturday Morning at Wild Oats</h3>
                 <p class="article-card__excerpt">25 years of bringing the Garden Route together, every Saturday.</p>
             </div>
-            <a href="article/wild-oats-market.html" class="article-card__link" aria-label="Read about Wild Oats Market"></a>
+            <a href="wild-oats-market.html" class="article-card__link" aria-label="Read about Wild Oats Market"></a>
         </article>
 
         <!-- Workshop Interiors -->
         <article class="article-card">
             <div class="article-card__image">
-                <img src="images/workshop-interiors.jpeg" alt="The Workshop Interiors team">
+                <img src="workshop-interiors.jpeg" alt="The Workshop Interiors team">
             </div>
             <div class="article-card__content">
                 <span class="article-card__tag">Interiors</span>
                 <h3 class="article-card__title">The Workshop Interiors</h3>
                 <p class="article-card__excerpt">A mother-daughter legacy transforming Garden Route homes.</p>
             </div>
-            <a href="article/workshop-interiors.html" class="article-card__link" aria-label="Read about The Workshop Interiors"></a>
+            <a href="workshop-interiors.html" class="article-card__link" aria-label="Read about The Workshop Interiors"></a>
         </article>
 
         <!-- Warrick Gelant -->
         <article class="article-card">
             <div class="article-card__image">
-                <img src="images/warrick-gelant.jpeg" alt="Warrick Gelant in Springbok jersey">
+                <img src="warrick-gelant.jpeg" alt="Warrick Gelant in Springbok jersey">
             </div>
             <div class="article-card__content">
                 <span class="article-card__tag">Sport</span>
                 <h3 class="article-card__title">Knysna's World Cup Winner</h3>
                 <p class="article-card__excerpt">The Warrick Gelant story: from Hornlee to rugby glory.</p>
             </div>
-            <a href="article/warrick-gelant.html" class="article-card__link" aria-label="Read about Warrick Gelant"></a>
+            <a href="warrick-gelant.html" class="article-card__link" aria-label="Read about Warrick Gelant"></a>
         </article>
 
         <!-- Custom Blinds / Designing -->
         <article class="article-card">
             <div class="article-card__image">
-                <img src="images/coastal-blinds.jpeg" alt="Outdoor blinds with lagoon view">
+                <img src="coastal-blinds.jpeg" alt="Outdoor blinds with lagoon view">
             </div>
             <div class="article-card__content">
                 <span class="article-card__tag">Design</span>
                 <h3 class="article-card__title">Designing for the Garden Route</h3>
                 <p class="article-card__excerpt">Where climate meets craft: the science of coastal interiors.</p>
             </div>
-            <a href="article/designing-garden-route.html" class="article-card__link" aria-label="Read about designing for the Garden Route"></a>
+            <a href="designing-garden-route.html" class="article-card__link" aria-label="Read about designing for the Garden Route"></a>
         </article>
 
         <!-- Art of Coastal Living / Property -->
         <article class="article-card">
             <div class="article-card__image">
-                <img src="images/coastal-property.jpeg" alt="Thesen Islands waterfront property at sunset">
+                <img src="coastal-property.jpeg" alt="Thesen Islands waterfront property at sunset">
             </div>
             <div class="article-card__content">
                 <span class="article-card__tag">Property</span>
                 <h3 class="article-card__title">The Art of Coastal Living</h3>
                 <p class="article-card__excerpt">Inside the homes that define Garden Route style, from clifftop escapes to forest retreats.</p>
             </div>
-            <a href="article/designing-garden-route.html" class="article-card__link" aria-label="Read about coastal living"></a>
+            <a href="designing-garden-route.html" class="article-card__link" aria-label="Read about coastal living"></a>
         </article>
     </section>
 
