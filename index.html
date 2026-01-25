@@ -6,1135 +6,250 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garden Route Living | South Africa's Premier Coastal Lifestyle Magazine</title>
     <meta name="description" content="Garden Route Living is the definitive guide to South Africa's most beautiful coastline. Discover the people, places, food, wine and lifestyle from Mossel Bay to Plettenberg Bay.">
-    
-    <!-- Open Graph -->
     <meta property="og:title" content="Garden Route Living | South Africa's Premier Coastal Lifestyle Magazine">
-    <meta property="og:description" content="The definitive guide to South Africa's most beautiful coastline. People, places, food, wine and lifestyle from Mossel Bay to Plettenberg Bay.">
-    <meta property="og:image" content="https://gardenrouteliving.onrender.com/hero-sunset-lagoon.png">
-    <meta property="og:url" content="https://gardenrouteliving.onrender.com/">
+    <meta property="og:description" content="The definitive guide to South Africa's most beautiful coastline.">
+    <meta property="og:image" content="https://garden-route-living.onrender.com/hero-sunset-lagoon.png">
+    <meta property="og:url" content="https://garden-route-living.onrender.com/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Garden Route Living">
-    <meta property="og:locale" content="en_ZA">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Garden Route Living | Coastal Lifestyle Magazine">
-    <meta name="twitter:description" content="South Africa's most beautiful coastline. People, places and lifestyle.">
-    <meta name="twitter:image" content="https://gardenrouteliving.onrender.com/hero-sunset-lagoon.png">
-    
-    <!-- SEO -->
-    <link rel="canonical" href="https://gardenrouteliving.onrender.com/">
-    <meta name="robots" content="index, follow">
-    <meta name="geo.region" content="ZA-WC">
-    <meta name="geo.placename" content="Garden Route">
-    
-    <!-- Fonts -->
+    <link rel="canonical" href="https://garden-route-living.onrender.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --ink: #1a1a1a;
-            --ink-light: #4a4a4a;
-            --ink-muted: #6b6b6b;
-            --paper: #fefdfb;
-            --cream: #f8f6f1;
-            --sand: #e9e5dc;
-            --ocean: #1e3a4c;
-            --ocean-light: #2d5a6e;
-            --gold: #b8860b;
-            --gold-light: #d4a84b;
-            --sage: #5a7a6a;
-            
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
-            
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2.5rem;
-            --space-xl: 4rem;
-            --space-2xl: 6rem;
-            
-            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        body {
-            font-family: var(--font-body);
-            background: var(--paper);
-            color: var(--ink);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        /* ============================================
-           HEADER / NAVIGATION
-           ============================================ */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(254, 253, 251, 0.92);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            transition: var(--transition);
-        }
-        
-        .header--scrolled {
-            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
-        }
-        
-        .header__inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: relative;
-        }
-        
-        .logo__main {
-            font-family: var(--font-display);
-            font-size: 1.6rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--ink);
-            line-height: 1;
-        }
-        
-        .logo__sub {
-            font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: 1.8rem;
-            font-weight: 400;
-            font-style: italic;
-            color: #b8860b;
-            margin-top: 0;
-            margin-left: 1.8rem;
-            letter-spacing: 0.02em;
-            line-height: 1;
-        }
-        
-        .nav__link {
-            font-family: var(--font-body);
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--ink-light);
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .nav__link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--gold);
-            transition: var(--transition);
-        }
-        
-        .nav__link:hover {
-            color: var(--ink);
-        }
-        
-        .nav__link:hover::after {
-            width: 100%;
-        }
-        
-        .nav__cta {
-            background: var(--ocean);
-            color: white;
-            padding: 0.6rem 1.2rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            border-radius: 2px;
-            transition: var(--transition);
-        }
-        
-        .nav__cta:hover {
-            background: var(--ocean-light);
-        }
-        
-        .nav__cta::after {
-            display: none;
-        }
-        
-        /* Mobile menu */
-        .nav__toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        .nav__toggle span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--ink);
-            margin: 5px 0;
-            transition: var(--transition);
-        }
-        
-        /* ============================================
-           HERO SECTION - FULL IMPACT
-           ============================================ */
-        .hero {
-            background: white;
-            padding: 2rem;
-            background: white;
-            position: relative;
-            height: 85vh;
-            min-height: 500px;
-            max-height: 800px;
-            display: flex;
-            align-items: flex-end;
-            overflow: hidden;
-        }
-        
-        .hero__image {
-            border-radius: 0;
-            overflow: hidden;
-            position: absolute;
-            inset: 2.5rem 4rem;
-            z-index: 1;
-        }
-        
-        .hero__image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 30%;
-        }
-        
-        .hero__overlay {
-            position: absolute;
-            inset: 2.5rem 4rem;
-            background: linear-gradient(
-                to top,
-                rgba(0,0,0,0.7) 0%,
-                rgba(0,0,0,0.3) 40%,
-                rgba(0,0,0,0.1) 70%,
-                transparent 100%
-            );
-            z-index: 2;
-        }
-        
-        .hero__content {
-            position: relative;
-            z-index: 3;
-            max-width: 1400px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 2rem var(--space-2xl);
-            color: white;
-        }
-        
-        .hero__edition {
-            font-family: var(--font-body);
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--gold-light);
-            margin-bottom: var(--space-sm);
-        }
-        
-        .hero__title {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 500;
-            line-height: 1.1;
-            max-width: 800px;
-            margin-bottom: var(--space-md);
-        }
-        
-        .hero__subtitle {
-            font-family: var(--font-body);
-            font-size: 1.1rem;
-            font-weight: 300;
-            line-height: 1.6;
-            max-width: 550px;
-            opacity: 0.9;
-            margin-bottom: var(--space-lg);
-        }
-        
-        .hero__cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            background: white;
-            color: var(--ink);
-            padding: 1rem 2rem;
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            transition: var(--transition);
-        }
-        
-        .hero__cta:hover {
-            background: var(--gold);
-            color: white;
-        }
-        
-        .hero__cta svg {
-            width: 16px;
-            height: 16px;
-            transition: var(--transition);
-        }
-        
-        .hero__cta:hover svg {
-            transform: translateX(4px);
-        }
-        
-        .hero__credit {
-            position: absolute;
-            bottom: 1rem;
-            right: 2rem;
-            z-index: 3;
-            font-size: 0.7rem;
-            color: rgba(255,255,255,0.5);
-            font-weight: 400;
-        }
-        
-        /* ============================================
-           SECTION INTRO
-           ============================================ */
-        .section-intro {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: var(--space-2xl) 2rem;
-            text-align: center;
-        }
-        
-        .section-intro__label {
-            font-family: var(--font-body);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: var(--space-sm);
-        }
-        
-        .section-intro__title {
-            font-family: var(--font-display);
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            font-weight: 500;
-            color: var(--ink);
-            margin-bottom: var(--space-md);
-        }
-        
-        .section-intro__text {
-            font-size: 1.05rem;
-            color: var(--ink-muted);
-            line-height: 1.8;
-        }
-        
-        /* ============================================
-           FEATURED STORY - MAGAZINE COVER STYLE
-           ============================================ */
-        .featured {
-            background: var(--cream);
-            padding: var(--space-xl) 0;
-        }
-        
-        .featured__inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-            align-items: center;
-        }
-        
-        .featured__image {
-            position: relative;
-            aspect-ratio: 4/5;
-            overflow: hidden;
-        }
-        
-        .featured__image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .featured__image:hover img {
-            transform: scale(1.03);
-        }
-        
-        .featured__image-credit {
-            position: absolute;
-            bottom: 1rem;
-            left: 1rem;
-            font-size: 0.65rem;
-            color: rgba(255,255,255,0.7);
-            background: rgba(0,0,0,0.3);
-            padding: 0.3rem 0.6rem;
-            backdrop-filter: blur(4px);
-        }
-        
-        .featured__content {
-            padding: var(--space-lg) 0;
-        }
-        
-        .featured__tag {
-            display: inline-block;
-            font-family: var(--font-body);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--gold);
-            border: 1px solid var(--gold);
-            padding: 0.4rem 1rem;
-            margin-bottom: var(--space-md);
-        }
-        
-        .featured__title {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 500;
-            line-height: 1.15;
-            color: var(--ink);
-            margin-bottom: var(--space-md);
-        }
-        
-        .featured__excerpt {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--ink-light);
-            margin-bottom: var(--space-lg);
-        }
-        
-        .featured__meta {
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
-            padding-bottom: var(--space-lg);
-            border-bottom: 1px solid var(--sand);
-        }
-        
-        .featured__author {
-            font-size: 0.85rem;
-            color: var(--ink-muted);
-        }
-        
-        .featured__author strong {
-            color: var(--ink);
-            font-weight: 600;
-        }
-        
-        .featured__link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: var(--ocean);
-            transition: var(--transition);
-        }
-        
-        .featured__link:hover {
-            color: var(--gold);
-        }
-        
-        .featured__link svg {
-            width: 18px;
-            height: 18px;
-            transition: var(--transition);
-        }
-        
-        .featured__link:hover svg {
-            transform: translateX(4px);
-        }
-        
-        /* ============================================
-           STORY GRID - ASYMMETRIC EDITORIAL
-           ============================================ */
-        .stories {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: var(--space-2xl) 2rem;
-        }
-        
-        .stories__header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: var(--space-xl);
-            padding-bottom: var(--space-md);
-            border-bottom: 1px solid var(--sand);
-        }
-        
-        .stories__title {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--ink);
-        }
-        
-        .stories__link {
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--ink-muted);
-            transition: var(--transition);
-        }
-        
-        .stories__link:hover {
-            color: var(--gold);
-        }
-        
-        .stories__grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: var(--space-lg);
-        }
-        
-        /* Story Card */
-        .story {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .story--large {
-            grid-column: span 8;
-        }
-        
-        .story--medium {
-            grid-column: span 4;
-        }
-        
-        .story--small {
-            grid-column: span 4;
-        }
-        
-        .story__image {
-            position: relative;
-            overflow: hidden;
-            background: var(--sand);
-        }
-        
-        .story--large .story__image {
-            aspect-ratio: 16/9;
-        }
-        
-        .story--medium .story__image,
-        .story--small .story__image {
-            aspect-ratio: 4/3;
-        }
-        
-        .story__image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .story:hover .story__image img {
-            transform: scale(1.05);
-        }
-        
-        .story__image-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
-            opacity: 0;
-            transition: var(--transition);
-        }
-        
-        .story:hover .story__image-overlay {
-            opacity: 1;
-        }
-        
-        .story__content {
-            padding: var(--space-md) 0;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .story__tag {
-            font-family: var(--font-body);
-            font-size: 0.65rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: var(--space-xs);
-        }
-        
-        .story__title {
-            font-family: var(--font-display);
-            font-weight: 500;
-            line-height: 1.25;
-            color: var(--ink);
-            margin-bottom: var(--space-xs);
-            transition: var(--transition);
-        }
-        
-        .story--large .story__title {
-            font-size: 1.75rem;
-        }
-        
-        .story--medium .story__title,
-        .story--small .story__title {
-            font-size: 1.25rem;
-        }
-        
-        .story:hover .story__title {
-            color: var(--ocean);
-        }
-        
-        .story__excerpt {
-            font-size: 0.95rem;
-            color: var(--ink-muted);
-            line-height: 1.6;
-            margin-top: auto;
-        }
-        
-        .story--small .story__excerpt {
-            display: none;
-        }
-        
-        .story__link {
-            position: absolute;
-            inset: 0;
-            z-index: 2;
-        }
-        
-        .story {
-            position: relative;
-        }
-        
-        /* ============================================
-           HIGHLIGHT BANNER
-           ============================================ */
-        .highlight {
-            background: var(--ocean);
-            padding: var(--space-xl) 2rem;
-        }
-        
-        .highlight__inner {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-            color: white;
-        }
-        
-        .highlight__title {
-            font-family: var(--font-display);
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 400;
-            font-style: italic;
-            line-height: 1.4;
-            margin-bottom: var(--space-md);
-        }
-        
-        .highlight__source {
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--gold-light);
-        }
-        
-        /* ============================================
-           SECOND STORY GRID
-           ============================================ */
-        .stories--alt {
-            background: var(--cream);
-            padding: var(--space-2xl) 0;
-        }
-        
-        .stories--alt .stories__grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        /* ============================================
-           NEWSLETTER SIGNUP
-           ============================================ */
-        .newsletter {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: var(--space-2xl) 2rem;
-            text-align: center;
-        }
-        
-        .newsletter__title {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 500;
-            color: var(--ink);
-            margin-bottom: var(--space-sm);
-        }
-        
-        .newsletter__text {
-            color: var(--ink-muted);
-            margin-bottom: var(--space-lg);
-        }
-        
-        .newsletter__form {
-            display: flex;
-            gap: 0;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        
-        .newsletter__input {
-            flex: 1;
-            padding: 1rem 1.25rem;
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            border: 1px solid var(--sand);
-            border-right: none;
-            background: white;
-            outline: none;
-            transition: var(--transition);
-        }
-        
-        .newsletter__input:focus {
-            border-color: var(--gold);
-        }
-        
-        .newsletter__input::placeholder {
-            color: var(--ink-muted);
-        }
-        
-        .newsletter__button {
-            padding: 1rem 2rem;
-            background: var(--ink);
-            color: white;
-            font-family: var(--font-body);
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .newsletter__button:hover {
-            background: var(--gold);
-        }
-        
-        /* ============================================
-           FOOTER
-           ============================================ */
-        .footer {
-            background: var(--ink);
-            color: white;
-            padding: var(--space-2xl) 2rem var(--space-lg);
-            width: 100%;
-        }
-        
-        .footer__inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: var(--space-xl);
-            width: 100%;
-        }
-        
-        .footer__brand {
-            padding-right: var(--space-xl);
-        }
-        
-        .footer__logo {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: var(--space-xs);
-        }
-        
-        .footer__logo span {
-            display: block;
-            font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: 1.4rem;
-            font-weight: 400;
-            font-style: italic;
-            letter-spacing: 0;
-            text-transform: none;
-            color: var(--gold-light);
-            margin-left: 1.2rem;
-        }
-        
-        .footer__tagline {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.6);
-            line-height: 1.7;
-            margin-top: var(--space-md);
-        }
-        
-        .footer__title {
-            font-family: var(--font-body);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--gold-light);
-            margin-bottom: var(--space-md);
-        }
-        
-        .footer__links {
-            list-style: none;
-        }
-        
-        .footer__links li {
-            margin-bottom: var(--space-xs);
-        }
-        
-        .footer__links a {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-            transition: var(--transition);
-        }
-        
-        .footer__links a:hover {
-            color: white;
-        }
-        
-        .footer__bottom {
-            max-width: 1400px;
-            margin: var(--space-xl) auto 0;
-            padding-top: var(--space-lg);
-            border-top: 1px solid rgba(255,255,255,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.5);
-            width: 100%;
-        }
-        
-        .footer__social {
-            display: flex;
-            gap: var(--space-md);
-        }
-        
-        .footer__social a {
-            color: rgba(255,255,255,0.5);
-            transition: var(--transition);
-        }
-        
-        .footer__social a:hover {
-            color: var(--gold-light);
-        }
-        
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
-        @media (max-width: 1024px) {
-            .featured__inner {
-                grid-template-columns: 1fr;
-                gap: var(--space-lg);
-            }
-            
-            .featured__image {
-                aspect-ratio: 16/10;
-            }
-            
-            .story--large,
-            .story--medium,
-            .story--small {
-                grid-column: span 6;
-            }
-            
-            .footer__inner {
-                grid-template-columns: 1fr 1fr;
-                gap: var(--space-lg);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header__inner {
-                padding: 0.75rem 1.25rem;
-            }
-            
-            .nav {
-                display: none;
-            }
-            
-            .nav__toggle {
-                display: block;
-            }
-            
-            .hero {
-            background: white;
-            padding: 2rem;
-            background: white;
-                min-height: 600px;
-            }
-            
-            .hero__content {
-                padding: 0 1.25rem var(--space-xl);
-            }
-            
-            .story--large,
-            .story--medium,
-            .story--small {
-                grid-column: span 12;
-            }
-            
-            .stories__grid {
-                gap: var(--space-md);
-            }
-            
-            .newsletter__form {
-                flex-direction: column;
-            }
-            
-            .newsletter__input {
-                border-right: 1px solid var(--sand);
-                border-bottom: none;
-            }
-            
-            .footer__inner {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .footer__brand {
-                padding-right: 0;
-            }
-            
-            .footer__bottom {
-                flex-direction: column;
-                gap: var(--space-md);
-            }
-        }
-        
-        @media (max-width: 480px) {
-            html {
-                font-size: 15px;
-            }
-            
-            .logo__main {
-                font-size: 1.2rem;
-            }
-            
-            .hero__cta {
-                width: 100%;
-                justify-content: center;
-            }
-        }
+        :root{
+            --ink:#151515;
+            --ink-light:#2d2d2d;
+            --ink-muted:#4a4a4a;
+            --paper:#ffffff;
+            --cream:#faf9f7;
+            --sand:#f0ede8;
+            --ocean:#14303d;
+            --ocean-light:#1e4a5c;
+            --gold:#8b7355;
+            --gold-light:#b09878;
+            --font-display:'Playfair Display',Georgia,serif;
+            --font-serif:'Cormorant Garamond',Georgia,serif;
+            --font-body:'Source Sans 3',-apple-system,BlinkMacSystemFont,sans-serif;
+            --ease:cubic-bezier(0.4,0,0.2,1)
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+        body{font-family:var(--font-body);background:var(--paper);color:var(--ink);line-height:1.6}
+        img{max-width:100%;height:auto;display:block}
+        a{color:inherit;text-decoration:none}
+        
+        /* HEADER - Ultra refined */
+        .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:all 0.4s var(--ease)}
+        .header--scrolled{background:rgba(255,255,255,0.98);box-shadow:0 1px 0 rgba(0,0,0,0.04)}
+        .header__inner{max-width:1600px;margin:0 auto;padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center}
+        .logo{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+        .logo__main{font-family:var(--font-display);font-size:0.95rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:var(--ink)}
+        .logo__sub{font-family:var(--font-serif);font-size:2.8rem;font-weight:300;font-style:italic;color:var(--gold);margin-top:-0.2rem;margin-left:0.25rem;letter-spacing:0.01em}
+        .nav{display:flex;align-items:center;gap:3rem}
+        .nav__link{font-size:0.7rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-muted);transition:all 0.3s var(--ease);position:relative}
+        .nav__link::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s var(--ease)}
+        .nav__link:hover{color:var(--ink)}
+        .nav__link:hover::after{width:100%}
+        .nav__cta{background:var(--ocean);color:white;padding:0.85rem 1.75rem;font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;transition:all 0.3s var(--ease)}
+        .nav__cta:hover{background:var(--ink)}
+        .nav__cta::after{display:none}
+        .nav__toggle{display:none;background:none;border:none;cursor:pointer;padding:0.5rem}
+        .nav__toggle span{display:block;width:20px;height:1px;background:var(--ink);margin:6px 0;transition:all 0.3s var(--ease)}
+        
+        /* HERO - Full impact editorial */
+        .hero{position:relative;height:100vh;min-height:800px;max-height:1100px;display:flex;align-items:flex-end;overflow:hidden}
+        .hero__image{position:absolute;inset:0;z-index:1}
+        .hero__image img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+        .hero__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,12,10,0.88) 0%,rgba(15,12,10,0.55) 35%,rgba(15,12,10,0.2) 60%,rgba(15,12,10,0.05) 80%,transparent 100%);z-index:2}
+        .hero__content{position:relative;z-index:3;width:100%;max-width:1600px;margin:0 auto;padding:0 4rem 6rem;color:white}
+        .hero__edition{font-size:0.65rem;font-weight:500;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold-light);margin-bottom:2rem;opacity:0.9}
+        .hero__title{font-family:var(--font-display);font-size:clamp(3.5rem,7vw,6rem);font-weight:400;line-height:1;max-width:1000px;margin-bottom:2rem;letter-spacing:-0.02em}
+        .hero__subtitle{font-family:var(--font-serif);font-size:1.35rem;font-weight:300;line-height:1.6;max-width:580px;opacity:0.8;margin-bottom:3rem;letter-spacing:0.01em}
+        .hero__cta{display:inline-flex;align-items:center;gap:1rem;background:white;color:var(--ink);padding:1.25rem 2.5rem;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;transition:all 0.4s var(--ease)}
+        .hero__cta:hover{background:var(--gold);color:white;transform:translateY(-2px)}
+        .hero__cta svg{width:14px;height:14px;transition:transform 0.3s var(--ease)}
+        .hero__cta:hover svg{transform:translateX(4px)}
+        
+        /* INTRO */
+        .section-intro{max-width:780px;margin:0 auto;padding:7rem 2rem;text-align:center}
+        .section-intro__label{font-size:0.6rem;font-weight:600;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+        .section-intro__title{font-family:var(--font-display);font-size:clamp(1.75rem,3.5vw,2.5rem);font-weight:400;color:var(--ink);margin-bottom:1.75rem;letter-spacing:-0.01em}
+        .section-intro__text{font-family:var(--font-serif);font-size:1.35rem;color:var(--ink-light);line-height:1.7}
+        
+        /* FEATURED */
+        .featured{background:var(--cream);padding:6rem 0}
+        .featured__inner{max-width:1400px;margin:0 auto;padding:0 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+        .featured__image{position:relative;aspect-ratio:4/5;overflow:hidden}
+        .featured__image img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+        .featured__image:hover img{transform:scale(1.04)}
+        .featured__content{padding:2rem 0}
+        .featured__tag{display:inline-block;font-size:0.6rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:0.6rem 1.5rem;margin-bottom:2rem}
+        .featured__title{font-family:var(--font-display);font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:400;line-height:1.15;color:var(--ink);margin-bottom:1.75rem;letter-spacing:-0.01em}
+        .featured__excerpt{font-family:var(--font-serif);font-size:1.25rem;line-height:1.65;color:var(--ink-light);margin-bottom:2.5rem}
+        .featured__meta{display:flex;align-items:center;gap:1.5rem;margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(0,0,0,0.08)}
+        .featured__author{font-size:0.85rem;color:var(--ink-muted)}
+        .featured__author strong{color:var(--ink);font-weight:600}
+        .featured__link{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ocean);transition:all 0.3s var(--ease)}
+        .featured__link:hover{color:var(--gold)}
+        .featured__link svg{width:16px;height:16px;transition:transform 0.3s var(--ease)}
+        .featured__link:hover svg{transform:translateX(5px)}
+        
+        /* STORIES GRID */
+        .stories{max-width:1600px;margin:0 auto;padding:6rem 4rem}
+        .stories__header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--sand)}
+        .stories__title{font-family:var(--font-display);font-size:1.35rem;font-weight:400;color:var(--ink)}
+        .stories__link{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-muted);transition:color 0.3s var(--ease)}
+        .stories__link:hover{color:var(--gold)}
+        .stories__grid{display:grid;grid-template-columns:repeat(12,1fr);gap:2.5rem}
+        .story{display:flex;flex-direction:column;position:relative}
+        .story--large{grid-column:span 8}
+        .story--medium{grid-column:span 4}
+        .story--small{grid-column:span 4}
+        .story__image{position:relative;overflow:hidden;background:var(--sand)}
+        .story--large .story__image{aspect-ratio:16/9}
+        .story--medium .story__image,.story--small .story__image{aspect-ratio:4/3}
+        .story__image img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s var(--ease)}
+        .story:hover .story__image img{transform:scale(1.05)}
+        .story__content{padding:1.75rem 0;flex:1;display:flex;flex-direction:column}
+        .story__tag{font-size:0.55rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem}
+        .story__title{font-family:var(--font-display);font-weight:400;line-height:1.25;color:var(--ink);transition:color 0.3s var(--ease)}
+        .story--large .story__title{font-size:1.6rem}
+        .story--medium .story__title,.story--small .story__title{font-size:1.2rem}
+        .story:hover .story__title{color:var(--ocean)}
+        .story__excerpt{font-size:0.95rem;color:var(--ink-muted);line-height:1.6;margin-top:0.85rem}
+        .story--small .story__excerpt{display:none}
+        .story__link{position:absolute;inset:0;z-index:2}
+        
+        /* HIGHLIGHT */
+        .highlight{background:var(--ocean);padding:6rem 2rem}
+        .highlight__inner{max-width:1000px;margin:0 auto;text-align:center;color:white}
+        .highlight__title{font-family:var(--font-serif);font-size:clamp(1.6rem,3.5vw,2.25rem);font-weight:300;font-style:italic;line-height:1.45;margin-bottom:2rem}
+        .highlight__source{font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold-light)}
+        
+        /* ALT STORIES */
+        .stories--alt{background:var(--cream);padding:6rem 0}
+        .stories--alt .stories__grid{max-width:1600px;margin:0 auto;padding:0 4rem}
+        
+        /* NEWSLETTER */
+        .newsletter{max-width:680px;margin:0 auto;padding:7rem 2rem;text-align:center}
+        .newsletter__title{font-family:var(--font-display);font-size:1.85rem;font-weight:400;color:var(--ink);margin-bottom:1rem}
+        .newsletter__text{font-family:var(--font-serif);font-size:1.15rem;color:var(--ink-muted);margin-bottom:2.5rem}
+        .newsletter__form{display:flex;gap:0;max-width:500px;margin:0 auto}
+        .newsletter__input{flex:1;padding:1.1rem 1.5rem;font-family:var(--font-body);font-size:0.9rem;border:1px solid var(--sand);border-right:none;background:white;outline:none;transition:border-color 0.3s var(--ease)}
+        .newsletter__input:focus{border-color:var(--gold)}
+        .newsletter__input::placeholder{color:#999}
+        .newsletter__button{padding:1.1rem 2.25rem;background:var(--ink);color:white;font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;border:none;cursor:pointer;transition:background 0.3s var(--ease)}
+        .newsletter__button:hover{background:var(--gold)}
+        
+        /* FOOTER */
+        .footer{background:var(--ink);color:white;padding:6rem 4rem 4rem}
+        .footer__inner{max-width:1600px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:5rem}
+        .footer__logo{font-family:var(--font-display);font-size:0.9rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase}
+        .footer__logo span{display:block;font-family:var(--font-serif);font-size:2rem;font-weight:300;font-style:italic;text-transform:none;letter-spacing:0;color:var(--gold-light);margin-top:-0.1rem;margin-left:0.25rem}
+        .footer__tagline{font-size:0.9rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:1.75rem;max-width:320px}
+        .footer__title{font-size:0.6rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.5rem}
+        .footer__links{list-style:none}
+        .footer__links li{margin-bottom:0.75rem}
+        .footer__links a{font-size:0.9rem;color:rgba(255,255,255,0.55);transition:color 0.3s var(--ease)}
+        .footer__links a:hover{color:white}
+        .footer__bottom{max-width:1600px;margin:5rem auto 0;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;color:rgba(255,255,255,0.35)}
+        .footer__social{display:flex;gap:1.75rem}
+        .footer__social a{color:rgba(255,255,255,0.35);transition:color 0.3s var(--ease)}
+        .footer__social a:hover{color:var(--gold-light)}
+        
+        /* RESPONSIVE */
+        @media(max-width:1200px){.header__inner{padding:1.25rem 3rem}.hero__content{padding:0 3rem 5rem}.stories{padding:5rem 3rem}.stories--alt .stories__grid{padding:0 3rem}.footer{padding:5rem 3rem 3rem}.featured__inner{padding:0 3rem;gap:4rem}}
+        @media(max-width:1024px){.featured__inner{grid-template-columns:1fr;gap:3rem}.featured__image{aspect-ratio:16/10}.story--large,.story--medium,.story--small{grid-column:span 6}.footer__inner{grid-template-columns:1fr 1fr;gap:3rem}}
+        @media(max-width:768px){.header__inner{padding:1rem 1.5rem}.nav{display:none}.nav__toggle{display:block}.logo__main{font-size:0.8rem;letter-spacing:0.25em}.logo__sub{font-size:2rem}.hero{min-height:650px}.hero__content{padding:0 1.5rem 4rem}.hero__title{font-size:2.75rem}.section-intro{padding:5rem 1.5rem}.featured__inner{padding:0 1.5rem}.story--large,.story--medium,.story--small{grid-column:span 12}.stories{padding:4rem 1.5rem}.stories__grid{gap:2rem}.newsletter__form{flex-direction:column}.newsletter__input{border-right:1px solid var(--sand);border-bottom:none}.footer{padding:4rem 1.5rem 2rem}.footer__inner{grid-template-columns:1fr;text-align:center;gap:2.5rem}.footer__tagline{margin:1.5rem auto 0}.footer__bottom{flex-direction:column;gap:1.25rem}}
+        @media(max-width:480px){html{font-size:15px}.hero__cta{width:100%;justify-content:center}}
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header" id="header">
         <div class="header__inner">
-            <a href="index.html" class="logo">
-                <span class="logo__main">Garden Route</span>
-                <span class="logo__sub">Living</span>
-            </a>
-            
+            <a href="index.html" class="logo"><span class="logo__main">Garden Route</span><span class="logo__sub">Living</span></a>
             <nav class="nav">
                 <a href="index.html" class="nav__link">Stories</a>
                 <a href="about.html" class="nav__link">About</a>
                 <a href="contact.html" class="nav__link">Contact</a>
                 <a href="contact.html" class="nav__cta">Subscribe</a>
             </nav>
-            
-            <button class="nav__toggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </header>
     
-    <!-- Hero -->
     <section class="hero">
-        <div class="hero__image">
-            <img src="hero-sunset-lagoon.png" alt="Aerial view of turquoise Knysna Lagoon with leisure boats anchored between the iconic sandstone Knysna Heads cliffs, Western Cape, South Africa">
-        </div>
+        <div class="hero__image"><img src="hero-sunset-lagoon.png" alt="Golden hour aerial view of the Garden Route coastline where the lagoon meets the Indian Ocean, South Africa"></div>
         <div class="hero__overlay"></div>
         <div class="hero__content">
             <p class="hero__edition">Summer 2026</p>
             <h1 class="hero__title">Where the Forest Meets the Sea</h1>
-            <p class="hero__subtitle">Discover South Africa's most beautiful coastline through the eyes of the people who call it home. From Mossel Bay to Nature's Valley, these are the stories that define Garden Route living.</p>
-            <a href="#stories" class="hero__cta">
-                Explore Stories
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-            </a>
+            <p class="hero__subtitle">Discover South Africa's most beautiful coastline through the eyes of the people who call it home.</p>
+            <a href="#stories" class="hero__cta">Explore Stories <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
         </div>
-        <p class="hero__credit">Knysna Lagoon · Image: Visit Knysna</p>
     </section>
     
-    <!-- Section Intro -->
     <div class="section-intro">
         <p class="section-intro__label">Welcome</p>
         <h2 class="section-intro__title">The Garden Route's Own Magazine</h2>
-        <p class="section-intro__text">We celebrate the artisans, restaurateurs, winemakers, athletes and creatives who make this 300km stretch of coastline one of the most remarkable places on Earth. No clickbait. No algorithms. Just authentic stories from the people who live here.</p>
+        <p class="section-intro__text">We celebrate the artisans, restaurateurs, winemakers, athletes and creatives who make this 300km stretch of coastline one of the most remarkable places on Earth.</p>
     </div>
     
-    <!-- Featured Story -->
     <section class="featured">
         <div class="featured__inner">
-            <div class="featured__image">
-                <a href="enricos-restaurant.html">
-                    <img src="enricos-owner.jpg" alt="Enrico with fresh catch of the day and house wine at Keurboomstrand. Image: Enrico Ristorante Facebook">
-                </a>
-                <span class="featured__image-credit">Keurboomstrand</span>
-            </div>
+            <div class="featured__image"><a href="enricos-restaurant.html"><img src="enricos-owner.jpg" alt="Enrico with fresh catch of the day at Keurboomstrand"></a></div>
             <div class="featured__content">
                 <span class="featured__tag">Cover Story</span>
                 <h2 class="featured__title">Enrico's: Where the Ocean Meets the Table</h2>
-                <p class="featured__excerpt">For three decades, Ristorante Enrico has been the Garden Route's most iconic dining destination. The fish comes from their own boat, the pasta is made fresh each morning, and the sunsets are, quite simply, the best on the coast. We spent an evening with the family behind the legend.</p>
-                <div class="featured__meta">
-                    <p class="featured__author">By <strong>Garden Route Living</strong></p>
-                </div>
-                <a href="enricos-restaurant.html" class="featured__link">
-                    Read the full story
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </a>
+                <p class="featured__excerpt">For three decades, Ristorante Enrico has been the Garden Route's most iconic dining destination. The fish comes from their own boat, the pasta is made fresh each morning, and the sunsets are, quite simply, the best on the coast.</p>
+                <div class="featured__meta"><p class="featured__author">By <strong>Garden Route Living</strong></p></div>
+                <a href="enricos-restaurant.html" class="featured__link">Read the full story <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
             </div>
         </div>
     </section>
     
-    <!-- Stories Grid -->
     <section class="stories" id="stories">
         <div class="stories__header">
             <h2 class="stories__title">Latest Stories</h2>
             <a href="index.html" class="stories__link">View all →</a>
         </div>
-        
         <div class="stories__grid">
-            <!-- Large Story -->
             <article class="story story--large">
-                <div class="story__image">
-                    <img src="hiking-goukamma.jpg" alt="Two hikers pause to photograph the view over Goukamma Nature Reserve lagoon at golden hour, with the Outeniqua Mountains in the distance, near Sedgefield">
-                    <div class="story__image-overlay"></div>
-                </div>
+                <div class="story__image"><img src="hiking-goukamma.jpg" alt="Hikers at Goukamma Nature Reserve"></div>
                 <div class="story__content">
                     <span class="story__tag">Outdoors</span>
                     <h3 class="story__title">The Garden Route's Greatest Hikes</h3>
                     <p class="story__excerpt">From the forest canopy of Knysna to the coastal cliffs of Robberg, we chart the trails every nature lover needs to walk at least once.</p>
                 </div>
-                <a href="hiking-trails.html" class="story__link" aria-label="Read about Garden Route hiking trails"></a>
+                <a href="hiking-trails.html" class="story__link" aria-label="Read hiking trails"></a>
             </article>
-            
-            <!-- Medium Story -->
             <article class="story story--medium">
-                <div class="story__image">
-                    <img src="wildoats-bikes.jpg" alt="Recycled tyre cycle rack at Wild Oats Market, Sedgefield">
-                    <div class="story__image-overlay"></div>
-                </div>
+                <div class="story__image"><img src="wildoats-bikes.jpg" alt="Wild Oats Market, Sedgefield"></div>
                 <div class="story__content">
                     <span class="story__tag">Community</span>
                     <h3 class="story__title">Saturday at Wild Oats</h3>
                     <p class="story__excerpt">For 25 years, this Sedgefield market has been the Garden Route's Saturday morning ritual.</p>
                 </div>
-                <a href="wild-oats-market.html" class="story__link" aria-label="Read about Wild Oats Market"></a>
+                <a href="wild-oats-market.html" class="story__link" aria-label="Read Wild Oats"></a>
             </article>
-            
-            <!-- Small Stories Row -->
             <article class="story story--small">
-                <div class="story__image">
-                    <img src="luka-deck.jpg" alt="Guests dining on the deck at Luka Vineyards overlooking the paddocks">
-                    <div class="story__image-overlay"></div>
-                </div>
-                <div class="story__content">
-                    <span class="story__tag">Wine</span>
-                    <h3 class="story__title">Luka Vineyards</h3>
-                </div>
-                <a href="luka-vineyards.html" class="story__link" aria-label="Read about Luka Vineyards"></a>
+                <div class="story__image"><img src="luka-deck.jpg" alt="Luka Vineyards"></div>
+                <div class="story__content"><span class="story__tag">Wine</span><h3 class="story__title">Luka Vineyards</h3></div>
+                <a href="luka-vineyards.html" class="story__link" aria-label="Read Luka"></a>
             </article>
-            
             <article class="story story--small">
-                <div class="story__image">
-                    <img src="sunrise-dancer.jpg" alt="Joyful dancer with headphones at Secret Sunrise, Garden Route">
-                    <div class="story__image-overlay"></div>
-                </div>
-                <div class="story__content">
-                    <span class="story__tag">Wellness</span>
-                    <h3 class="story__title">Sunrise Sessions</h3>
-                </div>
-                <a href="sunrise-sessions.html" class="story__link" aria-label="Read about Sunrise Sessions"></a>
+                <div class="story__image"><img src="sunrise-dancer.jpg" alt="Sunrise Sessions"></div>
+                <div class="story__content"><span class="story__tag">Wellness</span><h3 class="story__title">Sunrise Sessions</h3></div>
+                <a href="sunrise-sessions.html" class="story__link" aria-label="Read Sunrise"></a>
             </article>
-            
             <article class="story story--small">
-                <div class="story__image">
-                    <img src="workshop-showroom.jpg" alt="The Workshop Interiors showroom featuring curated plants and artisan vases in Knysna">
-                    <div class="story__image-overlay"></div>
-                </div>
-                <div class="story__content">
-                    <span class="story__tag">Interiors</span>
-                    <h3 class="story__title">The Workshop Interiors</h3>
-                </div>
-                <a href="workshop-interiors.html" class="story__link" aria-label="Read about The Workshop Interiors"></a>
+                <div class="story__image"><img src="workshop-showroom.jpg" alt="The Workshop Interiors"></div>
+                <div class="story__content"><span class="story__tag">Interiors</span><h3 class="story__title">The Workshop Interiors</h3></div>
+                <a href="workshop-interiors.html" class="story__link" aria-label="Read Workshop"></a>
             </article>
         </div>
     </section>
     
-    <!-- Quote Banner -->
     <section class="highlight">
         <div class="highlight__inner">
             <blockquote class="highlight__title">"The Garden Route isn't just a destination. It's a way of life—one that balances wild nature with warm hospitality, adventure with tranquility."</blockquote>
@@ -1142,129 +257,74 @@
         </div>
     </section>
     
-    <!-- Second Stories Grid -->
     <section class="stories stories--alt">
         <div class="stories__grid">
             <article class="story story--medium">
-                <div class="story__image">
-                    <img src="cb-woven-blinds.jpg" alt="Coastal living room with woven bamboo blinds by Custom Blinds, Garden Route. Image: Custom Blinds Facebook">
-                    <div class="story__image-overlay"></div>
-                </div>
+                <div class="story__image"><img src="cb-woven-blinds.jpg" alt="Coastal living with woven blinds"></div>
                 <div class="story__content">
                     <span class="story__tag">Design</span>
                     <h3 class="story__title">Designing for the Garden Route</h3>
                     <p class="story__excerpt">The science and art of creating interiors that thrive in our unique coastal climate.</p>
                 </div>
-                <a href="designing-garden-route.html" class="story__link" aria-label="Read about designing for the Garden Route"></a>
+                <a href="designing-garden-route.html" class="story__link"></a>
             </article>
-            
             <article class="story story--medium">
-                <div class="story__image">
-                    <img src="safari-sunset.jpg" alt="Sunset game drive at Garden Route Game Lodge. Image: Garden Route Game Lodge Facebook">
-                    <div class="story__image-overlay"></div>
-                </div>
+                <div class="story__image"><img src="safari-sunset.jpg" alt="Garden Route Game Lodge"></div>
                 <div class="story__content">
                     <span class="story__tag">Travel</span>
                     <h3 class="story__title">Garden Route Game Lodge</h3>
                     <p class="story__excerpt">Big Five encounters just three hours from Cape Town, in malaria-free comfort.</p>
                 </div>
-                <a href="garden-route-game-lodge.html" class="story__link" aria-label="Read about Garden Route Game Lodge"></a>
+                <a href="garden-route-game-lodge.html" class="story__link"></a>
             </article>
-            
             <article class="story story--medium">
-                <div class="story__image">
-                    <img src="warrick-gelant.jpg" alt="Warrick Gelant celebrating with the Rugby World Cup trophy in his Springbok jersey">
-                    <div class="story__image-overlay"></div>
-                </div>
+                <div class="story__image"><img src="warrick-gelant.jpg" alt="Warrick Gelant"></div>
                 <div class="story__content">
                     <span class="story__tag">Sport</span>
                     <h3 class="story__title">Knysna's World Cup Winner</h3>
                     <p class="story__excerpt">The Warrick Gelant story: from Hornlee to Springbok glory.</p>
                 </div>
-                <a href="warrick-gelant.html" class="story__link" aria-label="Read about Warrick Gelant"></a>
+                <a href="warrick-gelant.html" class="story__link"></a>
             </article>
+        </div>
+    </section>
     
-    <!-- Newsletter -->
     <section class="newsletter">
         <h2 class="newsletter__title">Stay Connected</h2>
-        <p class="newsletter__text">Join our community and receive the best of Garden Route Living directly in your inbox. No spam, just stories worth reading.</p>
+        <p class="newsletter__text">Join our community and receive the best of Garden Route Living directly in your inbox.</p>
         <form class="newsletter__form" action="#" method="post">
             <input type="email" class="newsletter__input" placeholder="Your email address" required>
             <button type="submit" class="newsletter__button">Subscribe</button>
         </form>
     </section>
     
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__brand">
-                <p class="footer__logo">
-                    Garden Route
-                    <span>Living</span>
-                </p>
+                <p class="footer__logo">Garden Route<span>Living</span></p>
                 <p class="footer__tagline">The definitive guide to South Africa's most beautiful coastline. Celebrating the people, places and lifestyle from Mossel Bay to Nature's Valley.</p>
             </div>
-            
             <div class="footer__column">
                 <h3 class="footer__title">Stories</h3>
-                <ul class="footer__links">
-                    <li><a href="enricos-restaurant.html">Dining</a></li>
-                    <li><a href="hiking-trails.html">Outdoors</a></li>
-                    <li><a href="luka-vineyards.html">Wine</a></li>
-                    <li><a href="designing-garden-route.html">Design</a></li>
-                </ul>
+                <ul class="footer__links"><li><a href="enricos-restaurant.html">Dining</a></li><li><a href="hiking-trails.html">Outdoors</a></li><li><a href="luka-vineyards.html">Wine</a></li><li><a href="designing-garden-route.html">Design</a></li></ul>
             </div>
-            
             <div class="footer__column">
                 <h3 class="footer__title">Magazine</h3>
-                <ul class="footer__links">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="contact.html">Advertise</a></li>
-                    <li><a href="contact.html">Submit a Story</a></li>
-                </ul>
+                <ul class="footer__links"><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Advertise</a></li><li><a href="contact.html">Submit a Story</a></li></ul>
             </div>
-            
             <div class="footer__column">
                 <h3 class="footer__title">Connect</h3>
-                <ul class="footer__links">
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="mailto:gardenroutepublishing@gmail.com">Email Us</a></li>
-                </ul>
+                <ul class="footer__links"><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="mailto:gardenroutepublishing@gmail.com">Email Us</a></li></ul>
             </div>
         </div>
-        
         <div class="footer__bottom">
             <p>© 2026 Garden Route Living. All rights reserved.</p>
             <div class="footer__social">
-                <a href="#" aria-label="Instagram">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                </a>
-                <a href="#" aria-label="Facebook">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
+                <a href="#" aria-label="Instagram"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                <a href="#" aria-label="Facebook"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
             </div>
         </div>
     </footer>
-    
-    <!-- Scroll Header Effect -->
-    <script>
-        const header = document.getElementById('header');
-        let lastScroll = 0;
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 50) {
-                header.classList.add('header--scrolled');
-            } else {
-                header.classList.remove('header--scrolled');
-            }
-            
-            lastScroll = currentScroll;
-        });
-    </script>
+    <script>const header=document.getElementById('header');window.addEventListener('scroll',()=>{header.classList.toggle('header--scrolled',window.pageYOffset>50)});</script>
 </body>
 </html>
-
