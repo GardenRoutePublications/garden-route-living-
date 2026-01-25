@@ -31,7 +31,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
@@ -128,31 +128,29 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            position: relative;
         }
         
         .logo__main {
             font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 600;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
             color: var(--ink);
             line-height: 1;
         }
         
         .logo__sub {
-            font-family: var(--font-display);
-            font-size: 0.95rem;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 2.2rem;
             font-weight: 400;
             font-style: italic;
-            color: var(--gold);
-            margin-top: 2px;
-        }
-        
-        .nav {
-            display: flex;
-            gap: 2.5rem;
-            align-items: center;
+            color: #b8860b;
+            margin-top: -0.15rem;
+            margin-left: 1.8rem;
+            letter-spacing: 0.02em;
+            line-height: 1;
         }
         
         .nav__link {
@@ -227,18 +225,23 @@
            HERO SECTION - FULL IMPACT
            ============================================ */
         .hero {
+            background: white;
+            padding: 2rem;
+            background: white;
             position: relative;
-            height: 100vh;
-            min-height: 700px;
-            max-height: 1000px;
+            height: 85vh;
+            min-height: 500px;
+            max-height: 800px;
             display: flex;
             align-items: flex-end;
             overflow: hidden;
         }
         
         .hero__image {
+            border-radius: 0;
+            overflow: hidden;
             position: absolute;
-            inset: 0;
+            inset: 2.5rem 4rem;
             z-index: 1;
         }
         
@@ -246,12 +249,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 40%;
+            object-position: center 30%;
         }
         
         .hero__overlay {
             position: absolute;
-            inset: 0;
+            inset: 2.5rem 4rem;
             background: linear-gradient(
                 to top,
                 rgba(0,0,0,0.7) 0%,
@@ -590,7 +593,7 @@
         
         .story__image-overlay {
             position: absolute;
-            inset: 0;
+            inset: 2.5rem 4rem;
             background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
             opacity: 0;
             transition: var(--transition);
@@ -652,7 +655,7 @@
         
         .story__link {
             position: absolute;
-            inset: 0;
+            inset: 2.5rem 4rem;
             z-index: 2;
         }
         
@@ -914,6 +917,9 @@
             }
             
             .hero {
+            background: white;
+            padding: 2rem;
+            background: white;
                 min-height: 600px;
             }
             
@@ -1027,7 +1033,7 @@
         <div class="featured__inner">
             <div class="featured__image">
                 <a href="enricos-restaurant.html">
-                    <img src="enricos.jpg" alt="Waiter serving guests at sunset on the beachfront deck at Ristorante Enrico, Keurboomstrand, with the Indian Ocean waves breaking behind">
+                    <img src="enricos-owner.jpg" alt="Enrico with fresh catch of the day and house wine at Keurboomstrand. Image: Enrico Ristorante Facebook">
                 </a>
                 <span class="featured__image-credit">Keurboomstrand</span>
             </div>
@@ -1073,7 +1079,7 @@
             <!-- Medium Story -->
             <article class="story story--medium">
                 <div class="story__image">
-                    <img src="wild-oats-market.jpg" alt="Visitors browse fresh proteas and organic produce at the Wild Oats Community Farmers Market under the milkwood trees, Sedgefield">
+                    <img src="wildoats-bikes.jpg" alt="Recycled tyre cycle rack at Wild Oats Market, Sedgefield">
                     <div class="story__image-overlay"></div>
                 </div>
                 <div class="story__content">
@@ -1087,7 +1093,7 @@
             <!-- Small Stories Row -->
             <article class="story story--small">
                 <div class="story__image">
-                    <img src="luka-vineyards.jpg" alt="Couple enjoying wine tasting with vineyard views at Luka Vineyards, Harkerville, Plettenberg Bay">
+                    <img src="luka-deck.jpg" alt="Guests dining on the deck at Luka Vineyards overlooking the paddocks">
                     <div class="story__image-overlay"></div>
                 </div>
                 <div class="story__content">
@@ -1099,7 +1105,7 @@
             
             <article class="story story--small">
                 <div class="story__image">
-                    <img src="sunrise-sessions.jpg" alt="Silhouettes of dancers wearing glowing headphones at a Secret Sunrise silent disco on the beach at dawn">
+                    <img src="sunrise-dancer.jpg" alt="Joyful dancer with headphones at Secret Sunrise, Garden Route">
                     <div class="story__image-overlay"></div>
                 </div>
                 <div class="story__content">
@@ -1111,7 +1117,7 @@
             
             <article class="story story--small">
                 <div class="story__image">
-                    <img src="workshop-interiors.jpg" alt="Elegant coastal living space with wicker furniture and lagoon views designed by The Workshop Interiors, Thesen Islands, Knysna">
+                    <img src="workshop-showroom.jpg" alt="The Workshop Interiors showroom featuring curated plants and artisan vases in Knysna">
                     <div class="story__image-overlay"></div>
                 </div>
                 <div class="story__content">
@@ -1136,7 +1142,7 @@
         <div class="stories__grid">
             <article class="story story--medium">
                 <div class="story__image">
-                    <img src="custom-blinds.jpg" alt="Outdoor roller blind partially lowered on a stone-walled veranda with panoramic ocean views along the Garden Route coast">
+                    <img src="cb-woven-blinds.jpg" alt="Coastal living room with woven bamboo blinds by Custom Blinds, Garden Route. Image: Custom Blinds Facebook">
                     <div class="story__image-overlay"></div>
                 </div>
                 <div class="story__content">
@@ -1149,7 +1155,7 @@
             
             <article class="story story--medium">
                 <div class="story__image">
-                    <img src="game-lodge.jpg" alt="Safari vehicle with guests watching a lion pair at Garden Route Game Lodge near Albertinia">
+                    <img src="safari-sunset.jpg" alt="Sunset game drive at Garden Route Game Lodge. Image: Garden Route Game Lodge Facebook">
                     <div class="story__image-overlay"></div>
                 </div>
                 <div class="story__content">
@@ -1171,35 +1177,7 @@
                     <p class="story__excerpt">The Warrick Gelant story: from Hornlee to Springbok glory.</p>
                 </div>
                 <a href="warrick-gelant.html" class="story__link" aria-label="Read about Warrick Gelant"></a>
-            
-            <article class="story story--medium">
-                <div class="story__image">
-                    <img src="coastal-property.jpg" alt="Luxury clifftop home with infinity pool overlooking the Garden Route coastline at sunset">
-                    <div class="story__image-overlay"></div>
-                </div>
-                <div class="story__content">
-                    <span class="story__tag">Property</span>
-                    <h3 class="story__title">The Art of Coastal Living</h3>
-                    <p class="story__excerpt">Inside the homes that define Garden Route style, from clifftop escapes to lagoon-side retreats.</p>
-                </div>
-                <a href="designing-garden-route.html" class="story__link" aria-label="Read about coastal living"></a>
             </article>
-            </article>
-            
-            <article class="story story--medium">
-                <div class="story__image">
-                    <img src="coastal-property.jpg" alt="Luxury clifftop home with infinity pool overlooking the Garden Route coastline at sunset">
-                    <div class="story__image-overlay"></div>
-                </div>
-                <div class="story__content">
-                    <span class="story__tag">Property</span>
-                    <h3 class="story__title">The Art of Coastal Living</h3>
-                    <p class="story__excerpt">Inside the homes that define Garden Route style, from clifftop escapes to lagoon-side retreats.</p>
-                </div>
-                <a href="designing-garden-route.html" class="story__link" aria-label="Read about coastal living"></a>
-            </article>
-        </div>
-    </section>
     
     <!-- Newsletter -->
     <section class="newsletter">
