@@ -20,7 +20,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -59,7 +59,17 @@
         }
         .logo { display: flex; flex-direction: column; }
         .logo__main { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-        .logo__sub { font-family: var(--font-display); font-size: 0.9rem; font-style: italic; color: var(--gold); }
+        .logo__sub { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; margin-left: 1.5rem; margin-top: -0.1rem;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--gold);
+            margin-top: -0.3rem;
+            margin-left: 2rem;
+            letter-spacing: 0.02em;
+        }
+        .logo__sub-OLD { font-family: var(--font-display); font-size: 2rem; font-style: italic; color: var(--gold); }
         .nav { display: flex; gap: 2rem; }
         .nav__link { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); transition: var(--transition); }
         .nav__link:hover { color: var(--gold); }
@@ -85,11 +95,11 @@
         }
         .hero__tag {
             display: inline-block;
-            font-size: 0.7rem; font-weight: 600;
-            letter-spacing: 0.2em; text-transform: uppercase;
-            color: var(--gold-light);
-            border: 1px solid var(--gold-light);
-            padding: 0.4rem 1rem;
+            font-size: 2rem; font-weight: 700;
+            letter-spacing: 0.25em; text-transform: uppercase;
+            color: #ffffff; background: rgba(184, 134, 11, 0.9);
+            border: 2px solid #d4a84b;
+            padding: 0.6rem 1.5rem;
             margin-bottom: 1.5rem;
         }
         .hero__title {
@@ -188,7 +198,7 @@
             margin-bottom: 0.75rem;
         }
         .feature-box__text {
-            font-size: 0.95rem;
+            font-size: 2rem;
             color: var(--ink-light);
             line-height: 1.7;
         }
@@ -209,12 +219,14 @@
             text-align: center;
         }
         .cta-box__title {
+            color: #ffffff !important;
             font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: 0.75rem;
         }
         .cta-box__text {
+            color: rgba(255,255,255,0.95) !important;
             font-size: 1rem;
             opacity: 0.9;
             margin-bottom: 1.5rem;
@@ -311,7 +323,7 @@
     
     <section class="hero">
         <div class="hero__image">
-            <img src="custom-blinds.jpg" alt="Outdoor roller blind partially lowered on a stone-walled coastal veranda with panoramic views of the Indian Ocean along the Garden Route">
+            <img src="cb-awning.jpg" alt="Retractable awning installation on modern Garden Route terrace. Image: Custom Blinds Facebook">
         </div>
         <div class="hero__overlay"></div>
         <div class="hero__content">
@@ -412,7 +424,7 @@
             <div class="related__grid">
                 <a href="workshop-interiors.html" class="related-card">
                     <div class="related-card__image">
-                        <img src="workshop-interiors.jpg" alt="Coastal living room designed by The Workshop Interiors">
+                        <img src="workshop-tanya.jpg" alt="Tanya from The Workshop Interiors at a Garden Route cafe">
                     </div>
                     <div class="related-card__content">
                         <span class="related-card__tag">Interiors</span>
@@ -421,7 +433,7 @@
                 </a>
                 <a href="enricos-restaurant.html" class="related-card">
                     <div class="related-card__image">
-                        <img src="enricos.jpg" alt="Beachfront dining at Enricos">
+                        <img src="enricos-terrace.jpg" alt="Busy lunch service at Ristorante Enrico beachfront terrace, Keurboomstrand. Image: Enrico Ristorante Facebook">
                     </div>
                     <div class="related-card__content">
                         <span class="related-card__tag">Dining</span>
@@ -430,7 +442,7 @@
                 </a>
                 <a href="luka-vineyards.html" class="related-card">
                     <div class="related-card__image">
-                        <img src="luka-vineyards.jpg" alt="Wine tasting at Luka Vineyards">
+                        <img src="luka-mountains.jpg" alt="Luka Vineyards outdoor seating with Outeniqua Mountains backdrop">
                     </div>
                     <div class="related-card__content">
                         <span class="related-card__tag">Wine</span>
