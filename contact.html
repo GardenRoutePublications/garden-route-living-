@@ -2,525 +2,464 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="3ac2MDqd1PRK0g65gk6Q21J4i4F_L_yZWabLLRe7Qwk" />
+    <meta name="google-site-verification" content="3ac2MDqd1PRK0g65gk6Q21J4i4F_L_yZWabLLRe7Qwk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Garden Route Living</title>
-    <meta name="description" content="Get in touch with Garden Route Living. Promote your event, advertise your business, or share a story idea.">
+    <title>Contact | Garden Route Living</title>
+    <meta name="description" content="Get in touch with Garden Route Living. Advertising enquiries, story submissions, and general contact.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Contact Us | Garden Route Living">
-    <meta property="og:description" content="Get in touch with Garden Route Living. Promote your event, advertise your business, or share a story idea.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80">
+    <meta property="og:title" content="Contact Garden Route Living">
+    <meta property="og:description" content="Get in touch with South Africa's premier coastal lifestyle magazine.">
     <meta property="og:url" content="https://gardenrouteliving.onrender.com/contact.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Garden Route Living">
     
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Us | Garden Route Living">
-    <meta name="twitter:description" content="Get in touch with Garden Route Living. Promote your event, advertise your business.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80">
-    
-    <!-- SEO -->
     <link rel="canonical" href="https://gardenrouteliving.onrender.com/contact.html">
     <meta name="robots" content="index, follow">
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --color-ink: #1a1a1a;
-            --color-paper: #faf9f7;
-            --color-cream: #f5f3ef;
-            --color-sand: #e8e4dc;
-            --color-ocean: #2d4a5e;
-            --color-gold: #c4913d;
-            --color-mist: rgba(255,255,255,0.92);
+            --ink: #1a1a1a;
+            --ink-light: #4a4a4a;
+            --ink-muted: #6b6b6b;
+            --paper: #fefdfb;
+            --cream: #f8f6f1;
+            --sand: #e9e5dc;
+            --ocean: #1e3a4c;
+            --gold: #b8860b;
+            --gold-light: #d4a84b;
+            --success: #2d7d46;
             
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Lora', Georgia, serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, sans-serif;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html { font-size: 18px; scroll-behavior: smooth; }
-        
+        html { font-size: 16px; scroll-behavior: smooth; }
         body {
             font-family: var(--font-body);
-            background: var(--color-paper);
-            color: var(--color-ink);
-            line-height: 1.8;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.7;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
         }
         
-        /* Navigation */
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
+        .header__inner {
+            max-width: 1400px;
+            margin: 0 auto;
             padding: 1rem 2rem;
-            background: var(--color-mist);
-            backdrop-filter: blur(20px);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
-        .nav__brand {
-            text-align: center;
-            text-decoration: none;
-        }
+        .logo { display: flex; flex-direction: column; }
         
-        .nav__title {
+        .logo__main {
             font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 400;
-            letter-spacing: 0.2em;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: var(--color-ink);
-            text-decoration: none;
-            display: block;
         }
         
-        .nav__subtitle {
+        .logo__sub {
             font-family: var(--font-display);
-            font-size: 0.85rem;
-            font-weight: 300;
+            font-size: 0.95rem;
             font-style: italic;
-            color: var(--color-ink);
-            opacity: 0.7;
-            display: block;
-            text-decoration: none;
+            color: var(--gold);
         }
         
-        .nav__back {
-            font-family: var(--font-body);
+        .nav { display: flex; gap: 2.5rem; align-items: center; }
+        
+        .nav__link {
             font-size: 0.8rem;
+            font-weight: 500;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--color-ink);
-            text-decoration: none;
-            opacity: 0.7;
-            transition: opacity 0.3s;
+            color: var(--ink-light);
+            transition: var(--transition);
         }
         
-        .nav__back:hover { opacity: 1; }
+        .nav__link:hover { color: var(--gold); }
         
-        /* Hero */
-        .hero {
-            padding: 10rem 2rem 5rem;
+        /* Page Header */
+        .page-header {
+            padding: 10rem 2rem 4rem;
             text-align: center;
-            background: var(--color-cream);
+            background: var(--cream);
         }
         
-        .hero__tag {
-            font-family: var(--font-body);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        .hero__title {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 300;
-            line-height: 1.1;
-            color: var(--color-ink);
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero__subtitle {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: #666;
-            max-width: 550px;
-            margin: 0 auto;
-        }
-        
-        /* Main Content */
-        .content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-        
-        .content__intro {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .content__intro p {
-            font-size: 1.1rem;
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Contact Cards */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-        
-        .contact-card {
-            background: var(--color-cream);
-            padding: 2.5rem;
-        }
-        
-        .contact-card--featured {
-            grid-column: span 2;
-            background: var(--color-ocean);
-            color: white;
-            text-align: center;
-            padding: 3.5rem;
-        }
-        
-        .contact-card__icon {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-card__title {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-            color: var(--color-ink);
-        }
-        
-        .contact-card--featured .contact-card__title {
-            color: white;
-            font-size: 1.8rem;
-        }
-        
-        .contact-card__text {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-        
-        .contact-card--featured .contact-card__text {
-            color: rgba(255,255,255,0.85);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 2rem;
-        }
-        
-        .contact-card__email {
-            font-family: var(--font-body);
-            font-size: 1rem;
-            color: var(--color-gold);
-            text-decoration: none;
-            padding-bottom: 0.25rem;
-            border-bottom: 1px solid var(--color-gold);
-            transition: all 0.3s;
-        }
-        
-        .contact-card__email:hover {
-            color: var(--color-ink);
-            border-color: var(--color-ink);
-        }
-        
-        .contact-card--featured .contact-card__email {
-            font-size: 1.1rem;
-            color: var(--color-gold);
-        }
-        
-        .contact-card--featured .contact-card__email:hover {
-            color: white;
-            border-color: white;
-        }
-        
-        /* Advertising Section */
-        .advertising {
-            background: var(--color-paper);
-            padding: 4rem 0;
-            border-top: 1px solid var(--color-sand);
-        }
-        
-        .advertising__header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .advertising__tag {
-            font-family: var(--font-body);
+        .page-header__label {
             font-size: 0.7rem;
             font-weight: 600;
             letter-spacing: 0.25em;
             text-transform: uppercase;
-            color: var(--color-gold);
+            color: var(--gold);
             margin-bottom: 1rem;
-            display: block;
         }
         
-        .advertising__title {
+        .page-header__title {
             font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 300;
-            color: var(--color-ink);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 500;
+            margin-bottom: 1rem;
         }
         
-        .advertising__content {
+        .page-header__text {
+            font-size: 1.1rem;
+            color: var(--ink-muted);
+            max-width: 550px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Grid */
+        .contact {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.5fr;
             gap: 4rem;
-            align-items: start;
         }
         
-        .advertising__text p {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 1.25rem;
-            line-height: 1.8;
+        /* Contact Info */
+        .contact-info__section {
+            margin-bottom: 2.5rem;
         }
         
-        .advertising__highlight {
-            background: var(--color-cream);
-            padding: 2rem;
-            margin-top: 1.5rem;
-        }
-        
-        .advertising__highlight-title {
+        .contact-info__title {
             font-family: var(--font-display);
-            font-size: 1.2rem;
-            color: var(--color-ink);
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--sand);
+        }
+        
+        .contact-info__text {
+            color: var(--ink-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--ocean);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .contact-info__link:hover {
+            color: var(--gold);
+        }
+        
+        .contact-info__link svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        /* Pitch Box */
+        .pitch {
+            background: var(--ocean);
+            color: white;
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .pitch__title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 500;
             margin-bottom: 0.75rem;
         }
         
-        .advertising__highlight p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 0;
-        }
-        
-        .advertising__stats {
-            background: var(--color-ink);
-            color: white;
-            padding: 2.5rem;
-        }
-        
-        .advertising__stats-title {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            color: var(--color-gold);
-        }
-        
-        .stat {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .stat:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        
-        .stat__number {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: white;
-            line-height: 1;
-            margin-bottom: 0.25rem;
-        }
-        
-        .stat__label {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.6);
-        }
-        
-        .advertising__cta {
-            text-align: center;
-            margin-top: 3rem;
-        }
-        
-        .advertising__cta p {
-            font-size: 1rem;
-            color: #555;
+        .pitch__text {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.7;
             margin-bottom: 1rem;
         }
         
-        .advertising__cta a {
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            color: var(--color-gold);
-            text-decoration: none;
-            padding-bottom: 0.25rem;
-            border-bottom: 1px solid var(--color-gold);
+        .pitch__stat {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
         }
         
-        .advertising__cta a:hover {
-            color: var(--color-ink);
-            border-color: var(--color-ink);
+        .pitch__stat-number {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--gold-light);
+        }
+        
+        .pitch__stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border: 1px solid var(--sand);
+        }
+        
+        .contact-form__title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-form__subtitle {
+            color: var(--ink-muted);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--ink-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            border: 1px solid var(--sand);
+            background: var(--paper);
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .form-submit {
+            display: block;
+            width: 100%;
+            padding: 1.1rem;
+            background: var(--ink);
+            color: white;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .form-submit:hover {
+            background: var(--gold);
         }
         
         /* Footer */
         .footer {
-            background: var(--color-ink);
+            background: var(--ink);
             color: white;
             padding: 3rem 2rem;
             text-align: center;
         }
         
-        .footer__brand {
+        .footer__logo {
             font-family: var(--font-display);
             font-size: 1.2rem;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
         }
         
-        .footer__email {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+        .footer__links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
         
-        .footer__email a {
-            color: var(--color-gold);
-            text-decoration: none;
+        .footer__links a {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            transition: var(--transition);
         }
+        
+        .footer__links a:hover { color: white; }
         
         .footer__copy {
-            font-size: 0.85rem;
-            opacity: 0.5;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
         }
         
-        /* Responsive */
-        @media (max-width: 768px) {
-            html { font-size: 16px; }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-card--featured {
-                grid-column: span 1;
-            }
-            
-            .advertising__content {
+        @media (max-width: 900px) {
+            .contact {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
-            .content { padding: 3rem 1.5rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .nav { display: none; }
         }
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <a href="index.html" class="nav__back">← Home</a>
-        <a href="index.html" class="nav__brand">
-            <span class="nav__title">Garden Route</span>
-            <span class="nav__subtitle">Living</span>
-        </a>
-        <div style="width: 60px;"></div>
-    </nav>
-
-    <header class="hero">
-        <span class="hero__tag">Get in Touch</span>
-        <h1 class="hero__title">Contact Us</h1>
-        <p class="hero__subtitle">We'd love to hear from you. Whether it's a story tip, an event, or a business enquiry.</p>
+    <header class="header">
+        <div class="header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__main">Garden Route</span>
+                <span class="logo__sub">Living</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Stories</a>
+                <a href="about.html" class="nav__link">About</a>
+                <a href="contact.html" class="nav__link">Contact</a>
+            </nav>
+        </div>
     </header>
-
-    <section class="content">
-        <div class="content__intro">
-            <p>Garden Route Living is built on community. The stories we tell come from the people who live here, and we're always looking for the next great tale. Drop us a line.</p>
+    
+    <section class="page-header">
+        <p class="page-header__label">Get in Touch</p>
+        <h1 class="page-header__title">Contact Us</h1>
+        <p class="page-header__text">Whether you have a story to share, want to advertise, or just want to say hello—we'd love to hear from you.</p>
+    </section>
+    
+    <section class="contact">
+        <div class="contact-info">
+            <div class="contact-info__section">
+                <h2 class="contact-info__title">General Enquiries</h2>
+                <p class="contact-info__text">For general questions about Garden Route Living, story ideas, or feedback on our content.</p>
+                <a href="mailto:hello@gardenrouteliving.co.za" class="contact-info__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    hello@gardenrouteliving.co.za
+                </a>
+            </div>
+            
+            <div class="contact-info__section">
+                <h2 class="contact-info__title">Story Submissions</h2>
+                <p class="contact-info__text">Know a remarkable person, place or business that deserves to be featured? We're always looking for authentic Garden Route stories.</p>
+                <a href="mailto:stories@gardenrouteliving.co.za" class="contact-info__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    stories@gardenrouteliving.co.za
+                </a>
+            </div>
+            
+            <div class="contact-info__section">
+                <h2 class="contact-info__title">Advertising</h2>
+                <p class="contact-info__text">Reach an engaged audience of affluent locals and visitors actively seeking quality Garden Route experiences.</p>
+                <a href="mailto:advertise@gardenrouteliving.co.za" class="contact-info__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    advertise@gardenrouteliving.co.za
+                </a>
+            </div>
+            
+            <div class="pitch">
+                <h3 class="pitch__title">Why Advertise With Us?</h3>
+                <p class="pitch__text">Garden Route Living is built on a high-authority domain (DR 80+) with strong organic search visibility. Our readers are decision-makers actively researching dining, accommodation, activities and services along the Garden Route.</p>
+                <div class="pitch__stat">
+                    <span class="pitch__stat-number">DR 80+</span>
+                    <span class="pitch__stat-label">Domain authority for premium backlinks</span>
+                </div>
+            </div>
         </div>
         
-        <div class="contact-grid">
-            <div class="contact-card contact-card--featured">
-                <div class="contact-card__icon">✉</div>
-                <h2 class="contact-card__title">General Enquiries</h2>
-                <p class="contact-card__text">Story ideas, feedback, collaboration proposals, or just to say hello. We read every email.</p>
-                <a href="mailto:gardenroutepublishing@gmail.com" class="contact-card__email">gardenroutepublishing@gmail.com</a>
-            </div>
+        <div class="contact-form">
+            <h2 class="contact-form__title">Send Us a Message</h2>
+            <p class="contact-form__subtitle">We'll get back to you within 48 hours.</p>
             
-            <div class="contact-card">
-                <h2 class="contact-card__title">Promote Your Event</h2>
-                <p class="contact-card__text">Running a market, festival, exhibition, or community gathering? We feature local events that bring people together. Send us the details and we'll consider it for our coverage.</p>
-                <a href="mailto:gardenroutepublishing@gmail.com?subject=Event%20Submission" class="contact-card__email">Submit an event →</a>
-            </div>
-            
-            <div class="contact-card">
-                <h2 class="contact-card__title">Share a Story</h2>
-                <p class="contact-card__text">Know someone doing something remarkable? A local business breaking new ground? A hidden gem that deserves attention? We're all ears. The best stories come from tips like yours.</p>
-                <a href="mailto:gardenroutepublishing@gmail.com?subject=Story%20Tip" class="contact-card__email">Send a tip →</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="advertising">
-        <div class="content">
-            <div class="advertising__header">
-                <span class="advertising__tag">For Business</span>
-                <h2 class="advertising__title">Advertise with Us</h2>
-            </div>
-            
-            <div class="advertising__content">
-                <div class="advertising__text">
-                    <p>Garden Route Living reaches an engaged audience of locals and visitors who care deeply about this region. Our readers are decision-makers: homeowners, business owners, and people actively looking for the best the coast has to offer.</p>
-                    
-                    <p>We offer featured articles that tell your story with the same editorial care we bring to all our content. These aren't advertorials that readers scroll past. They're genuine pieces that showcase what makes your business special, hosted on a platform with real domain authority.</p>
-                    
-                    <p>Every sponsored article is crafted by our editorial team, professionally photographed, and permanently hosted on our site. You get a story worth reading, and lasting visibility where it matters.</p>
-                    
-                    <div class="advertising__highlight">
-                        <h3 class="advertising__highlight-title">What's Included</h3>
-                        <p>Professional feature article, photography coordination, permanent placement on site, social promotion, and a backlink from our DR 80 domain to boost your own search visibility.</p>
+            <form action="https://formspree.io/f/yourformid" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                 </div>
                 
-                <div class="advertising__stats">
-                    <h3 class="advertising__stats-title">Why It Works</h3>
-                    
-                    <div class="stat">
-                        <div class="stat__number">DR 80</div>
-                        <div class="stat__label">Domain Rating — powerful backlinks for your SEO</div>
-                    </div>
-                    
-                    <div class="stat">
-                        <div class="stat__number">Local</div>
-                        <div class="stat__label">Readers who actually live, work, and spend here</div>
-                    </div>
-                    
-                    <div class="stat">
-                        <div class="stat__number">Permanent</div>
-                        <div class="stat__label">Your article stays live — no expiry dates</div>
-                    </div>
-                    
-                    <div class="stat">
-                        <div class="stat__number">Editorial</div>
-                        <div class="stat__label">Written by journalists, not copywriters</div>
-                    </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a topic...</option>
+                        <option value="general">General Enquiry</option>
+                        <option value="story">Story Submission</option>
+                        <option value="advertising">Advertising</option>
+                        <option value="partnership">Partnership Opportunity</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
                 </div>
-            </div>
-            
-            <div class="advertising__cta">
-                <p>Interested? Request our rate card and let's talk about what we can do for your business.</p>
-                <a href="mailto:gardenroutepublishing@gmail.com?subject=Advertising%20Rate%20Card%20Request">Request rate card →</a>
-            </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us more..." required></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
         </div>
     </section>
-
+    
     <footer class="footer">
-        <p class="footer__brand">Garden Route Living</p>
-        <p class="footer__email"><a href="mailto:gardenroutepublishing@gmail.com">gardenroutepublishing@gmail.com</a></p>
+        <p class="footer__logo">Garden Route Living</p>
+        <div class="footer__links">
+            <a href="index.html">Stories</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
         <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
     </footer>
 </body>

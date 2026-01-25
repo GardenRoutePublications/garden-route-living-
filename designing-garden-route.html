@@ -2,675 +2,452 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="3ac2MDqd1PRK0g65gk6Q21J4i4F_L_yZWabLLRe7Qwk" />
+    <meta name="google-site-verification" content="3ac2MDqd1PRK0g65gk6Q21J4i4F_L_yZWabLLRe7Qwk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designing for the Garden Route: Where Climate Meets Craft | Garden Route Living</title>
-    <meta name="description" content="The Garden Route's unique coastal climate demands more than pretty interiors. We explore the science and art of window treatments with the region's leading specialists.">
+    <meta name="description" content="The Garden Route's unique coastal climate demands more than aesthetic choices. We explore the science and art of blinds, shutters and awnings with Custom Blinds Shutters and Awnings, the region's leading specialists.">
     
-    <!-- Open Graph -->
     <meta property="og:title" content="Designing for the Garden Route: Where Climate Meets Craft">
-    <meta property="og:description" content="The Garden Route's unique coastal climate demands more than pretty interiors. We explore the science and art of window treatments with the region's leading specialists.">
-    <meta property="og:image" content="https://gardenrouteliving.onrender.ccoastal-blinds.jpeg">
-    <meta property="og:url" content="https://gardenrouteliving.onrender.com/article/designing-garden-route.html">
+    <meta property="og:description" content="The science and art of window treatments in South Africa's most demanding coastal environment.">
+    <meta property="og:image" content="https://gardenrouteliving.onrender.com/custom-blinds.jpg">
+    <meta property="og:url" content="https://gardenrouteliving.onrender.com/designing-garden-route.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Garden Route Living">
     
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Designing for the Garden Route: Where Climate Meets Craft">
-    <meta name="twitter:description" content="The science and art of window treatments on the Garden Route.">
-    <meta name="twitter:image" content="https://gardenrouteliving.onrender.ccoastal-blinds.jpeg">
-    
-    <!-- SEO -->
-    <link rel="canonical" href="https://gardenrouteliving.onrender.com/article/designing-garden-route.html">
+    <link rel="canonical" href="https://gardenrouteliving.onrender.com/designing-garden-route.html">
     <meta name="robots" content="index, follow">
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --color-ink: #1a1a1a;
-            --color-paper: #faf9f7;
-            --color-cream: #f5f3ef;
-            --color-sand: #e8e4dc;
-            --color-ocean: #2d4a5e;
-            --color-gold: #c4913d;
-            --color-sage: #7a9a8a;
-            --color-mist: rgba(255,255,255,0.85);
+            --ink: #1a1a1a;
+            --ink-light: #4a4a4a;
+            --ink-muted: #6b6b6b;
+            --paper: #fefdfb;
+            --cream: #f8f6f1;
+            --sand: #e9e5dc;
+            --ocean: #1e3a4c;
+            --ocean-light: #2d5a6e;
+            --gold: #b8860b;
+            --gold-light: #d4a84b;
             
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Lora', Georgia, serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, sans-serif;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 17px; scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--paper); color: var(--ink); line-height: 1.8; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
         
-        html {
-            font-size: 18px;
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: var(--font-body);
-            background: var(--color-paper);
-            color: var(--color-ink);
-            line-height: 1.8;
-        }
-        
-        /* Navigation */
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1rem 2rem;
-            background: var(--color-mist);
+        /* Header */
+        .header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(254, 253, 251, 0.97);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
         }
-        
-        .nav__logo {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 400;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-ink);
-            text-decoration: none;
+        .header__inner {
+            max-width: 1400px; margin: 0 auto; padding: 1rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
         }
-        
-        .nav__back {
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--color-ink);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .nav__back:hover {
-            color: var(--color-gold);
-        }
+        .logo { display: flex; flex-direction: column; }
+        .logo__main { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+        .logo__sub { font-family: var(--font-display); font-size: 0.9rem; font-style: italic; color: var(--gold); }
+        .nav { display: flex; gap: 2rem; }
+        .nav__link { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); transition: var(--transition); }
+        .nav__link:hover { color: var(--gold); }
         
         /* Hero */
         .hero {
-            height: 75vh;
-            min-height: 550px;
+            padding-top: 70px;
             position: relative;
+            height: 75vh;
+            min-height: 500px;
             display: flex;
             align-items: flex-end;
-            margin-top: 60px;
-            overflow: hidden;
         }
-        
-        .hero__image {
-            position: absolute;
-            inset: 0;
-            background: url('coastal-blinds.jpeg') center/cover;
-        }
-        
-        .hero__overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
-        }
-        
+        .hero__image { position: absolute; inset: 0; }
+        .hero__image img { width: 100%; height: 100%; object-fit: cover; }
+        .hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, transparent 100%); }
         .hero__content {
-            position: relative;
-            z-index: 2;
-            padding: 4rem;
-            max-width: 800px;
+            position: relative; z-index: 2;
+            max-width: 900px; margin: 0 auto;
+            padding: 0 2rem 4rem;
             color: white;
+            text-align: center;
         }
-        
         .hero__tag {
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-            margin-bottom: 1rem;
-            display: block;
+            display: inline-block;
+            font-size: 0.7rem; font-weight: 600;
+            letter-spacing: 0.2em; text-transform: uppercase;
+            color: var(--gold-light);
+            border: 1px solid var(--gold-light);
+            padding: 0.4rem 1rem;
+            margin-bottom: 1.5rem;
         }
-        
         .hero__title {
             font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            font-weight: 300;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 500;
             line-height: 1.15;
             margin-bottom: 1rem;
         }
-        
         .hero__subtitle {
             font-size: 1.1rem;
+            font-weight: 300;
             opacity: 0.9;
-            font-style: italic;
             max-width: 600px;
+            margin: 0 auto;
         }
         
         /* Article */
-        .article {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
+        .article { max-width: 750px; margin: 0 auto; padding: 4rem 2rem; }
         
-        .article__lead {
-            font-size: 1.3rem;
+        .article__intro {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
             font-weight: 400;
-            line-height: 1.7;
-            color: #333;
-            margin-bottom: 2rem;
             font-style: italic;
+            line-height: 1.6;
+            color: var(--ink-light);
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--sand);
         }
         
         .article p {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--ink-light);
             margin-bottom: 1.5rem;
-            color: #444;
         }
         
         .article h2 {
             font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 400;
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: var(--ink);
             margin: 3rem 0 1.5rem;
-            color: var(--color-ink);
         }
         
         .article h3 {
             font-family: var(--font-display);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 500;
-            margin: 2.5rem 0 1rem;
-            color: var(--color-ocean);
+            color: var(--ink);
+            margin: 2rem 0 1rem;
         }
         
-        .article__image {
-            margin: 3rem -4rem;
-            position: relative;
+        .article a {
+            color: var(--ocean);
+            border-bottom: 1px solid var(--gold);
+            transition: var(--transition);
         }
+        .article a:hover { color: var(--gold); }
         
-        .article__image img {
-            width: 100%;
-            height: auto;
-        }
-        
-        .article__caption {
-            font-size: 0.85rem;
-            color: #888;
-            margin-top: 0.75rem;
-            text-align: center;
-            font-style: italic;
-        }
-        
-        .article__quote {
+        /* Pull Quote */
+        .pullquote {
             margin: 3rem 0;
             padding: 2rem 0;
-            border-top: 1px solid var(--color-sand);
-            border-bottom: 1px solid var(--color-sand);
+            border-top: 2px solid var(--gold);
+            border-bottom: 1px solid var(--sand);
         }
-        
-        .article__quote blockquote {
+        .pullquote__text {
             font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 400;
             font-style: italic;
-            color: var(--color-ocean);
             line-height: 1.5;
-            margin-bottom: 1rem;
+            color: var(--ink);
         }
-        
-        .article__quote cite {
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            font-style: normal;
-            color: var(--color-gold);
-            letter-spacing: 0.05em;
+        .pullquote__source {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gold);
         }
         
         /* Feature Box */
         .feature-box {
-            background: var(--color-ocean);
+            background: var(--cream);
+            padding: 2rem;
+            margin: 2.5rem 0;
+            border-left: 3px solid var(--gold);
+        }
+        .feature-box__title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .feature-box__text {
+            font-size: 0.95rem;
+            color: var(--ink-light);
+            line-height: 1.7;
+        }
+        .feature-box__link {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--ocean);
+        }
+        
+        /* CTA Box */
+        .cta-box {
+            background: var(--ocean);
             color: white;
             padding: 2.5rem;
             margin: 3rem 0;
+            text-align: center;
         }
-        
-        .feature-box__title {
+        .cta-box__title {
             font-family: var(--font-display);
             font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+        .cta-box__text {
+            font-size: 1rem;
+            opacity: 0.9;
             margin-bottom: 1.5rem;
+        }
+        .cta-box__button {
+            display: inline-block;
+            background: white;
+            color: var(--ocean);
+            padding: 0.9rem 2rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: var(--transition);
+            border: none;
+        }
+        .cta-box__button:hover {
+            background: var(--gold);
             color: white;
         }
         
-        .feature-box__list {
-            list-style: none;
+        /* Image with Caption */
+        .article-image {
+            margin: 2.5rem -2rem;
+        }
+        .article-image img {
+            width: 100%;
+        }
+        .article-image__caption {
+            font-size: 0.8rem;
+            color: var(--ink-muted);
+            padding: 0.75rem 2rem 0;
+            font-style: italic;
         }
         
-        .feature-box__list li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            font-size: 0.95rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+        /* Related Stories */
+        .related {
+            background: var(--cream);
+            padding: 4rem 2rem;
+            margin-top: 4rem;
         }
-        
-        .feature-box__list li:last-child {
-            border-bottom: none;
+        .related__inner { max-width: 1000px; margin: 0 auto; }
+        .related__title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 2rem;
         }
-        
-        .feature-box__list li::before {
-            content: '→';
-            color: var(--color-gold);
-            flex-shrink: 0;
-        }
-        
-        /* Climate Grid */
-        .climate-grid {
+        .related__grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
-            margin: 2rem 0;
         }
-        
-        .climate-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--color-cream);
-        }
-        
-        .climate-item__icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .climate-item__title {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--color-ocean);
-        }
-        
-        .climate-item__desc {
-            font-size: 0.85rem;
-            color: #666;
-        }
-        
-        /* Expert Box */
-        .expert-box {
-            background: var(--color-cream);
-            padding: 2.5rem;
-            margin: 3rem 0;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .expert-box__logo {
-            text-align: center;
-        }
-        
-        .expert-box__logo-text {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: var(--color-ocean);
-            line-height: 1.3;
-        }
-        
-        .expert-box__logo-sub {
-            font-size: 0.8rem;
-            color: #888;
-            margin-top: 0.5rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-        
-        .expert-box__content h3 {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            margin: 0 0 1rem;
-            color: var(--color-ink);
-        }
-        
-        .expert-box__content p {
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-            color: #555;
-        }
-        
-        .expert-box__link {
-            color: var(--color-ocean);
-            font-weight: 500;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        
-        .expert-box__link:hover {
-            color: var(--color-gold);
-        }
-        
-        /* Room Guide */
-        .room-guide {
-            margin: 3rem 0;
-        }
-        
-        .room-guide__item {
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--color-sand);
-        }
-        
-        .room-guide__room {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            color: var(--color-ocean);
-            margin-bottom: 0.5rem;
-        }
-        
-        .room-guide__rec {
-            font-size: 0.95rem;
-            color: #555;
-        }
-        
-        /* Info Box */
-        .info-box {
-            background: var(--color-cream);
-            padding: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .info-box__title {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--color-ink);
-        }
-        
-        .info-box p {
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-        
-        .info-box a {
-            color: var(--color-ocean);
-            text-decoration: none;
-        }
-        
-        .info-box a:hover {
-            color: var(--color-gold);
-        }
+        .related-card { background: white; transition: var(--transition); }
+        .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+        .related-card__image { aspect-ratio: 4/3; overflow: hidden; }
+        .related-card__image img { width: 100%; height: 100%; object-fit: cover; }
+        .related-card__content { padding: 1.25rem; }
+        .related-card__tag { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+        .related-card__title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; margin-top: 0.5rem; }
         
         /* Footer */
-        .footer {
-            background: var(--color-ink);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
+        .footer { background: var(--ink); color: white; padding: 3rem 2rem; text-align: center; }
+        .footer__logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
+        .footer__links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+        .footer__links a { font-size: 0.85rem; color: rgba(255,255,255,0.7); transition: var(--transition); }
+        .footer__links a:hover { color: white; }
+        .footer__copy { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
         
-        .footer__brand {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer__email {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer__email a {
-            color: var(--color-gold);
-            text-decoration: none;
-        }
-        
-        .footer__email a:hover {
-            text-decoration: underline;
-        }
-        
-        .footer__copy {
-            font-size: 0.85rem;
-            opacity: 0.5;
-        }
-        
-        /* Responsive */
         @media (max-width: 768px) {
-            html {
-                font-size: 16px;
-            }
-            .hero__content {
-                padding: 2rem;
-            }
-            .article {
-                padding: 2rem 1.5rem;
-            }
-            .article__image {
-                margin: 2rem -1.5rem;
-            }
-            .climate-grid {
-                grid-template-columns: 1fr;
-            }
-            .expert-box {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+            .nav { display: none; }
+            .hero { height: 60vh; }
+            .article { padding: 3rem 1.5rem; }
+            .article-image { margin: 2rem -1.5rem; }
+            .related__grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <a href="index.html" class="nav__logo">Garden Route Living</a>
-        <a href="index.html" class="nav__back">← Back to Stories</a>
-    </nav>
-
-    <!-- Hero -->
-    <header class="hero">
-        <div class="hero__image"></div>
-        <div class="hero__overlay"></div>
-        <div class="hero__content">
-            <span class="hero__tag">Interiors</span>
-            <h1 class="hero__title">Designing for the Garden Route: Where Climate Meets Craft</h1>
-            <p class="hero__subtitle">The region's unique conditions demand more than pretty interiors. We explore the science and art of window treatments with local specialists.</p>
+    <header class="header">
+        <div class="header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__main">Garden Route</span>
+                <span class="logo__sub">Living</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Stories</a>
+                <a href="about.html" class="nav__link">About</a>
+                <a href="contact.html" class="nav__link">Contact</a>
+            </nav>
         </div>
     </header>
-
-    <!-- Article -->
+    
+    <section class="hero">
+        <div class="hero__image">
+            <img src="custom-blinds.jpg" alt="Outdoor roller blind partially lowered on a stone-walled coastal veranda with panoramic views of the Indian Ocean along the Garden Route">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <span class="hero__tag">Design</span>
+            <h1 class="hero__title">Designing for the Garden Route: Where Climate Meets Craft</h1>
+            <p class="hero__subtitle">The science and art of window treatments in South Africa's most demanding coastal environment</p>
+        </div>
+    </section>
+    
     <article class="article">
-        <p class="article__lead">
-            Anyone who has lived on the Garden Route knows the feeling: that moment when the afternoon sun catches your living room at just the wrong angle, or when the southeaster rattles through an outdoor entertaining area you thought was sheltered. Our coastline is spectacular, but it makes demands of the spaces we inhabit.
-        </p>
-
-        <p>
-            The Garden Route occupies a unique climatic position, wedged between two rainfall systems with the Outeniqua Mountains banking clouds on one side and the Indian Ocean moderating temperatures on the other. The result is a Mediterranean maritime climate that locals describe with characteristic understatement: "If you don't like the weather in George, come back in ten minutes."
-        </p>
-
-        <p>
-            This changeability, combined with high humidity, salt-laden air, and intense seasonal UV exposure, creates a particular challenge for interior design. What works in Johannesburg or Cape Town often fails here within a few seasons. Materials warp. Fabrics fade. Hardware corrodes. The Garden Route, for all its beauty, is unforgiving to shortcuts.
-        </p>
-
+        <p class="article__intro">The Garden Route is beautiful precisely because it's wild. But that wildness—the salt air, the humidity, the fierce summer sun and winter storms—makes interior design here unlike anywhere else in South Africa.</p>
+        
+        <p>Ask any homeowner along this 300-kilometre stretch of coastline about their biggest maintenance challenge, and you'll hear the same answer: windows. The very views that drew them here become their greatest vulnerability—to UV damage, to moisture, to the relentless coastal wind.</p>
+        
+        <p>We spoke with <a href="https://customblinds.co.za" target="_blank" rel="noopener">Custom Blinds Shutters & Awnings</a>, the Garden Route's leading specialists in window treatments, about what it really takes to design for this unique environment.</p>
+        
         <h2>Understanding the Coastal Challenge</h2>
-
-        <p>
-            To design successfully for this region, one must first understand what the coast inflicts on building materials. Salt air is the silent destroyer: it accelerates corrosion in metals, causes timber to swell and split, and degrades synthetic materials at rates that surprise homeowners who have moved from inland cities.
-        </p>
-
-        <div class="climate-grid">
-            <div class="climate-item">
-                <div class="climate-item__icon">☀️</div>
-                <div class="climate-item__title">UV Intensity</div>
-                <div class="climate-item__desc">Year-round sun exposure fades untreated fabrics within months</div>
-            </div>
-            <div class="climate-item">
-                <div class="climate-item__icon">💨</div>
-                <div class="climate-item__title">Salt Air</div>
-                <div class="climate-item__desc">Corrosive marine environment demands rust-proof hardware</div>
-            </div>
-            <div class="climate-item">
-                <div class="climate-item__icon">💧</div>
-                <div class="climate-item__title">Humidity</div>
-                <div class="climate-item__desc">Moisture fluctuations cause warping in unsuitable materials</div>
-            </div>
+        
+        <p>"Most people think choosing blinds is purely aesthetic," says the team at Custom Blinds, who have completed over 8,000 installations across George, Knysna, Plettenberg Bay, Mossel Bay, Sedgefield and Wilderness. "But here on the Garden Route, it's actually an engineering decision first."</p>
+        
+        <p>The challenges are multifaceted. Salt air corrodes metal components within months if they're not marine-grade. Humidity can warp wooden shutters that haven't been properly sealed. UV radiation fades fabrics and degrades plastics faster than anywhere inland. And the famous Garden Route winds can tear poorly secured awnings from their mountings.</p>
+        
+        <div class="pullquote">
+            <p class="pullquote__text">"Here on the Garden Route, choosing window treatments isn't purely aesthetic—it's an engineering decision first."</p>
+            <p class="pullquote__source">Custom Blinds Shutters & Awnings</p>
         </div>
-
-        <p>
-            Then there is the light itself. The Garden Route enjoys some 3,000 hours of sunshine annually, and while this is precisely why people move here, it creates practical problems. North-facing windows (remember, we are in the Southern Hemisphere) receive relentless solar gain. Glare off the ocean can make coastal living rooms unusable in the afternoons. And UV radiation quietly destroys furniture, flooring, and artwork that would last decades elsewhere.
-        </p>
-
-        <div class="article__quote">
-            <blockquote>
-                "Our coastal experience informs everything we recommend. What we install today still needs to perform seasons from now, in salt air, summer heat, and winter storms."
-            </blockquote>
-            <cite>— Custom Blinds Shutters & Awnings</cite>
-        </div>
-
-        <h2>The Local Approach</h2>
-
-        <p>
-            It is against this backdrop that Custom Blinds Shutters & Awnings has built its reputation over the past fifteen years. Founded by Duncan Kane and operating from Knysna, the company has completed over 8,000 installations across the Garden Route, developing what might be called a coastal-specific methodology.
-        </p>
-
-        <p>
-            The approach begins with materials selection. Where a Gauteng supplier might default to timber venetians, the Custom Blinds team specifies moisture-resistant alternatives: aluminium components where hardware is exposed, composite materials for shutters, and fabrics with proven UV and humidity ratings. These are not generic products badged for the local market; they are specifications refined through years of observing what survives and what does not.
-        </p>
-
-        <div class="expert-box">
-            <div class="expert-box__logo">
-                <div class="expert-box__logo-text">Custom Blinds<br>Shutters & Awnings</div>
-                <div class="expert-box__logo-sub">Est. 2010 · Knysna</div>
-            </div>
-            <div class="expert-box__content">
-                <h3>Garden Route Specialists</h3>
-                <p>The only South African company offering the complete package: online sales, on-site consultation, in-house manufacturing, and professional installation under one roof. Serving George, Knysna, Plettenberg Bay, Mossel Bay, Sedgefield, Wilderness, and Buffalo Bay.</p>
-                <a href="https://customblinds.co.za" class="expert-box__link">customblinds.co.za →</a>
-            </div>
-        </div>
-
-        <h2>Room by Room: What Works</h2>
-
-        <p>
-            The question most homeowners ask is simple: what should I put on my windows? The answer, as with most things architectural, is "it depends." But some patterns have emerged from fifteen years of Garden Route installations.
-        </p>
-
-        <div class="room-guide">
-            <div class="room-guide__item">
-                <div class="room-guide__room">Living Areas with Ocean Views</div>
-                <div class="room-guide__rec">Solar shades with openness factors that reduce glare while preserving the view. Motorised operation allows adjustment as the sun moves, and the synthetic fabrics resist UV degradation.</div>
-            </div>
-            <div class="room-guide__item">
-                <div class="room-guide__room">Bedrooms</div>
-                <div class="room-guide__rec">Honeycomb (cellular) blinds provide both light control and thermal insulation. The air pockets in the fabric structure help moderate temperature, reducing energy costs in both summer and winter.</div>
-            </div>
-            <div class="room-guide__item">
-                <div class="room-guide__room">Bathrooms & High-Moisture Areas</div>
-                <div class="room-guide__rec">Aluminium venetians or composite shutters. The golden rule: nothing that can warp, nothing that can mildew. Hardware should be stainless steel throughout.</div>
-            </div>
-            <div class="room-guide__item">
-                <div class="room-guide__room">Outdoor Entertaining Spaces</div>
-                <div class="room-guide__rec">Weather blinds and louvred awnings transform patios into year-round rooms. Modern systems integrate with home automation, responding to wind sensors and scheduled routines.</div>
-            </div>
-        </div>
-
-        <h2>The Security Question</h2>
-
-        <p>
-            Let us address the elephant in the room. Garden Route homeowners face the same security considerations as South Africans everywhere, but many baulk at the aesthetic of traditional burglar bars. The fear of making one's home "look like Fort Knox" is real, and it has led to interesting innovations.
-        </p>
-
-        <p>
-            Aluminium security shutters have emerged as the preferred solution for many coastal properties. Marine-grade aluminium with stainless steel hardware resists corrosion; internal locking mechanisms provide genuine protection; and adjustable louvres allow control over light, air, and privacy. From the street, they read as elegant architectural features rather than defensive installations.
-        </p>
-
-        <p>
-            The practical advantage is consolidation: one product replaces burglar bars, security gates, curtains, and blinds. Less visual clutter, lower maintenance, and a coherent aesthetic that actually enhances property value rather than diminishing it.
-        </p>
-
-        <h2>The Automation Revolution</h2>
-
-        <p>
-            Perhaps the most significant development in window treatments over the past decade has been the integration of smart home technology. Brands like Somfy and MotionBlinds have made motorised operation accessible and reliable, with particular benefits for coastal homes.
-        </p>
-
-        <p>
-            Consider a typical Garden Route scenario: you are away from home when the afternoon heat builds. With automated blinds programmed to respond to time of day (or, in more sophisticated systems, to temperature sensors), the house protects itself. Interiors stay cooler, energy bills drop, and furniture is shielded from UV exposure regardless of whether anyone is home.
-        </p>
-
+        
+        <h2>The Custom Blinds Approach</h2>
+        
+        <p>What sets Custom Blinds apart is their end-to-end model. They're the only company on the Garden Route that handles the entire process in-house: free on-site consultation, in-house manufacturing, and professional installation—all under one roof.</p>
+        
+        <p>"We don't just sell products," they explain. "We solve problems. Every home is different, every window orientation presents unique challenges, and every homeowner has different priorities—whether that's privacy, light control, insulation, or simply making a room look beautiful."</p>
+        
         <div class="feature-box">
-            <h3 class="feature-box__title">Why Automate in Coastal Homes</h3>
-            <ul class="feature-box__list">
-                <li>Schedule blinds to close during peak UV hours, protecting interiors even when you are away</li>
-                <li>Integrate with weather sensors: awnings retract automatically in high winds</li>
-                <li>Reduce energy costs by managing solar heat gain throughout the day</li>
-                <li>Voice control and app operation for convenience, especially with hard-to-reach windows</li>
-                <li>Extend the life of window treatments by eliminating manual handling wear</li>
-            </ul>
+            <h3 class="feature-box__title">The Custom Fit Guarantee</h3>
+            <p class="feature-box__text">Custom Blinds backs every installation with their Custom Fit Guarantee. If your blinds arrive too large, they'll trim them at no charge. If they're too small, you'll receive 5% off your replacement order. It's the kind of confidence that comes from 15 years of local experience.</p>
+            <a href="https://customblinds.co.za/custom-fit-guarantee/" class="feature-box__link" target="_blank" rel="noopener">Learn more about the guarantee →</a>
         </div>
-
-        <h2>The Value of Local Expertise</h2>
-
-        <p>
-            There is a reason that national chains often struggle on the Garden Route. The specifications that work in Durban or Pretoria simply do not translate to our conditions. Local knowledge, accumulated over thousands of installations, is not a marketing phrase here; it is the difference between products that last and expensive mistakes.
-        </p>
-
-        <p>
-            Custom Blinds Shutters & Awnings represents something increasingly rare in South African retail: genuine specialisation. Their partnerships with brands like Hunter Douglas, Somfy, Coulisse, Blindquip and Cornerstar are underpinned by specific coastal expertise. When they recommend a particular fabric or hardware grade, that recommendation carries the weight of observed performance over years and seasons.
-        </p>
-
-        <div class="article__quote">
-            <blockquote>
-                "We've got installations from 2010 in Knysna beachfront properties that still look and work like new. That's the standard we hold ourselves to."
-            </blockquote>
-            <cite>— Custom Blinds Shutters & Awnings</cite>
+        
+        <h2>Room by Room: What Works Where</h2>
+        
+        <h3>Living Areas with Ocean Views</h3>
+        <p>For the dramatic floor-to-ceiling windows that define Garden Route architecture, Custom Blinds typically recommends their Custom Lifestyle™ range of outdoor blinds. These create seamless indoor-outdoor flow while protecting interiors from the elements—crucial for homes exposed to the infamous southeaster.</p>
+        
+        <h3>Bedrooms</h3>
+        <p>Blackout blinds are essential for bedrooms, particularly in summer when the sun rises before 5am. The company's blockout roller blinds, combined with a pelmet for complete light seal, ensure restful sleep year-round.</p>
+        
+        <h3>Bathrooms and Kitchens</h3>
+        <p>Moisture-resistant materials are non-negotiable in these high-humidity spaces. Aluminium Venetian blinds or PVC shutters resist warping and mould, maintaining their appearance through years of steam and splashes.</p>
+        
+        <h3>Outdoor Entertainment Areas</h3>
+        <p>The Garden Route's outdoor living culture demands solutions that extend usable space. Canvas awnings provide shade while allowing airflow, and motorised outdoor blinds can transform an exposed stoep into a year-round room at the touch of a button.</p>
+        
+        <div class="cta-box">
+            <h3 class="cta-box__title">Free In-Home Consultation</h3>
+            <p class="cta-box__text">Custom Blinds offers obligation-free consultations across the Garden Route, from Mossel Bay to Plettenberg Bay. Their experts will assess your space, discuss your needs, and provide a detailed quote.</p>
+            <a href="https://customblinds.co.za/request-free-quote/" class="cta-box__button" target="_blank" rel="noopener">Request a Quote</a>
         </div>
-
-        <h2>Making the Right Choice</h2>
-
-        <p>
-            For homeowners contemplating window treatments on the Garden Route, the path forward involves honest assessment. What direction do your windows face? How much direct sun do they receive? What is your proximity to the ocean, and therefore your salt exposure? Are there privacy or security requirements? What is your appetite for maintenance?
-        </p>
-
-        <p>
-            These questions lead to specifications, and specifications lead to products. The mistake many make is starting with aesthetics rather than function. Choose a blind because it looks good in a magazine, and you may find yourself replacing it within three years. Choose based on performance requirements, and the aesthetic usually follows.
-        </p>
-
-        <p>
-            The Garden Route rewards those who design with humility, acknowledging what the climate demands rather than fighting against it. The most beautiful coastal homes are not those that ignore their environment, but those that embrace it: open to the light and views, protected from the elements, comfortable through every season.
-        </p>
-
-        <p>
-            That is the balance that good window treatments achieve. And it is the balance that, after fifteen years and 8,000 installations, the specialists at Custom Blinds Shutters & Awnings have learned to strike.
-        </p>
-
-        <div class="info-box">
-            <h3 class="info-box__title">Custom Blinds Shutters & Awnings</h3>
-            <p><strong>Service Areas:</strong> George, Knysna, Plettenberg Bay, Mossel Bay, Sedgefield, Wilderness, Buffalo Bay</p>
-            <p><strong>Specialities:</strong> Indoor blinds, shutters, outdoor weather blinds, awnings, security shutters, shade ports, Somfy automation</p>
-            <p><strong>Partners:</strong> Hunter Douglas, Somfy, Coulisse, Blindquip, MotionBlinds, Cornerstar Screens</p>
-            <p><strong>Website:</strong> <a href="https://customblinds.co.za">customblinds.co.za</a></p>
-            <p><strong>Consultations:</strong> On-site assessments available throughout the Garden Route, with nationwide delivery for online orders</p>
+        
+        <h2>The Smart Home Revolution</h2>
+        
+        <p>Automation is transforming how Garden Route homes manage light and temperature. Custom Blinds partners with leading smart home brands including Somfy and MotionBlinds to offer motorised solutions that integrate with home automation systems.</p>
+        
+        <p>"Imagine your blinds automatically adjusting throughout the day," they suggest. "Opening to warm the house on a winter morning, closing to block the midday sun, and lowering for privacy as evening falls—all without you lifting a finger."</p>
+        
+        <p>For holiday homes that spend weeks unoccupied, automated blinds can simulate presence and protect interiors from sun damage even when owners are away.</p>
+        
+        <h2>Security Without Compromise</h2>
+        
+        <p>Security is a growing concern along the Garden Route, and window treatments play an increasingly important role. Custom Blinds' partnerships with security shutter specialists like Cornerstar and Locklatch mean homeowners don't have to choose between protection and aesthetics.</p>
+        
+        <p>Their security shutters meet insurance requirements while maintaining the clean lines that contemporary Garden Route architecture demands.</p>
+        
+        <h2>Premium Partnerships</h2>
+        
+        <p>Quality depends on supply chain. Custom Blinds has built partnerships with the industry's leading manufacturers, including Hunter Douglas (the world's largest window covering company), Coulisse (Dutch innovation in soft furnishings), and Blindquip (South Africa's premier component supplier).</p>
+        
+        <p>These partnerships mean access to materials specifically engineered for harsh environments, backed by warranties that generic suppliers simply can't match.</p>
+        
+        <div class="feature-box">
+            <h3 class="feature-box__title">Service Areas</h3>
+            <p class="feature-box__text">Custom Blinds Shutters & Awnings serves the entire Garden Route region including George, Knysna, Plettenberg Bay, Mossel Bay, Sedgefield, Wilderness, Groot Brakrivier, Hartenbos, Victoria Bay, Brenton-on-Sea, Buffalo Bay, and Nature's Valley.</p>
+            <a href="https://customblinds.co.za" class="feature-box__link" target="_blank" rel="noopener">Visit customblinds.co.za →</a>
         </div>
+        
+        <h2>Why Local Expertise Matters</h2>
+        
+        <p>The Garden Route isn't like Cape Town or Johannesburg. The specific combination of salt air, humidity, UV intensity, and wind patterns creates challenges that interior designers from elsewhere simply don't understand.</p>
+        
+        <p>With 15 years of local experience and over 8,000 installations, Custom Blinds has encountered—and solved—every problem the Garden Route climate can throw at window treatments. That institutional knowledge is invaluable when protecting a significant investment in your home.</p>
+        
+        <p>Because on the Garden Route, the view isn't just something you look at. It's something you live with. And living with it beautifully requires expertise that goes far beyond aesthetics.</p>
     </article>
-
-    <!-- Footer -->
+    
+    <section class="related">
+        <div class="related__inner">
+            <h2 class="related__title">More Design Stories</h2>
+            <div class="related__grid">
+                <a href="workshop-interiors.html" class="related-card">
+                    <div class="related-card__image">
+                        <img src="workshop-interiors.jpg" alt="Coastal living room designed by The Workshop Interiors">
+                    </div>
+                    <div class="related-card__content">
+                        <span class="related-card__tag">Interiors</span>
+                        <h3 class="related-card__title">The Workshop Interiors</h3>
+                    </div>
+                </a>
+                <a href="enricos-restaurant.html" class="related-card">
+                    <div class="related-card__image">
+                        <img src="enricos.jpg" alt="Beachfront dining at Enricos">
+                    </div>
+                    <div class="related-card__content">
+                        <span class="related-card__tag">Dining</span>
+                        <h3 class="related-card__title">Enrico's Restaurant</h3>
+                    </div>
+                </a>
+                <a href="luka-vineyards.html" class="related-card">
+                    <div class="related-card__image">
+                        <img src="luka-vineyards.jpg" alt="Wine tasting at Luka Vineyards">
+                    </div>
+                    <div class="related-card__content">
+                        <span class="related-card__tag">Wine</span>
+                        <h3 class="related-card__title">Luka Vineyards</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
     <footer class="footer">
-        <p class="footer__brand">Garden Route Living</p>
-        <p class="footer__email"><a href="mailto:gardenroutepublishing@gmail.com">gardenroutepublishing@gmail.com</a></p>
+        <p class="footer__logo">Garden Route Living</p>
+        <div class="footer__links">
+            <a href="index.html">Stories</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
         <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
     </footer>
 </body>

@@ -2,24 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="3ac2MDqd1PRK0g65gk6Q21J4i4F_L_yZWabLLRe7Qwk" />
+    <meta name="google-site-verification" content="3ac2MDqd1PRK0g65gk6Q21J4i4F_L_yZWabLLRe7Qwk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Garden Route Living</title>
-    <meta name="description" content="Meet the team behind Garden Route Living. Local writers, photographers and storytellers celebrating South Africa's most beautiful coastline.">
+    <title>About | Garden Route Living</title>
+    <meta name="description" content="Garden Route Living is an independent digital magazine celebrating the people, places and lifestyle of South Africa's most beautiful coastline.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="About Us | Garden Route Living">
-    <meta property="og:description" content="Meet the team behind Garden Route Living. Local writers, photographers and storytellers celebrating South Africa's most beautiful coastline.">
-    <meta property="og:image" content="https://gardenrouteliving.onrender.com/about-aerial.jpeg">
+    <meta property="og:title" content="About Garden Route Living">
+    <meta property="og:description" content="An independent digital magazine celebrating South Africa's most beautiful coastline.">
+    <meta property="og:image" content="https://gardenrouteliving.onrender.com/garden-route-beach.jpg">
     <meta property="og:url" content="https://gardenrouteliving.onrender.com/about.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Garden Route Living">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Us | Garden Route Living">
-    <meta name="twitter:description" content="Meet the team behind Garden Route Living.">
-    <meta name="twitter:image" content="https://gardenrouteliving.onrender.com/about-aerial.jpeg">
     
     <!-- SEO -->
     <link rel="canonical" href="https://gardenrouteliving.onrender.com/about.html">
@@ -28,90 +24,116 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --color-ink: #1a1a1a;
-            --color-paper: #faf9f7;
-            --color-cream: #f5f3ef;
-            --color-sand: #e8e4dc;
-            --color-ocean: #2d4a5e;
-            --color-gold: #c4913d;
+            --ink: #1a1a1a;
+            --ink-light: #4a4a4a;
+            --ink-muted: #6b6b6b;
+            --paper: #fefdfb;
+            --cream: #f8f6f1;
+            --sand: #e9e5dc;
+            --ocean: #1e3a4c;
+            --gold: #b8860b;
+            --gold-light: #d4a84b;
             
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Lora', Georgia, serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, sans-serif;
+            
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { font-size: 18px; scroll-behavior: smooth; }
+        
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
         
         body {
             font-family: var(--font-body);
-            background: var(--color-paper);
-            color: var(--color-ink);
-            line-height: 1.8;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.7;
         }
         
-        /* Navigation */
-        .nav {
-            padding: 1.5rem 2rem;
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        
+        .header__inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--color-sand);
         }
         
-        .nav__brand {
-            text-align: center;
-            text-decoration: none;
+        .logo {
+            display: flex;
+            flex-direction: column;
         }
         
-        .nav__title {
+        .logo__main {
             font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 400;
-            letter-spacing: 0.2em;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: var(--color-ink);
-            display: block;
+            color: var(--ink);
         }
         
-        .nav__subtitle {
+        .logo__sub {
             font-family: var(--font-display);
-            font-size: 0.85rem;
-            font-weight: 300;
+            font-size: 0.95rem;
             font-style: italic;
-            color: var(--color-ink);
-            opacity: 0.7;
-            display: block;
+            color: var(--gold);
         }
         
-        .nav__back {
-            font-family: var(--font-body);
+        .nav {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav__link {
             font-size: 0.8rem;
+            font-weight: 500;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--color-ink);
-            text-decoration: none;
-            opacity: 0.7;
-            transition: opacity 0.3s;
+            color: var(--ink-light);
+            transition: var(--transition);
         }
         
-        .nav__back:hover { opacity: 1; }
+        .nav__link:hover { color: var(--gold); }
         
         /* Hero */
         .hero {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
+            padding-top: 80px;
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
         }
         
         .hero__image {
-            width: 100%;
-            aspect-ratio: 21/9;
-            overflow: hidden;
-            border: 1px solid var(--color-sand);
+            position: absolute;
+            inset: 0;
         }
         
         .hero__image img {
@@ -120,178 +142,291 @@
             object-fit: cover;
         }
         
-        .hero__content {
-            text-align: center;
-            padding: 3rem 1rem 2rem;
+        .hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
         }
         
-        .hero__tag {
-            font-family: var(--font-body);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-            margin-bottom: 1rem;
-            display: block;
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+            color: white;
         }
         
         .hero__title {
             font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 300;
-            line-height: 1.2;
-            color: var(--color-ink);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 500;
         }
         
         /* Content */
         .content {
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 2rem 4rem;
+            padding: 4rem 2rem;
+        }
+        
+        .content__intro {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--ink-light);
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--sand);
+        }
+        
+        .content h2 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin: 2.5rem 0 1rem;
         }
         
         .content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--ink-light);
             margin-bottom: 1.5rem;
-            color: #444;
         }
         
-        .content p:first-of-type {
-            font-size: 1.1rem;
-            color: var(--color-ink);
+        .content a {
+            color: var(--ocean);
+            border-bottom: 1px solid var(--gold);
+            transition: var(--transition);
+        }
+        
+        .content a:hover {
+            color: var(--gold);
         }
         
         /* Values */
         .values {
-            background: var(--color-cream);
-            padding: 3rem 2rem;
+            background: var(--cream);
+            padding: 4rem 2rem;
             margin: 3rem 0;
+        }
+        
+        .values__inner {
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
         .values__title {
             font-family: var(--font-display);
             font-size: 1.5rem;
+            font-weight: 500;
             text-align: center;
-            margin-bottom: 2rem;
-            color: var(--color-ink);
+            margin-bottom: 3rem;
         }
         
         .values__grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
         }
         
-        .values__item {
+        .value {
             text-align: center;
+            padding: 1.5rem;
         }
         
-        .values__item-title {
+        .value__icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .value__title {
             font-family: var(--font-display);
-            font-size: 1.2rem;
-            color: var(--color-ocean);
+            font-size: 1.1rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
         }
         
-        .values__item-text {
+        .value__text {
             font-size: 0.9rem;
-            color: #666;
+            color: var(--ink-muted);
+            line-height: 1.6;
+        }
+        
+        /* CTA */
+        .cta {
+            background: var(--ocean);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .cta__title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .cta__text {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta__button {
+            display: inline-block;
+            background: white;
+            color: var(--ocean);
+            padding: 1rem 2.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+        
+        .cta__button:hover {
+            background: var(--gold);
+            color: white;
         }
         
         /* Footer */
         .footer {
-            background: var(--color-ink);
+            background: var(--ink);
             color: white;
             padding: 3rem 2rem;
             text-align: center;
         }
         
-        .footer__brand {
+        .footer__logo {
             font-family: var(--font-display);
             font-size: 1.2rem;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
         }
         
-        .footer__email {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+        .footer__links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
         
-        .footer__email a {
-            color: var(--color-gold);
-            text-decoration: none;
+        .footer__links a {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            transition: var(--transition);
         }
+        
+        .footer__links a:hover { color: white; }
         
         .footer__copy {
-            font-size: 0.85rem;
-            opacity: 0.5;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
         }
         
-        @media (max-width: 600px) {
-            html { font-size: 16px; }
-            .values__grid { grid-template-columns: 1fr; gap: 1.5rem; }
-            .content { padding: 0 1.5rem 3rem; }
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .values__grid { grid-template-columns: 1fr; }
+            .hero { height: 50vh; }
         }
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <a href="index.html" class="nav__back">← Home</a>
-        <a href="index.html" class="nav__brand">
-            <span class="nav__title">Garden Route</span>
-            <span class="nav__subtitle">Living</span>
-        </a>
-        <div style="width: 60px;"></div>
-    </nav>
-
-    <header class="hero">
-        <div class="hero__image">
-            <img src="about-aerial.jpeg" alt="Aerial view of the Garden Route coastline">
-        </div>
-        <div class="hero__content">
-            <span class="hero__tag">About Us</span>
-            <h1 class="hero__title">The Story Behind the Stories</h1>
+    <header class="header">
+        <div class="header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__main">Garden Route</span>
+                <span class="logo__sub">Living</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Stories</a>
+                <a href="about.html" class="nav__link">About</a>
+                <a href="contact.html" class="nav__link">Contact</a>
+            </nav>
         </div>
     </header>
-
-    <section class="content">
-        <p>Garden Route Living began the way most good things do around here: over a glass of wine, watching the sun set over the lagoon, wondering why nobody was telling these stories.</p>
-        
-        <p>The Garden Route has always attracted writers, artists, and dreamers. But somewhere between the tourist brochures and the estate agent listings, the real stories were getting lost. The third-generation fisherman in Knysna. The winemaker who gave up corporate life to plant vines in Harkerville. The restaurant where the chef still goes out on his own boat every morning.</p>
-        
-        <p>We started Garden Route Living in 2026 to tell those stories. Not the generic "top 10 things to do" content that could be written by anyone, anywhere. The stories that can only come from being here, knowing people, understanding what makes this stretch of coastline unlike anywhere else in the world.</p>
-        
-        <p>We are a small team of writers, photographers, and locals who believe that great storytelling starts with genuine curiosity and deep respect for the people and places we cover.</p>
+    
+    <section class="hero">
+        <div class="hero__image">
+            <img src="knysna-heads-sailboat.jpg" alt="Yacht sailing through the iconic Knysna Heads channel with dramatic sandstone cliffs winding through coastal fynbos down to a secluded beach with dramatic rock formations along the Garden Route">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <h1 class="hero__title">About Us</h1>
+        </div>
     </section>
-
+    
+    <article class="content">
+        <p class="content__intro">Garden Route Living is an independent digital magazine dedicated to celebrating the people, places and lifestyle of South Africa's most beautiful coastline.</p>
+        
+        <p>We believe the Garden Route deserves more than generic travel guides and algorithm-driven content. This 300-kilometre stretch of coastline—from Mossel Bay to Nature's Valley—is home to some of the most remarkable communities, ecosystems and stories in the world.</p>
+        
+        <p>Our mission is simple: to tell those stories with the depth, authenticity and visual quality they deserve.</p>
+        
+        <h2>What We Cover</h2>
+        
+        <p>From the restaurateurs serving fresh linefish caught that morning, to the winemakers cultivating vines in the Harkerville hills. From the interior designers who understand our unique coastal climate, to the athletes who grew up running barefoot on our beaches and went on to win World Cups.</p>
+        
+        <p>We cover dining, wine, outdoors, wellness, design, property, sport and community—always through the lens of the people who live and work here.</p>
+        
+        <h2>Our Approach</h2>
+        
+        <p>Every story in Garden Route Living is researched, written and photographed to magazine standards. We don't do clickbait. We don't chase algorithms. We create content that locals are proud to share and visitors find genuinely useful.</p>
+        
+        <p>We work closely with businesses and organisations across the Garden Route, but our editorial remains independent. If we feature something, it's because we believe in it.</p>
+        
+        <h2>For Businesses</h2>
+        
+        <p>Garden Route Living offers advertising partnerships and sponsored content opportunities for businesses that align with our values. Our readers are affluent, engaged, and actively seeking quality experiences along the Garden Route.</p>
+        
+        <p>If you'd like to discuss how we can work together, please <a href="contact.html">get in touch</a>.</p>
+    </article>
+    
     <section class="values">
-        <h2 class="values__title">What We Believe</h2>
-        <div class="values__grid">
-            <div class="values__item">
-                <h3 class="values__item-title">Local First</h3>
-                <p class="values__item-text">We live here. We write about what we know and love.</p>
-            </div>
-            <div class="values__item">
-                <h3 class="values__item-title">Quality Over Quantity</h3>
-                <p class="values__item-text">Fewer stories, told well. No clickbait, no filler.</p>
-            </div>
-            <div class="values__item">
-                <h3 class="values__item-title">Independent Always</h3>
-                <p class="values__item-text">No corporate owners. Just people who care about this place.</p>
+        <div class="values__inner">
+            <h2 class="values__title">What We Stand For</h2>
+            <div class="values__grid">
+                <div class="value">
+                    <div class="value__icon">🌊</div>
+                    <h3 class="value__title">Authenticity</h3>
+                    <p class="value__text">Real stories from real people. No stock photos, no generic content, no AI-generated fluff.</p>
+                </div>
+                <div class="value">
+                    <div class="value__icon">🌿</div>
+                    <h3 class="value__title">Sustainability</h3>
+                    <p class="value__text">We champion businesses and initiatives that protect the Garden Route's extraordinary natural environment.</p>
+                </div>
+                <div class="value">
+                    <div class="value__icon">🤝</div>
+                    <h3 class="value__title">Community</h3>
+                    <p class="value__text">The Garden Route's strength lies in its people. We celebrate and support local communities.</p>
+                </div>
             </div>
         </div>
     </section>
-
-    <section class="content">
-        <p>If you have a story to share, a business to feature, or just want to say hello, we would love to hear from you.</p>
+    
+    <section class="cta">
+        <h2 class="cta__title">Have a Story to Share?</h2>
+        <p class="cta__text">We're always looking for remarkable people, places and businesses to feature in Garden Route Living.</p>
+        <a href="contact.html" class="cta__button">Get in Touch</a>
     </section>
-
+    
     <footer class="footer">
-        <p class="footer__brand">Garden Route Living</p>
-        <p class="footer__email"><a href="mailto:gardenroutepublishing@gmail.com">gardenroutepublishing@gmail.com</a></p>
+        <p class="footer__logo">Garden Route Living</p>
+        <div class="footer__links">
+            <a href="index.html">Stories</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
         <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
     </footer>
 </body>
