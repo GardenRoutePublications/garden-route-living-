@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Best Hiking Trails on the Garden Route | Garden Route Living</title>
+    <meta name="description" content="From coastal cliff walks to ancient forest trails, discover the Garden Route's most rewarding hikes. Our guide covers hidden gems and iconic routes from Mossel Bay to Plettenberg Bay.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Best Hiking Trails on the Garden Route">
+    <meta property="og:description" content="From coastal cliff walks to ancient forest trails, discover the Garden Route's most rewarding hikes.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80">
+    <meta property="og:url" content="https://gardenrouteliving.onrender.com/article/hiking-trails.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Garden Route Living">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Best Hiking Trails on the Garden Route">
+    <meta name="twitter:description" content="From coastal cliff walks to ancient forest trails, the Garden Route's most rewarding hikes.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80">
+    
+    <!-- SEO -->
+    <link rel="canonical" href="https://gardenrouteliving.onrender.com/article/hiking-trails.html">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-ink: #1a1a1a;
+            --color-paper: #faf9f7;
+            --color-cream: #f5f3ef;
+            --color-sand: #e8e4dc;
+            --color-ocean: #2d4a5e;
+            --color-gold: #c4913d;
+            --color-forest: #3d5a47;
+            --color-mist: rgba(255,255,255,0.85);
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Lora', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--color-paper);
+            color: var(--color-ink);
+            line-height: 1.8;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: var(--color-mist);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav__logo {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            text-decoration: none;
+        }
+        
+        .nav__back {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav__back:hover {
+            color: var(--color-gold);
+        }
+        
+        /* Hero */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            margin-top: 60px;
+        }
+        
+        .hero__image {
+            position: absolute;
+            inset: 0;
+        }
+        
+        .hero__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0,0,0,0.7) 0%,
+                rgba(0,0,0,0.2) 50%,
+                transparent 100%
+            );
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem;
+            max-width: 800px;
+            color: white;
+        }
+        
+        .hero__tag {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        
+        .hero__meta {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+        
+        /* Article */
+        .article {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .article__lead {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .article p {
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+        
+        .article h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 3rem 0 1.5rem;
+            color: var(--color-ink);
+        }
+        
+        .article h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 2.5rem 0 1rem;
+            color: var(--color-forest);
+        }
+        
+        .article__image {
+            margin: 3rem -4rem;
+            position: relative;
+        }
+        
+        .article__image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .article__caption {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.75rem;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .article__quote {
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid var(--color-sand);
+            border-bottom: 1px solid var(--color-sand);
+        }
+        
+        .article__quote blockquote {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--color-ocean);
+            line-height: 1.5;
+        }
+        
+        /* Trail Cards */
+        .trail-card {
+            background: var(--color-cream);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--color-forest);
+        }
+        
+        .trail-card__title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--color-ink);
+        }
+        
+        .trail-card__details {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .trail-card__details strong {
+            color: var(--color-forest);
+        }
+        
+        .trail-card p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        /* Info Box */
+        .info-box {
+            background: var(--color-cream);
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .info-box__title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-ink);
+        }
+        
+        .info-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .info-box a {
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+        
+        .info-box a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--color-ink);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer__brand {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer__email {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer__email a {
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+        
+        .footer__email a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer__copy {
+            font-size: 0.85rem;
+            opacity: 0.5;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+            .hero__content {
+                padding: 2rem;
+            }
+            .article {
+                padding: 2rem 1.5rem;
+            }
+            .article__image {
+                margin: 2rem -1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="../index.html" class="nav__logo">Garden Route Living</a>
+        <a href="../index.html" class="nav__back">← Back to Stories</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero__image">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=80" alt="Hiking trail through indigenous forest">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <span class="hero__tag">Outdoors</span>
+            <h1 class="hero__title">The Best Hiking Trails on the Garden Route</h1>
+            <p class="hero__meta">Words by Garden Route Living</p>
+        </div>
+    </header>
+
+    <!-- Article -->
+    <article class="article">
+        <p class="article__lead">
+            From ancient forests where elephants still roam to dramatic coastal cliffs overlooking the Indian Ocean, the Garden Route offers some of South Africa's finest hiking. Here is our guide to the trails every walker should know, from easy family strolls to multi-day adventures.
+        </p>
+
+        <p>
+            The Garden Route stretches 300 kilometres along the south-western coast, from Mossel Bay in the west to Storms River in the east. Between these points lies an extraordinary diversity of landscapes: the Outeniqua and Tsitsikamma mountain ranges, indigenous forests that once sheltered herds of elephants, fynbos-covered coastal plateaus, and rugged shorelines where waves crash against ancient sandstone cliffs.
+        </p>
+
+        <p>
+            Whether you have an hour to spare or a week to explore, there is a trail here for you. Local hiking communities have long known about routes that rarely appear in guidebooks, paths that wind through forgotten corners of the forest or follow old woodcutter trails to hidden waterfalls. We have gathered the best of them here.
+        </p>
+
+        <h2>Coastal Classics</h2>
+
+        <h3>Robberg Nature Reserve, Plettenberg Bay</h3>
+
+        <p>
+            If you only have time for one hike on the Garden Route, make it Robberg. This World Heritage Site peninsula juts into the Indian Ocean just south of Plettenberg Bay, offering three circular routes that range from a gentle 30-minute stroll to a challenging four-hour circumnavigation.
+        </p>
+
+        <div class="trail-card">
+            <h4 class="trail-card__title">Robberg Peninsula Trails</h4>
+            <p class="trail-card__details"><strong>Location:</strong> 8km south of Plettenberg Bay</p>
+            <p class="trail-card__details"><strong>Options:</strong> The Gap (2.1km, 30 min) | Witsand (5.5km, 2.5 hrs) | The Point (9.2km, 4 hrs)</p>
+            <p class="trail-card__details"><strong>Difficulty:</strong> Easy to Moderate</p>
+            <p class="trail-card__details"><strong>Entry:</strong> R65 adults, R45 children (Wild Card accepted)</p>
+        </div>
+
+        <p>
+            The full Point Circuit takes you around the entire peninsula, past a colony of around 6,000 Cape fur seals, along dramatic cliffs, and across the stunning Witsand dune that connects Robberg to a small island. There is scrambling involved, a chain-assisted section above the sea, and rewards that include pristine beaches, Stone Age caves, and the chance to spot whales and dolphins. The views across Plettenberg Bay to the Tsitsikamma Mountains are unforgettable.
+        </p>
+
+        <h3>St Blaize Trail, Mossel Bay</h3>
+
+        <p>
+            Starting at the historic Cape St Blaize Lighthouse and following the 30-metre contour line westward to Dana Bay, the St Blaize Trail is 13.5 kilometres of spectacular coastal walking. The route passes through the Point of Human Origins archaeological site at Pinnacle Point, where some of the earliest evidence of modern human behaviour has been discovered.
+        </p>
+
+        <div class="trail-card">
+            <h4 class="trail-card__title">St Blaize Trail</h4>
+            <p class="trail-card__details"><strong>Location:</strong> Mossel Bay to Dana Bay</p>
+            <p class="trail-card__details"><strong>Distance:</strong> 13.5km one way</p>
+            <p class="trail-card__details"><strong>Duration:</strong> 5-6 hours</p>
+            <p class="trail-card__details"><strong>Difficulty:</strong> Moderate</p>
+            <p class="trail-card__details"><strong>Tip:</strong> Arrange transport from Dana Bay in advance, or turn back at any point for a shorter walk</p>
+        </div>
+
+        <p>
+            Watch for dassies basking on rocks, scan the ocean for dolphins, and take a detour down to the secluded Eden Bay beach. The trail passes through Pinnacle Point Golf Estate (sign in required), where the clubhouse makes an excellent lunch stop with sweeping sea views.
+        </p>
+
+        <div class="article__image">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" alt="Coastal hiking trail with ocean views">
+            <p class="article__caption">The Garden Route's coastal trails offer dramatic cliff-top walking with views of the Indian Ocean.</p>
+        </div>
+
+        <h2>Forest Trails: Walking with Giants</h2>
+
+        <h3>Circles in the Forest, Knysna</h3>
+
+        <p>
+            Named after Dalene Matthee's beloved novel about the Knysna forest, this trail takes you into the heart of the indigenous woodland that once covered much of the region. Starting at the Dalene Matthee Memorial at Krisjan-se-Nek, you can choose between a 3km or 9km circular route through towering yellowwoods, stinkwoods, and assegai trees.
+        </p>
+
+        <div class="trail-card">
+            <h4 class="trail-card__title">Circles in the Forest</h4>
+            <p class="trail-card__details"><strong>Location:</strong> Goldfield State Forest, near Knysna</p>
+            <p class="trail-card__details"><strong>Options:</strong> 3km loop (1.5 hrs) | 9km loop (3-4 hrs)</p>
+            <p class="trail-card__details"><strong>Difficulty:</strong> Easy to Moderate</p>
+            <p class="trail-card__details"><strong>Permit:</strong> Pay at the boom gate</p>
+        </div>
+
+        <p>
+            The 9km route rewards with a forest pool and waterfall, perfect for a cool dip on warm days. Giant ferns line the paths, streams crossed by small wooden bridges add to the fairy-tale atmosphere, and the tannin-stained water running through the forest is drinkable if you are curious about its distinctive copper colour.
+        </p>
+
+        <h3>Elephant Walk Trails, Diepwalle</h3>
+
+        <p>
+            The Diepwalle section of the Garden Route National Park is the "Mecca" of the Knysna forests, and the three colour-coded Elephant Walk trails commemorate the herds that once roamed here freely. Today, only a lone elephant is believed to remain in these woods, but the trails named in their honour offer some of the finest forest walking in South Africa.
+        </p>
+
+        <div class="trail-card">
+            <h4 class="trail-card__title">Elephant Walk Trails</h4>
+            <p class="trail-card__details"><strong>Location:</strong> Diepwalle Forest Station, north of Knysna</p>
+            <p class="trail-card__details"><strong>Options:</strong> Black (9km) | White (8km) | Red (7km)</p>
+            <p class="trail-card__details"><strong>Duration:</strong> 3-4 hours each</p>
+            <p class="trail-card__details"><strong>Difficulty:</strong> Easy to Moderate</p>
+        </div>
+
+        <p>
+            Do not miss the nearby King Edward VII Big Tree, an ancient Outeniqua Yellowwood over 800 years old that survived the logging era. The tea garden at Diepwalle serves legendary melktert for post-hike refreshment.
+        </p>
+
+        <div class="article__quote">
+            <blockquote>
+                "To walk in the wake of elephants, to be small in a world of giants, to learn the spoor of silence and the deep rumbling eloquence of kin."
+            </blockquote>
+        </div>
+
+        <h3>Jubilee Creek, Knysna</h3>
+
+        <p>
+            This 3.4km section of the Outeniqua Hiking Trail follows in the footsteps of the miners who flocked to Knysna in the 1880s in search of gold. The rush was short-lived, but remnants of gold mining activity can still be seen along this centuries-old forest path. The trail leads to a sun-bathed clearing with a rock pool and waterfall, making it perfect for families with children.
+        </p>
+
+        <h2>Mountain Adventures</h2>
+
+        <h3>Cradock Peak Trail, George</h3>
+
+        <p>
+            For those seeking a challenge, the Cradock Peak Trail climbs to the highest point in the Outeniqua Mountains at 1,578 metres above sea level. The views from the summit stretch from the Swartberg Mountains in the north to Mossel Bay and Knysna along the coast. This is serious hiking that demands respect, but the rewards are extraordinary.
+        </p>
+
+        <div class="trail-card">
+            <h4 class="trail-card__title">Cradock Peak Trail</h4>
+            <p class="trail-card__details"><strong>Location:</strong> Witfontein Forestry Station, George</p>
+            <p class="trail-card__details"><strong>Distance:</strong> 19km return</p>
+            <p class="trail-card__details"><strong>Duration:</strong> 8-10 hours</p>
+            <p class="trail-card__details"><strong>Difficulty:</strong> Challenging</p>
+            <p class="trail-card__details"><strong>Permit:</strong> Self-issued at Witfontein</p>
+        </div>
+
+        <h3>Vensterberg Trail</h3>
+
+        <p>
+            A local favourite that rarely appears in tourist guides, the Vensterberg Trail starts from the parking area at "The Sputnik" radio tower north of the Outeniqua Pass. This punchy 3km hike climbs from 800m to 1,309m, offering arguably the best views of the Outeniqua mountain range's rugged character. The trail is well-defined but lacks signage, so pay attention at the rocky sections.
+        </p>
+
+        <h2>Multi-Day Adventures</h2>
+
+        <h3>The Outeniqua Trail</h3>
+
+        <p>
+            The Outeniqua Trail is one of South Africa's classic multi-day hikes, weaving 108 kilometres through indigenous forest and montane fynbos from Beervlei to Harkerville over seven days. The trail can also be done in shorter two to five-day sections, with rustic huts providing overnight shelter.
+        </p>
+
+        <div class="trail-card">
+            <h4 class="trail-card__title">Outeniqua Trail</h4>
+            <p class="trail-card__details"><strong>Location:</strong> Garden Route National Park</p>
+            <p class="trail-card__details"><strong>Distance:</strong> 108km (full trail) | Shorter sections available</p>
+            <p class="trail-card__details"><strong>Duration:</strong> 2-7 days</p>
+            <p class="trail-card__details"><strong>Bookings:</strong> SANParks (essential)</p>
+        </div>
+
+        <p>
+            Highlights include swimming in pristine mountain pools, watching for signs of the elusive Knysna elephant, and the magical sight of Knysna Loeries with their crimson-tipped wings flashing through the forest canopy. Huts provide bunk beds, firewood, and basic facilities, so you need only carry a sleeping bag and food.
+        </p>
+
+        <h3>The Plett Camino</h3>
+
+        <p>
+            Inspired by the Camino de Santiago, this five-day slackpacking trail covers 75 kilometres from the Garden of Eden to Robberg, combining forest, river valleys, and coastline. Fully catered with farmhouse-style accommodation, it is the luxury option for those who want to experience the region's diversity without carrying a heavy pack.
+        </p>
+
+        <h2>Hidden Gems</h2>
+
+        <h3>Drupkelders, Knysna</h3>
+
+        <p>
+            One of Knysna's best-kept secrets, this short but steep 3.6km trail leads to an extraordinary natural "cellar" complete with stalactites and stalagmites. The big pool at the Homtini River is perfect for swimming, and the limited permits (only 12 per day) mean you will often have the place to yourself.
+        </p>
+
+        <h3>Half-Collared Kingfisher Trail, Wilderness</h3>
+
+        <p>
+            This 7km linear route follows the Touw River through the Wilderness section of the Garden Route National Park, ending at a waterfall with a swimming pool. Wooden boardwalks make for easy walking, and bird-watchers can spot the trail's namesake along with Giant Kingfishers, Knysna Loeries, and Fish Eagles.
+        </p>
+
+        <h3>Kranshoek Coastal Trail, Harkerville</h3>
+
+        <p>
+            Starting at the Kranshoek picnic site, this circular trail winds through forest, down into a gorge following a waterfall's stream, along the coast, and back up to a stunning viewpoint. The combination of forest and coastal scenery makes it one of the most varied day hikes on the Garden Route.
+        </p>
+
+        <div class="info-box">
+            <h3 class="info-box__title">Before You Go</h3>
+            <p><strong>Best Season:</strong> Spring (September to November) and autumn (March to May) offer ideal conditions. Summer can be hot; winter brings rain.</p>
+            <p><strong>What to Bring:</strong> Good hiking boots, sun protection, at least 1.5 litres of water per person, snacks, and a camera.</p>
+            <p><strong>Safety:</strong> Tell someone your plans, start early, and be aware of snakes basking on trails in warm weather.</p>
+            <p><strong>Permits:</strong> Most trails require permits or entry fees. SANParks trails should be booked in advance.</p>
+            <p><strong>Local Resources:</strong> The Garden Route Adventure Guide (<a href="https://gardenrouteadventureguide.com" target="_blank">gardenrouteadventureguide.com</a>) has detailed trail information and GPS downloads.</p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__brand">Garden Route Living</p>
+        <p class="footer__email"><a href="mailto:gardenroutepublishing@gmail.com">gardenroutepublishing@gmail.com</a></p>
+        <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
+    </footer>
+</body>
+</html>

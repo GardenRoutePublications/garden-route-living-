@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knysna's World Cup Winner: The Warrick Gelant Story | Garden Route Living</title>
+    <meta name="description" content="From the streets of Hornlee to Rugby World Cup glory, Warrick Gelant's journey is a Garden Route story of talent, determination, and staying true to your roots.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Knysna's World Cup Winner: The Warrick Gelant Story">
+    <meta property="og:description" content="From the streets of Hornlee to Rugby World Cup glory, Warrick Gelant's journey is a Garden Route story of talent, determination, and staying true to your roots.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544298621-a28e00ec96ea?w=1200&q=80">
+    <meta property="og:url" content="https://gardenrouteliving.onrender.com/article/warrick-gelant.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Garden Route Living">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Knysna's World Cup Winner: The Warrick Gelant Story">
+    <meta name="twitter:description" content="From Hornlee to Rugby World Cup glory.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1544298621-a28e00ec96ea?w=1200&q=80">
+    
+    <!-- SEO -->
+    <link rel="canonical" href="https://gardenrouteliving.onrender.com/article/warrick-gelant.html">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-ink: #1a1a1a;
+            --color-paper: #faf9f7;
+            --color-cream: #f5f3ef;
+            --color-sand: #e8e4dc;
+            --color-ocean: #2d4a5e;
+            --color-gold: #c4913d;
+            --color-green: #006847;
+            --color-mist: rgba(255,255,255,0.85);
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Lora', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--color-paper);
+            color: var(--color-ink);
+            line-height: 1.8;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: var(--color-mist);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav__logo {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            text-decoration: none;
+        }
+        
+        .nav__back {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav__back:hover {
+            color: var(--color-gold);
+        }
+        
+        /* Hero */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            margin-top: 60px;
+            background: linear-gradient(135deg, var(--color-green) 0%, #004d35 100%);
+        }
+        
+        .hero__pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='%23fff' fill-opacity='0.4'/%3E%3C/svg%3E");
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem;
+            max-width: 800px;
+            color: white;
+        }
+        
+        .hero__tag {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #ffd700;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        
+        .hero__subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        /* Article */
+        .article {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .article__lead {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .article p {
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+        
+        .article h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 3rem 0 1.5rem;
+            color: var(--color-ink);
+        }
+        
+        .article__image {
+            margin: 3rem -4rem;
+            position: relative;
+        }
+        
+        .article__image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .article__caption {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.75rem;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .article__quote {
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid var(--color-sand);
+            border-bottom: 1px solid var(--color-sand);
+        }
+        
+        .article__quote blockquote {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--color-green);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .article__quote cite {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-style: normal;
+            color: var(--color-gold);
+            letter-spacing: 0.05em;
+        }
+        
+        /* Stats Box */
+        .stats-box {
+            background: var(--color-green);
+            color: white;
+            padding: 2rem;
+            margin: 3rem 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+        
+        .stat {
+            padding: 1rem;
+        }
+        
+        .stat__number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #ffd700;
+            display: block;
+        }
+        
+        .stat__label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.9;
+        }
+        
+        /* Timeline */
+        .timeline {
+            margin: 3rem 0;
+            padding-left: 2rem;
+            border-left: 2px solid var(--color-green);
+        }
+        
+        .timeline__item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+        
+        .timeline__item::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--color-green);
+            border-radius: 50%;
+        }
+        
+        .timeline__year {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-green);
+            margin-bottom: 0.25rem;
+        }
+        
+        .timeline__event {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        
+        /* Info Box */
+        .info-box {
+            background: var(--color-cream);
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .info-box__title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-ink);
+        }
+        
+        .info-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--color-ink);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer__brand {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer__email {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer__email a {
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+        
+        .footer__email a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer__copy {
+            font-size: 0.85rem;
+            opacity: 0.5;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+            .hero__content {
+                padding: 2rem;
+            }
+            .article {
+                padding: 2rem 1.5rem;
+            }
+            .article__image {
+                margin: 2rem -1.5rem;
+            }
+            .stats-box {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="../index.html" class="nav__logo">Garden Route Living</a>
+        <a href="../index.html" class="nav__back">← Back to Stories</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero__pattern"></div>
+        <div class="hero__content">
+            <span class="hero__tag">Sport</span>
+            <h1 class="hero__title">Knysna's World Cup Winner: The Warrick Gelant Story</h1>
+            <p class="hero__subtitle">From the streets of Hornlee to Springbok glory</p>
+        </div>
+    </header>
+
+    <!-- Article -->
+    <article class="article">
+        <p class="article__lead">
+            When Warrick Gelant was nine years old, playing rugby on the dusty fields of Hornlee, he could not have imagined that one day he would hold a Rugby World Cup winner's medal. But in November 2019, that is exactly what happened. And when he returned home to Knysna, the whole town came out to welcome their hero.
+        </p>
+
+        <p>
+            Warrick Wayne Gelant was born on 20 May 1995 in Knysna, the coastal town at the heart of the Garden Route that has given the world oysters, indigenous forests, and now, a Springbok star. He grew up in Hornlee, a community on the edge of town where sport was not just recreation but a way out.
+        </p>
+
+        <p>
+            As a child, Gelant played everything: cricket, football, athletics. Rugby was actually almost the last sport he tried. But when he started, aged nine, something clicked. The natural balance, the ability to step off both feet, the explosive pace: these gifts, combined with hours of street games with friends, would eventually carry him to the pinnacle of the sport.
+        </p>
+
+        <div class="article__quote">
+            <blockquote>
+                "Growing up in Knysna, I played a lot of different sports and we would always be having games in the street. I really wanted to represent my province in one of them."
+            </blockquote>
+            <cite>— Warrick Gelant</cite>
+        </div>
+
+        <h2>A Talent Spotted</h2>
+
+        <p>
+            Gelant attended Hornlee Primary School, where coaches Frank Borchards and Neil Weber recognised something special. In 2008, the year he finished primary school, he was selected to represent South Western Districts (SWD) at the Under-13 Craven Week tournament. It was the beginning of a remarkable rise.
+        </p>
+
+        <p>
+            That performance caught the attention of Hoërskool Outeniqua in George, one of South Africa's rugby powerhouses. Through his coaches' efforts, Gelant secured a bursary to attend the school, leaving Knysna for the first time to pursue his dream. It was a 45-minute drive from home, but a world away from the streets of Hornlee.
+        </p>
+
+        <p>
+            At Outeniqua, known affectionately as "the Kwaggas," Gelant flourished. The school consistently ranks among South Africa's top junior rugby programmes, and Gelant quickly became one of its brightest stars. He represented SWD at the 2012 Under-18 Craven Week despite still being in the Under-17 age group, and was named to the South African Schools team, playing against France, Wales, and England.
+        </p>
+
+        <div class="stats-box">
+            <div class="stat">
+                <span class="stat__number">13</span>
+                <span class="stat__label">Test Caps</span>
+            </div>
+            <div class="stat">
+                <span class="stat__number">3</span>
+                <span class="stat__label">Test Tries</span>
+            </div>
+            <div class="stat">
+                <span class="stat__number">2019</span>
+                <span class="stat__label">World Cup Winner</span>
+            </div>
+        </div>
+
+        <h2>The Professional Journey</h2>
+
+        <p>
+            After finishing school in 2013, Gelant moved to Pretoria to join the Blue Bulls. It was a bold step for a young man from a small Garden Route town, but Gelant had ambition to match his talent. He worked his way through the ranks: Varsity Cup with Tuks, Junior World Championships with the South Africa Under-20s, and a memorable stint with the Blitzboks sevens team.
+        </p>
+
+        <p>
+            His performances earned him selection for the 2019 Rugby World Cup squad. In Japan, Gelant made his World Cup debut against Namibia, scoring a try, and crossed again against Canada. Then, on 2 November 2019 in Yokohama, the Springboks demolished England 32-12 to claim their third World Cup title. Warrick Gelant, the boy from Hornlee, was a world champion.
+        </p>
+
+        <h2>The Homecoming</h2>
+
+        <p>
+            Two weeks later, Knysna painted itself green and gold. Thousands lined Clyde Street as Gelant, tears in his eyes, made his way through his hometown in an open-top parade. Children chanted his name. Old neighbours rushed forward to shake his hand. The whole Garden Route celebrated.
+        </p>
+
+        <div class="article__quote">
+            <blockquote>
+                "With all the fame that Warrick achieved, he still remains the same young kid that was playing in the streets of Hornlee. Every young kid running around in the streets of Hornlee can aspire to be like him."
+            </blockquote>
+            <cite>— Ricky van Aswegan, Hornlee community leader and former teacher</cite>
+        </div>
+
+        <p>
+            What struck everyone who knew him was how unchanged he remained. When Gelant comes home to Knysna, he still stays at his parents' house in Hornlee. The fame, the money, the glamour of professional rugby: none of it has altered his connection to the community that raised him.
+        </p>
+
+        <h2>Career Highlights</h2>
+
+        <div class="timeline">
+            <div class="timeline__item">
+                <div class="timeline__year">2008</div>
+                <div class="timeline__event">Selected for SWD Under-13 Craven Week while at Hornlee Primary School</div>
+            </div>
+            <div class="timeline__item">
+                <div class="timeline__year">2012</div>
+                <div class="timeline__event">Named to SA Schools team, playing against France, Wales and England</div>
+            </div>
+            <div class="timeline__item">
+                <div class="timeline__year">2014</div>
+                <div class="timeline__event">Joins Blue Bulls; wins gold with SA Sevens at Australian Youth Olympics</div>
+            </div>
+            <div class="timeline__item">
+                <div class="timeline__year">2017</div>
+                <div class="timeline__event">Springbok debut against Italy; named Currie Cup Back of the Year</div>
+            </div>
+            <div class="timeline__item">
+                <div class="timeline__year">2019</div>
+                <div class="timeline__event">Rugby World Cup winner with Springboks in Japan</div>
+            </div>
+            <div class="timeline__item">
+                <div class="timeline__year">2020</div>
+                <div class="timeline__event">Returns to Cape to join Stormers, fulfilling a "childhood dream"</div>
+            </div>
+            <div class="timeline__item">
+                <div class="timeline__year">2021</div>
+                <div class="timeline__event">Named URC Player of the Month after comeback from double knee surgery</div>
+            </div>
+            <div class="timeline__item">
+                <div class="timeline__year">2022</div>
+                <div class="timeline__event">Key player in Stormers' inaugural United Rugby Championship triumph</div>
+            </div>
+        </div>
+
+        <h2>Coming Home to the Cape</h2>
+
+        <p>
+            In 2020, Gelant made a move that felt like destiny: he signed for the Stormers, bringing him back to the Western Cape. It was, he said, a "childhood dream" to play for the team he had watched growing up. But first, he had to overcome a significant challenge. An ACL injury, followed by double knee surgery, threatened to derail his career.
+        </p>
+
+        <p>
+            True to character, Gelant fought back. His return to form was remarkable. In October 2021, he was voted URC Player of the Month after a series of dazzling performances. And in 2022, he was instrumental as the Stormers claimed the inaugural United Rugby Championship title, a historic moment for Cape rugby.
+        </p>
+
+        <p>
+            Coach John Dobson, watching Gelant dismantle defences with his trademark sidesteps and offloads, compared him to cricket legend Graeme Pollock: "I remember people saying about Graeme Pollock that he just had so much time, and Warrick just looks like he has time."
+        </p>
+
+        <h2>What He Means to Knysna</h2>
+
+        <p>
+            Warrick Gelant's story resonates far beyond rugby statistics. In a region where opportunities can be scarce, he represents what is possible. Every child kicking a ball on the fields of Hornlee can look at Gelant and see a pathway. Not just to professional sport, but to a life beyond the circumstances of birth.
+        </p>
+
+        <p>
+            His humility, his connection to home, his refusal to forget where he came from: these qualities have made him more than just a sports star to the Garden Route. He is proof that you can reach the top of the world and still remember the streets where you learned to play.
+        </p>
+
+        <div class="info-box">
+            <h3 class="info-box__title">Warrick Gelant at a Glance</h3>
+            <p><strong>Born:</strong> 20 May 1995, Knysna</p>
+            <p><strong>Position:</strong> Fullback</p>
+            <p><strong>Height:</strong> 1.80m</p>
+            <p><strong>Weight:</strong> 100kg</p>
+            <p><strong>Schools:</strong> Hornlee Primary School, Hoërskool Outeniqua (George)</p>
+            <p><strong>Professional Teams:</strong> Blue Bulls (2014-2020), Stormers (2020-2022), Racing 92 (2022-2024), Stormers (2024-present)</p>
+            <p><strong>International:</strong> 13 Test caps, 3 tries for South Africa</p>
+            <p><strong>Honours:</strong> 2019 Rugby World Cup winner, 2022 URC champion, URC Dream Team selection</p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__brand">Garden Route Living</p>
+        <p class="footer__email"><a href="mailto:gardenroutepublishing@gmail.com">gardenroutepublishing@gmail.com</a></p>
+        <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
+    </footer>
+</body>
+</html>

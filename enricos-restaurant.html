@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrico's: Where the Ocean Meets the Table | Garden Route Living</title>
+    <meta name="description" content="At Ristorante Enrico in Keurboomstrand, the fish comes from the restaurant's own boat, the sunsets are legendary, and the 'Bomba' is not to be missed.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Enrico's: Where the Ocean Meets the Table | Garden Route Living">
+    <meta property="og:description" content="At Ristorante Enrico in Keurboomstrand, the fish comes from the restaurant's own boat, the sunsets are legendary, and the Bomba is not to be missed.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80">
+    <meta property="og:url" content="https://gardenrouteliving.onrender.com/article/enricos-restaurant.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Garden Route Living">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enrico's: Where the Ocean Meets the Table">
+    <meta name="twitter:description" content="At Ristorante Enrico in Keurboomstrand, the fish comes from the restaurant's own boat.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80">
+    
+    <!-- SEO -->
+    <link rel="canonical" href="https://gardenrouteliving.onrender.com/article/enricos-restaurant.html">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-ink: #1a1a1a;
+            --color-paper: #faf9f7;
+            --color-cream: #f5f3ef;
+            --color-sand: #e8e4dc;
+            --color-ocean: #2d4a5e;
+            --color-gold: #c4913d;
+            --color-terracotta: #c4663d;
+            --color-mist: rgba(255,255,255,0.85);
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Lora', Georgia, serif;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 18px; scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--color-paper);
+            color: var(--color-ink);
+            line-height: 1.8;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: var(--color-mist);
+            backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav__logo {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            text-decoration: none;
+        }
+        
+        .nav__back {
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            text-decoration: none;
+        }
+        
+        .nav__back:hover { color: var(--color-gold); }
+        
+        .hero {
+            height: 75vh;
+            min-height: 550px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            margin-top: 60px;
+            overflow: hidden;
+        }
+        
+        .hero__image {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80') center/cover;
+        }
+        
+        .hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem;
+            max-width: 800px;
+            color: white;
+        }
+        
+        .hero__tag {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 300;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+        
+        .hero__subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        .article {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .article__lead {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .article p { margin-bottom: 1.5rem; color: #444; }
+        
+        .article h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 3rem 0 1.5rem;
+            color: var(--color-ink);
+        }
+        
+        .article__image {
+            margin: 2.5rem 0;
+        }
+        
+        .article__image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .article__image figcaption {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+        
+        .article__quote {
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid var(--color-sand);
+            border-bottom: 1px solid var(--color-sand);
+        }
+        
+        .article__quote blockquote {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--color-terracotta);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .article__quote cite {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-style: normal;
+            color: var(--color-gold);
+        }
+        
+        .menu-box {
+            background: var(--color-terracotta);
+            color: white;
+            padding: 2.5rem;
+            margin: 3rem 0;
+        }
+        
+        .menu-box__title {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .menu-box__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .menu-box__item h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-gold);
+        }
+        
+        .menu-box__item p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 0;
+        }
+        
+        .info-box {
+            background: var(--color-cream);
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .info-box__title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-ink);
+        }
+        
+        .info-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .info-box a {
+            color: var(--color-terracotta);
+            text-decoration: none;
+        }
+        
+        .info-box a:hover { color: var(--color-gold); }
+        
+        .tip-box {
+            background: var(--color-ocean);
+            color: white;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        
+        .tip-box__title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--color-gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .tip-box p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .footer {
+            background: var(--color-ink);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer__brand {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer__email { font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .footer__email a { color: var(--color-gold); text-decoration: none; }
+        .footer__copy { font-size: 0.85rem; opacity: 0.5; }
+        
+        @media (max-width: 768px) {
+            html { font-size: 16px; }
+            .hero__content { padding: 2rem; }
+            .article { padding: 2rem 1.5rem; }
+            .menu-box__grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html" class="nav__logo">Garden Route Living</a>
+        <a href="../index.html" class="nav__back">← Back to Stories</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero__image"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <span class="hero__tag">Dining</span>
+            <h1 class="hero__title">Enrico's: Where the Ocean Meets the Table</h1>
+            <p class="hero__subtitle">At Keurboomstrand's legendary Italian, the fish comes from the restaurant's own boat</p>
+        </div>
+    </header>
+
+    <article class="article">
+        <p class="article__lead">
+            The slogan says it all: "Any closer and you will get wet." Ristorante Enrico sits so close to the ocean at Keurboomstrand that dolphins breach just beyond the terrace, whales spout in season, and the sunset over Plettenberg Bay turns the entire restaurant golden. Since 2004, this has been one of the Garden Route's essential dining experiences.
+        </p>
+
+        <p>
+            Enrico and Ornella, real Italians who traded Johannesburg for the coast, have built something that transcends the typical beachside restaurant. Listed among South Africa's top 500 restaurants, Enrico's draws visitors from across the country and around the world, all seeking that combination of authentic Italian cooking, impeccably fresh seafood, and a setting that borders on the theatrical.
+        </p>
+
+        <figure class="article__image">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80" alt="Fresh seafood platter">
+            <figcaption>Fresh from the ocean: seafood is the star at Enrico's</figcaption>
+        </figure>
+
+        <h2>The Freshest Fish on the Coast</h2>
+
+        <p>
+            Not many restaurants anywhere can claim to own their own fishing charter. Enrico's can. The deep-sea fishing boat brings the catch directly to the kitchen door, which gives new meaning to the term "fresh fish." When you order the signature Fish Enrico, the linefish baked with wine, olive oil, parsley, and garlic, you can be confident it was swimming that morning.
+        </p>
+
+        <p>
+            The menu reflects Enrico's Italian heritage with a distinctly South African accent. Starters include paper-thin slices of kudu topped with fresh avocado, black pepper, lemon, and olive oil, a dish that has become legendary among regulars. The insalata di mare brings together prawns, mussels, linefish, and calamari strips. For those craving authentic Italian, the handmade ravioli ruffiana, meat-filled pasta rounds smothered in rich tomato sauce, satisfies completely.
+        </p>
+
+        <div class="menu-box">
+            <h3 class="menu-box__title">What to Order</h3>
+            <div class="menu-box__grid">
+                <div class="menu-box__item">
+                    <h4>Fish Enrico</h4>
+                    <p>The signature dish: the freshest linefish baked with wine, olive oil, parsley, and garlic. Simple, perfect, unforgettable.</p>
+                </div>
+                <div class="menu-box__item">
+                    <h4>Kudu & Avocado</h4>
+                    <p>Paper-thin kudu slices with fresh avocado, black pepper, lemon juice, and olive oil. A South African-Italian fusion starter.</p>
+                </div>
+                <div class="menu-box__item">
+                    <h4>Pizza Farcita</h4>
+                    <p>Enrico's unique creation: a light, two-layered pizza that delights. Available in wonderful variety.</p>
+                </div>
+                <div class="menu-box__item">
+                    <h4>Tiramisu</h4>
+                    <p>Prepared in true Italian fashion. Locals say it is sublime. Do not skip dessert.</p>
+                </div>
+            </div>
+        </div>
+
+        <p>
+            The pizza deserves special mention. Enrico perfected the Farcita, a unique two-layered creation that is lighter than traditional pizza but no less satisfying. The thin-crusted Margherita earns consistent praise as exactly how a classic should taste. For heartier appetites, the oxtail and lamb shanks showcase the kitchen's range beyond seafood.
+        </p>
+
+        <figure class="article__image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80" alt="Ocean sunset view">
+            <figcaption>Sunset over Plettenberg Bay from the Enrico's terrace</figcaption>
+        </figure>
+
+        <h2>The Setting</h2>
+
+        <p>
+            The terrace is the thing. Wooden picnic tables, nothing fancy, but oriented perfectly toward Keurboomstrand beach and the sweeping bay beyond. On a summer evening, as the sun sinks toward Robberg, the entire scene glows. Families, couples, groups of friends, locals and tourists, all gathered under umbrellas or out in the last light, glasses of wine in hand, watching for dolphins.
+        </p>
+
+        <p>
+            Whale watching from your lunch table is a genuine possibility between June and November, when Southern Right whales cruise these waters. Even without cetacean appearances, the view across to Robberg peninsula and the arc of Plettenberg Bay beach makes every meal feel like an occasion.
+        </p>
+
+        <div class="article__quote">
+            <blockquote>
+                "At Enrico's we watched the sun set over a pristine beach, had a dozen oysters, ate an excellent pizza, drank a rock-solid bottle of Spiers Shiraz, and made the following comment: If you can come to Enrico's and not enjoy this, it's time to roll over and die having lost the will to live."
+            </blockquote>
+            <cite>— Visitor review</cite>
+        </div>
+
+        <p>
+            Inside, the atmosphere shifts but remains welcoming. A fireplace warms the room on cold evenings. A television keeps sports fans happy during important matches. But the real draw remains the outdoor terrace, where the informality of bench seating and the majesty of the setting create something memorable.
+        </p>
+
+        <h2>The Bomba</h2>
+
+        <p>
+            Ask about the Bomba. Every restaurant review, every local recommendation, every piece of advice about Enrico's includes this instruction. The Bomba is something fun and unique to the Enrico experience. We will not spoil the surprise. Just know that it exists, that it is part of the ritual, and that you should participate.
+        </p>
+
+        <div class="tip-box">
+            <h4 class="tip-box__title">Insider Tip</h4>
+            <p>Enrico's does not accept reservations. Arrive before noon for lunch or before sunset for dinner to secure a front-row table. The restaurant is "mega big" but still fills quickly, especially during peak season and holidays. The wait is worth it.</p>
+        </div>
+
+        <h2>More Than a Restaurant</h2>
+
+        <p>
+            Part of what makes Enrico's special is the consistency. Staff have been with Enrico and Ornella for years, in some cases decades. The owners remain present, Enrico often emerging from the kitchen to greet guests while never taking his eye off the meals being prepared, Ornella managing the floor with the efficiency of long practice.
+        </p>
+
+        <p>
+            Live music adds to the atmosphere on many evenings: a guitarist playing covers, the kind of relaxed entertainment that suits the setting without overwhelming conversation. The wine list, printed on a large decorative bottle, includes good Italian options alongside South African favourites. The apple grappa comes recommended by those in the know.
+        </p>
+
+        <figure class="article__image">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200&q=80" alt="Italian pizza">
+            <figcaption>The thin-crusted pizzas are legendary</figcaption>
+        </figure>
+
+        <p>
+            Keurboomstrand itself adds to the appeal. A ten-minute drive from central Plettenberg Bay, this small beach community retains a quieter, more local character than the main town. Many visitors combine lunch at Enrico's with a walk along the beach, the sand stretching in both directions, the dunes rising behind.
+        </p>
+
+        <h2>The Verdict</h2>
+
+        <p>
+            Enrico's is not trying to be cutting-edge or innovative. It is trying to be excellent at the fundamentals: fresh ingredients, careful preparation, generous portions, warm service, and a setting that makes ordinary meals feel extraordinary. After more than twenty years, the formula still works.
+        </p>
+
+        <p>
+            Come hungry. Come early. Order the Fish Enrico or the seafood pasta or the Farcita pizza. Watch the sun set over the bay. Ask about the Bomba. Understand why some visitors eat here twice in a four-day stay, why locals bring every friend and family member who visits, why this unpretentious Italian on a beach has become a genuine Garden Route institution.
+        </p>
+
+        <div class="info-box">
+            <h3 class="info-box__title">Visit Ristorante Enrico</h3>
+            <p><strong>Location:</strong> 296 Main Street, Keurboomstrand, Plettenberg Bay (15 minutes from Plett centre)</p>
+            <p><strong>Phone:</strong> 044 535 9818</p>
+            <p><strong>Hours:</strong> Tuesday to Sunday, 12pm to 9pm (closed Mondays)</p>
+            <p><strong>Reservations:</strong> Not accepted. Arrive early for best tables.</p>
+            <p><strong>Price:</strong> R150 average main course. Corkage R50.</p>
+            <p><strong>Payment:</strong> Amex, Mastercard, Visa accepted</p>
+            <p><strong>Good to know:</strong> Child-friendly, vegetarian and vegan options available, gluten-free options, alfresco and indoor seating, fireplace in winter</p>
+            <p><strong>Also available:</strong> Deep-sea fishing charters, functions and weddings</p>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <p class="footer__brand">Garden Route Living</p>
+        <p class="footer__email"><a href="mailto:gardenroutepublishing@gmail.com">gardenroutepublishing@gmail.com</a></p>
+        <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
+    </footer>
+</body>
+</html>

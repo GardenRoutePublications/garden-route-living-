@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Weekend on Safari at Garden Route Game Lodge | Garden Route Living</title>
+    <meta name="description" content="Just three hours from Cape Town, the Garden Route Game Lodge offers Big 5 encounters against the backdrop of the Langeberg Mountains. We spend a weekend in the wild.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="A Weekend on Safari at Garden Route Game Lodge">
+    <meta property="og:description" content="Just three hours from Cape Town, the Garden Route Game Lodge offers Big 5 encounters against the backdrop of the Langeberg Mountains.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=80">
+    <meta property="og:url" content="https://gardenrouteliving.onrender.com/article/garden-route-game-lodge.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Garden Route Living">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A Weekend on Safari at Garden Route Game Lodge">
+    <meta name="twitter:description" content="Big 5 encounters just three hours from Cape Town.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=80">
+    
+    <!-- SEO -->
+    <link rel="canonical" href="https://gardenrouteliving.onrender.com/article/garden-route-game-lodge.html">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-ink: #1a1a1a;
+            --color-paper: #faf9f7;
+            --color-cream: #f5f3ef;
+            --color-sand: #e8e4dc;
+            --color-ocean: #2d4a5e;
+            --color-gold: #c4913d;
+            --color-mist: rgba(255,255,255,0.85);
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Lora', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--color-paper);
+            color: var(--color-ink);
+            line-height: 1.8;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: var(--color-mist);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav__logo {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            text-decoration: none;
+        }
+        
+        .nav__back {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav__back:hover {
+            color: var(--color-gold);
+        }
+        
+        /* Hero */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            margin-top: 60px;
+        }
+        
+        .hero__image {
+            position: absolute;
+            inset: 0;
+        }
+        
+        .hero__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0,0,0,0.7) 0%,
+                rgba(0,0,0,0.2) 50%,
+                transparent 100%
+            );
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem;
+            max-width: 800px;
+            color: white;
+        }
+        
+        .hero__tag {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        
+        .hero__meta {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+        
+        /* Article */
+        .article {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .article__lead {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .article p {
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+        
+        .article h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 3rem 0 1.5rem;
+            color: var(--color-ink);
+        }
+        
+        .article__image {
+            margin: 3rem -4rem;
+            position: relative;
+        }
+        
+        .article__image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .article__caption {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.75rem;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .article__quote {
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid var(--color-sand);
+            border-bottom: 1px solid var(--color-sand);
+        }
+        
+        .article__quote blockquote {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--color-ocean);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .article__quote cite {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-style: normal;
+            color: var(--color-gold);
+            letter-spacing: 0.05em;
+        }
+        
+        /* Info Box */
+        .info-box {
+            background: var(--color-cream);
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .info-box__title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-ink);
+        }
+        
+        .info-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .info-box a {
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+        
+        .info-box a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--color-ink);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer__brand {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer__email {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer__email a {
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+        
+        .footer__email a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer__copy {
+            font-size: 0.85rem;
+            opacity: 0.5;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+            .hero__content {
+                padding: 2rem;
+            }
+            .article {
+                padding: 2rem 1.5rem;
+            }
+            .article__image {
+                margin: 2rem -1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="../index.html" class="nav__logo">Garden Route Living</a>
+        <a href="../index.html" class="nav__back">← Back to Stories</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero__image">
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&q=80" alt="Giraffe on safari">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <span class="hero__tag">Travel</span>
+            <h1 class="hero__title">A Weekend on Safari at Garden Route Game Lodge</h1>
+            <p class="hero__meta">Words by Garden Route Living</p>
+        </div>
+    </header>
+
+    <!-- Article -->
+    <article class="article">
+        <p class="article__lead">
+            Set against the majestic Langeberg Mountain Range, the Garden Route Game Lodge proves you do not need to travel to Kruger for an authentic Big 5 experience. Just three and a half hours from Cape Town, this family-owned reserve offers wilderness, wildlife, and the kind of hospitality that keeps visitors returning year after year.
+        </p>
+
+        <p>
+            Established in 1999 as the first private game reserve in the Western Cape, Garden Route Game Lodge has spent over two decades perfecting the art of the accessible safari. Owned and operated by the Doherty and Apteker families since 2002, the reserve sits near Albertinia, guarding the entrance to the famed Garden Route coast.
+        </p>
+
+        <p>
+            The setting alone is worth the journey. Fynbos-covered hills roll toward the dramatic peaks of the Langeberg, while indigenous aloe plants punctuate the landscape with bursts of colour. This is not the flat savanna of the Lowveld. It is something uniquely Western Cape: wild, rugged, and impossibly scenic.
+        </p>
+
+        <h2>The Wildlife</h2>
+
+        <p>
+            What draws most visitors, of course, is the wildlife. The reserve is home to the Big 5: lion, elephant, buffalo, white rhino, and the elusive Cape Mountain leopard. Add to that cheetah, giraffe, zebra, hippo, and a remarkable diversity of antelope species including bontebok, red hartebeest, kudu, eland, impala and springbuck, and you begin to understand why game drives here rarely disappoint.
+        </p>
+
+        <div class="article__quote">
+            <blockquote>
+                "Garden Route Game Lodge was the first reserve in the Western Cape to reintroduce cheetah in 2007, and through our cooperation with the Endangered Wildlife Trust we have played a role in increasing the population of this threatened species."
+            </blockquote>
+            <cite>— Garden Route Game Lodge</cite>
+        </div>
+
+        <p>
+            Game drives depart early morning and late afternoon, when the animals are most active. In open Land Rovers, experienced rangers navigate the reserve's varied terrain, sharing their knowledge of animal behaviour, tracking, and the delicate ecology of this unique region. The evening drives conclude at scenic lookout points where sundowners are served as the African sky turns gold.
+        </p>
+
+        <h2>More Than a Game Drive</h2>
+
+        <p>
+            Beyond the twice-daily safaris, the lodge offers plenty to occupy a weekend stay. There is a reptile centre for those fascinated by cold-blooded creatures, elephant feeding experiences that bring you face to face with these gentle giants, and guided bush walks for a more intimate perspective on the smaller wonders of the bush.
+        </p>
+
+        <p>
+            The Ayana Spa provides the perfect counterpoint to early morning wake-up calls, offering treatments designed to complement the restorative power of time spent in nature. After a morning game drive, few things rival a massage followed by lunch on the wooden deck of the Serengeti Restaurant, watching wildlife move through the valley below.
+        </p>
+
+        <div class="article__image">
+            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&q=80" alt="African elephant in the wild">
+            <p class="article__caption">Elephants are among the highlights of any game drive at Garden Route Game Lodge.</p>
+        </div>
+
+        <h2>The Accommodation</h2>
+
+        <p>
+            Accommodation ranges from African-themed lodge rooms to valley-view bush chalets and luxury suites with private plunge pools. All offer views of either the mountains or the sweeping valley, and all are designed to immerse guests in their surroundings while providing every comfort.
+        </p>
+
+        <p>
+            Dining at the Serengeti Restaurant is an experience in itself. An interactive kitchen allows guests to watch chefs prepare authentic South African dishes, while the wooden deck provides front-row seats to the theatre of the bush. The wine list showcases the best of the Cape, a reminder that you are, after all, in one of the world's great wine regions.
+        </p>
+
+        <h2>Conservation at Heart</h2>
+
+        <p>
+            The lodge takes its conservation responsibilities seriously. Since 2002, it has worked closely with TM Ndanda school in the Kwanonqaba township near Mossel Bay, funding a school bus and subsidising teacher salaries. On the reserve itself, the focus is on sustainable practices and species protection, particularly for threatened animals like the cheetah.
+        </p>
+
+        <p>
+            The surrounding fynbos ecosystem is one of the world's great botanical treasures, home to an astonishing diversity of plant species including proteas, heaths, and the restios that give nearby Albertinia its reputation as the heart of the thatching reed industry. Learning about this unique vegetation adds another dimension to any safari experience.
+        </p>
+
+        <h2>The Verdict</h2>
+
+        <p>
+            For those seeking Big 5 encounters without the long journey to Kruger or the risk of malaria, Garden Route Game Lodge offers a compelling alternative. It is family-friendly, easily accessible, and set in some of the most beautiful scenery the Western Cape has to offer.
+        </p>
+
+        <p>
+            Whether you are a first-time safari-goer or a seasoned wildlife enthusiast, a weekend here delivers on the promise of African adventure. And with the rest of the Garden Route waiting to be explored, it makes the perfect first or final stop on any coastal road trip.
+        </p>
+
+        <div class="info-box">
+            <h3 class="info-box__title">Plan Your Visit</h3>
+            <p><strong>Location:</strong> N2 Highway, 7km east of Albertinia</p>
+            <p><strong>Distance:</strong> 3.5 hours from Cape Town, 85km from Mossel Bay</p>
+            <p><strong>Phone:</strong> <a href="tel:+27287351200">028 735 1200</a></p>
+            <p><strong>Website:</strong> <a href="https://grgamelodge.co.za" target="_blank">grgamelodge.co.za</a></p>
+            <p><strong>Day Visitors:</strong> Game drives depart daily at 11am. Bookings essential.</p>
+            <p><strong>Tip:</strong> Book directly with the lodge for complimentary inclusions like spa treatments or private picnics.</p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__brand">Garden Route Living</p>
+        <p class="footer__email"><a href="mailto:gardenroutepublishing@gmail.com">gardenroutepublishing@gmail.com</a></p>
+        <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
+    </footer>
+</body>
+</html>

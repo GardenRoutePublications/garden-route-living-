@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Workshop Interiors: A Mother-Daughter Legacy | Garden Route Living</title>
+    <meta name="description" content="For over two decades, Tanya Mans and her mother Fransie have transformed Garden Route homes from their Knysna studio. We visit The Workshop Interiors.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Workshop Interiors: A Mother-Daughter Legacy">
+    <meta property="og:description" content="For over two decades, Tanya Mans and her mother Fransie have transformed Garden Route homes from their Knysna studio.">
+    <meta property="og:image" content="https://theworkshopinteriors.co.za/wp-content/uploads/2024/09/i2.jpg">
+    <meta property="og:url" content="https://gardenrouteliving.onrender.com/article/workshop-interiors.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Garden Route Living">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Workshop Interiors: A Mother-Daughter Legacy">
+    <meta name="twitter:description" content="For over two decades, transforming Garden Route homes from their Knysna studio.">
+    <meta name="twitter:image" content="https://theworkshopinteriors.co.za/wp-content/uploads/2024/09/i2.jpg">
+    
+    <!-- SEO -->
+    <link rel="canonical" href="https://gardenrouteliving.onrender.com/article/workshop-interiors.html">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-ink: #1a1a1a;
+            --color-paper: #faf9f7;
+            --color-cream: #f5f3ef;
+            --color-sand: #e8e4dc;
+            --color-ocean: #2d4a5e;
+            --color-gold: #c4913d;
+            --color-mist: rgba(255,255,255,0.85);
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Lora', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--color-paper);
+            color: var(--color-ink);
+            line-height: 1.8;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: var(--color-mist);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav__logo {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            text-decoration: none;
+        }
+        
+        .nav__back {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-ink);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav__back:hover {
+            color: var(--color-gold);
+        }
+        
+        /* Hero */
+        .hero {
+            height: 70vh;
+            min-height: 500px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            margin-top: 60px;
+        }
+        
+        .hero__image {
+            position: absolute;
+            inset: 0;
+        }
+        
+        .hero__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0,0,0,0.7) 0%,
+                rgba(0,0,0,0.2) 50%,
+                transparent 100%
+            );
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem;
+            max-width: 800px;
+            color: white;
+        }
+        
+        .hero__tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        
+        .hero__meta {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        
+        /* Article */
+        .article {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .article__lead {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .article p {
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+        
+        .article h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 3rem 0 1.5rem;
+            color: var(--color-ink);
+        }
+        
+        .article__image {
+            margin: 3rem -4rem;
+            position: relative;
+        }
+        
+        .article__image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .article__caption {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 0.75rem;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .article__quote {
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid var(--color-sand);
+            border-bottom: 1px solid var(--color-sand);
+        }
+        
+        .article__quote blockquote {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--color-ocean);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .article__quote cite {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-style: normal;
+            color: var(--color-gold);
+            letter-spacing: 0.05em;
+        }
+        
+        /* Info Box */
+        .info-box {
+            background: var(--color-cream);
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .info-box__title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-ink);
+        }
+        
+        .info-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .info-box a {
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+        
+        .info-box a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--color-ink);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer__brand {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer__email {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer__email a {
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+        
+        .footer__email a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer__copy {
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+            .hero__content {
+                padding: 2rem;
+            }
+            .article {
+                padding: 2rem 1.5rem;
+            }
+            .article__image {
+                margin: 2rem -1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="../index.html" class="nav__logo">Garden Route Living</a>
+        <a href="../index.html" class="nav__back">← Back to Stories</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero__image">
+            <img src="https://theworkshopinteriors.co.za/wp-content/uploads/2024/09/i2.jpg" alt="The Workshop Interiors showroom">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <span class="hero__tag">Interiors</span>
+            <h1 class="hero__title">The Workshop Interiors: A Mother-Daughter Legacy</h1>
+            <p class="hero__meta">Words by Garden Route Living</p>
+        </div>
+    </header>
+
+    <!-- Article -->
+    <article class="article">
+        <p class="article__lead">
+            On the corner of Main and Nelson Street in Knysna, a mother and daughter have spent more than two decades turning houses into homes. Their secret? A shared eye for beauty, an unwavering commitment to craftsmanship, and the kind of trust that only family can bring.
+        </p>
+
+        <p>
+            When Tanya Mans joined her mother Fransie at The Workshop Interiors in February 2004, she was stepping into more than a business. She was continuing a tradition of transforming spaces that has made their studio one of the most respected names in Garden Route interior design.
+        </p>
+
+        <p>
+            Twenty-one years later, the mother-daughter duo have become synonymous with thoughtful, elegant interiors across the region. From complete home transformations to the perfect finishing touches, their approach blends technical expertise with an intuitive understanding of how people actually live in their spaces.
+        </p>
+
+        <h2>More Than Decoration</h2>
+
+        <p>
+            Walk into their showroom on Main Road and you immediately sense their philosophy. This is not about following trends or filling rooms with furniture. It is about understanding the way light moves through a coastal home, how fabric ages in the salt air, and what makes a space feel like it belongs to the people who live there.
+        </p>
+
+        <div class="article__quote">
+            <blockquote>
+                "Nothing is too big or too small for us. Let us help turn your house into a home."
+            </blockquote>
+            <cite>— The Workshop Interiors</cite>
+        </div>
+
+        <p>
+            Their services span the full spectrum of interior design: from individual pieces like headboards, sofas and soft furnishings, to complete new space design and the sensitive makeover of existing rooms. Upholstery, curtains, and careful space planning all fall within their expertise.
+        </p>
+
+        <p>
+            What sets The Workshop Interiors apart is their end-to-end approach. They do not simply advise and leave you to execute. From the first consultation through to final installation, Tanya and Fransie guide the entire process, ensuring that what you imagined is what you receive.
+        </p>
+
+        <h2>Built on Relationships</h2>
+
+        <p>
+            In a town where word of mouth matters more than any advertisement, their reputation speaks volumes. Clients describe them as "efficient, helpful, charming and reliable" and "the best interior decorators to deal with." Some travel considerable distances specifically to work with them, testament to the lasting relationships they build.
+        </p>
+
+        <p>
+            Perhaps it is the family dynamic that makes the difference. Working alongside her mother has given Tanya both roots and wings: the grounding of traditional craftsmanship and the freedom to evolve their aesthetic for contemporary coastal living. The result is design that feels timeless rather than trendy, spaces that will still feel right a decade from now.
+        </p>
+
+        <div class="article__image">
+            <img src="https://theworkshopinteriors.co.za/wp-content/uploads/2024/09/i3.jpg" alt="Interior design work by The Workshop Interiors">
+            <p class="article__caption">From scatter cushions to complete room transformations, every project receives the same meticulous attention.</p>
+        </div>
+
+        <h2>A Garden Route Institution</h2>
+
+        <p>
+            As one of Knysna's longest-standing interior design practices, The Workshop Interiors has witnessed the town's evolution from quiet forest hamlet to sought-after coastal destination. Through it all, they have remained true to their founding principle: creating beautiful, functional spaces that reflect each client's unique way of living.
+        </p>
+
+        <p>
+            For Tanya and Fransie, every project is personal. It is there in the way they take time to understand not just what you want, but how you live. In the careful selection of fabrics that will weather the Garden Route's temperamental climate. In the follow-through that ensures the final result exceeds expectations.
+        </p>
+
+        <p>
+            Two decades in, the mother-daughter team shows no signs of slowing down. The Workshop Interiors remains what it has always been: a place where expertise meets warmth, where craftsmanship meets creativity, and where your vision becomes their mission.
+        </p>
+
+        <div class="info-box">
+            <h3 class="info-box__title">Visit The Workshop Interiors</h3>
+            <p><strong>Address:</strong> Corner Main & Nelson Street, Knysna Central</p>
+            <p><strong>Phone:</strong> <a href="tel:+27443826664">044 382 6664</a></p>
+            <p><strong>Email:</strong> <a href="mailto:admin@theworkshopinteriors.co.za">admin@theworkshopinteriors.co.za</a></p>
+            <p><strong>Website:</strong> <a href="https://theworkshopinteriors.co.za" target="_blank">theworkshopinteriors.co.za</a></p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/theworkshopinteriors" target="_blank">@theworkshopinteriors</a></p>
+            <p><strong>Hours:</strong> Monday to Friday, 7:30am to 5:00pm</p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__brand">Garden Route Living</p>
+        <p class="footer__email"><a href="mailto:gardenroutepublishing@gmail.com">gardenroutepublishing@gmail.com</a></p>
+        <p class="footer__copy">© 2026 Garden Route Living. All rights reserved.</p>
+    </footer>
+</body>
+</html>
